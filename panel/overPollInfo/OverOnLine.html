@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>在线监测</title>
+		<link rel="stylesheet" type="text/css" href="../../scripts/plugins/layui/css/layui.css" />
+		<style type="text/css">
+			.boldred
+			{
+			
+			    color: red;
+			    border:1px solid #ccc;
+			    padding-left:4px;
+			    padding-right:4px;
+			    padding-top:2px;
+			    padding-bottom:2px;
+			    margin-left:2px;
+			    margin-right: 2px;
+			}
+			
+			.enterInfo a 
+			{
+			    text-decoration: none;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div style=" margin:10px;max-width: 560px;">
+			<div>
+				<table>
+					<tr>
+						<td>
+							<div class="enterInfo">
+								<p style="line-height: 20px">
+									<a id="EntName" class='boldred' target="_blank">重庆三圣实业股份有限公司混凝土分公司</a>位于
+									<a id="FK_City">重庆市北碚区</a>，具体地址为
+									<a id="FK_CountyDistrict" class='boldred'>重庆市北碚区云汉大道重庆两江云顶大酒店对面</a>
+									，该企业属于 <a id="FK_PolluterSuperviseType" href='javascript:void(0)' class='boldred'>市控</a>企业，
+									企业法人是<a id="LegalPpersonName" href='javascript:void(0)' class='boldred'>张春生</a>，
+									经度为<a id="lon" href='javascript:void(0)' class='boldred'>106.560909</a>，
+									纬度为<a id="lat" href='javascript:void(0)' class='boldred'>29.693044</a>。
+								</p>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<table id="overPoll" cellpadding='0' cellspacing='0' border='0'></table>
+		<script src="../../mock/overPollData.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../scripts/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../scripts/plugins/layui/layui.all.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			layui.use('table', function() {
+				var table = layui.table;
+				table.render({
+					elem: '#overPoll',
+					cellMinWidth: 100, //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+					width: 600,
+					height:400,
+					page: true,
+					cols: [
+						[{
+							field: 'OverTime',
+							width: 100,
+							title: '超标时间',
+							sort: true
+						}, {
+							field: 'OutportName',
+							width: 90,
+							title: '排口名称'
+						}, {
+							field: 'PollutantName',
+							width: 90,
+							title: '污染因子'
+						}, {
+							field: 'OverValue',
+							width: 120,
+							title: '超标值(mg/L)',
+							sort: true
+						}, {
+							field: 'WarnLower',
+							title: '下限值(mg/L)',
+							width: 120,
+						}, {
+							field: 'WarnUpper',
+							title: '上限值(mg/L)',
+							width: 120
+						}]
+					],
+					data: overData
+				});
+			});
+		</script>
+	</body>
+</html>

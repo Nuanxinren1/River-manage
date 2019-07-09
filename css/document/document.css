@@ -1,0 +1,143 @@
+.companyList>li span{
+    color: #999;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+.companyList>li span.key{
+    margin-left: 15px;
+}
+.companyList>li span.key:first-child{
+    margin-left: 0;
+}
+.companyList>li:nth-child(4) span{
+    color: #454545;
+}
+.companyList>li:last-child{
+    height: 40px;
+}
+.pf-type{
+    list-style: none;
+    /*float: left;*/
+    font-size: 12px;
+    overflow: hidden;
+    margin: 10px;
+}
+.pf-type>li{
+    float: left;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    border-radius: 20px;
+    line-height: 26px;
+}
+.pf-type>li:first-child{
+   color: #ff7e00;
+}
+.pf-type>li:nth-child(2){
+    color: #4da9bd;
+}.pf-type>li:nth-child(3){
+    color: #a7a2d6;
+}.pf-type>li:nth-child(4){
+    color: #4dbd82;
+}
+.pf-type>li:nth-child(5){
+    color: #648ec2;
+}
+.maintitle {
+    color: #454545;
+}
+.btn {
+    border: 1px solid #4da9bd;
+    background-color: #4da9bd;
+}
+.search {
+    border: 1px solid #4da9bd;
+    border-right: 0;
+
+}
+#intext {
+    border: 1px solid #4da9bd;
+    border-left: 0;
+}
+.select {
+    border: 1px solid #4da9bd;
+    border-top: 0;
+}
+.company_info{
+    border-left: 4px solid transparent !important;
+}
+.updateTime{
+    float: right;
+}
+.icon_del:hover {
+    background-color: #4da9bd;
+    color: #ffffff !important;
+    animation: rotate 300ms;
+    -webkit-animation: rotate 300ms;
+    animation-fill-mode: forwards;
+}
+#myself_condition {
+     display: block;
+}
+.add {
+    background-color: #ff7e00;
+}
+.ui-paging-container li.ui-pager:hover, .ui-paging-container li.focus {
+    background-color: #4da9bd !important;
+    color: #FFFFFF;
+}
+
+.company-img-content{
+    float: left;
+    width: 250px;
+    height: 100%;
+}
+.company-info-content{
+    float: right;
+    width: calc(100% - 250px);
+    height: 100%;
+}
+.company_info {
+    width: calc(100% - 100px);
+}
+.company-img-content img{
+    width: 210px;
+    height: 160px;
+}
+.map-view{
+    display: inline-block;
+    width: 14px;
+    height: 18px;
+    background: url("../../image/archives/map.png") no-repeat left;
+
+}
+.view_method1 {
+    display: inline-block;
+    width: 14px;
+    height: 18px;
+    background: url("../../image/archives/content.png")no-repeat left;
+}
+.maincenter {
+    margin-left: 0px;
+}
+.view_way span {
+    display: inline-block;
+    float: left;
+    margin-left: 10px;
+    cursor: pointer;
+    width: 60px;
+    padding-left: 20px;
+    font-size: 13px;
+}
+.view_way {
+    margin-top: 20px;
+}
+.export_btn{
+    float: right;
+    margin-right: -150px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.updateTime{
+    display: none;
+}

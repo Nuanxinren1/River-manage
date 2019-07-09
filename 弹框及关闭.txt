@@ -1,0 +1,41 @@
+1.不好使--//关闭当前页
+        //var index = layer.open();
+        //layer.close(index);
+2.https://blog.csdn.net/irisrathem/article/details/83021594
+    $("#closeImg").click(function () {
+        
+        //关闭当前页
+        var index = parent.layer.getFrameIndex(window.name);
+        parent.layer.close(index);
+    });
+    <div style="position:absolute;z-index:99;background-color: rgba(0, 0, 0,0);top:10px;left:600px;width:60px;height:40px;" id="closeImg">
+
+    </div>
+3.弹框--<span id="reset" onclick="uploadfile()">添加</span>
+function uploadfile() {
+    //window.open(this.href, '', 'width=255,height=255');
+    layer.open({
+        type: 2,
+        skin: 'layui-layer-demo', //样式类名
+        title: '',
+        closeBtn: 0, //不显示关闭按钮
+        anim: 2,
+        area: ['680px', '380px'],
+        shadeClose: true, //开启遮罩关闭
+        content: 'img.html'
+    });
+   
+}
+4.https://www.jianshu.com/p/65fea33e6750
+  layer.prompt(
+https://zhidao.baidu.com/question/1386996818384681340.html
+layer.confirm
+
+5.输入框圆角
+
+input {
+    border-radius:5px;
+}
+select {
+    border-radius:5px;
+}

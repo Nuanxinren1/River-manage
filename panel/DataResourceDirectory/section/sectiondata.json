@@ -1,0 +1,318 @@
+﻿{
+	 "status": 200
+	  ,"message": ""
+	  ,"total": 28,
+	  "rows": {
+		  "item":[
+  {
+    "SectionCode": "1",
+    "SectionName": "105公路桥",
+    "AssessmentCity": "济宁市",
+    "RiverLevel": "二级",
+    "Basin": "淮河流域",
+    "WaterSystem": "沂沭泗水系",
+    "SectionType": "国控",
+    "Lon": "116.26",
+    "Lat": "35.132"
+  },
+  {
+    "SectionCode": "2",
+    "SectionName": "201医院",
+    "AssessmentCity": "成都市",
+    "RiverLevel": "二级",
+    "Basin": "长江流域",
+    "WaterSystem": "",
+    "SectionType": "国控",
+    "Lon": "104.195",
+    "Lat": "30.764"
+  },
+  {
+    "SectionCode": "3",
+    "SectionName": "26#大桥",
+    "AssessmentCity": "承德市",
+    "RiverLevel": "一级",
+    "Basin": "海河流域",
+    "WaterSystem": "滦河水系",
+    "SectionType": "国控",
+    "Lon": "117.472",
+    "Lat": "40.417"
+  },
+  {
+    "SectionCode": "4",
+    "SectionName": "310公路桥",
+    "AssessmentCity": "临沂市",
+    "RiverLevel": "二级",
+    "Basin": "淮河流域",
+    "WaterSystem": "沂沭泗水系",
+    "SectionType": "国控",
+    "Lon": "117.852",
+    "Lat": "34.387"
+  },
+  {
+    "SectionCode": "5",
+    "SectionName": "312国道桥",
+    "AssessmentCity": "苏州市",
+    "RiverLevel": "出、入湖河流",
+    "Basin": "太湖流域",
+    "WaterSystem": "",
+    "SectionType": "国控",
+    "Lon": "120.218",
+    "Lat": "31.295"
+  },
+  {
+    "SectionCode": "6",
+    "SectionName": "858九队",
+    "AssessmentCity": "鸡西市",
+    "RiverLevel": "二级",
+    "Basin": "松花江流域",
+    "WaterSystem": "乌苏里江水系",
+    "SectionType": "国控",
+    "Lon": "133.085",
+    "Lat": "45.391"
+  },
+  {
+    "SectionCode": "7",
+    "SectionName": "阿及堡",
+    "AssessmentCity": "抚顺市",
+    "RiverLevel": "干流",
+    "Basin": "辽河流域",
+    "WaterSystem": "大辽河水系",
+    "SectionType": "国控",
+    "Lon": "123.934",
+    "Lat": "41.804"
+  },
+  {
+    "SectionCode": "8",
+    "SectionName": "阿七大桥",
+    "AssessmentCity": "凉山彝族自治州",
+    "RiverLevel": "二级",
+    "Basin": "长江流域",
+    "WaterSystem": "",
+    "SectionType": "国控",
+    "Lon": "101.991",
+    "Lat": "27.465"
+  },
+  {
+    "SectionCode": "9",
+    "SectionName": "阿热力",
+    "AssessmentCity": "阿克苏地区",
+    "RiverLevel": "二级",
+    "Basin": "西北诸河",
+    "WaterSystem": "",
+    "SectionType": "国控",
+    "Lon": "79.816",
+    "Lat": "41"
+  },
+  {
+    "SectionCode": "10",
+    "SectionName": "阿什河口内",
+    "AssessmentCity": "哈尔滨市",
+    "RiverLevel": "一级",
+    "Basin": "松花江流域",
+    "WaterSystem": "松花江水系",
+    "SectionType": "国控",
+    "Lon": "126.523",
+    "Lat": "45.67"
+  },
+  {
+    "SectionCode": "11",
+    "SectionName": "阿瓦提镇",
+    "AssessmentCity": "喀什地区",
+    "RiverLevel": "",
+    "Basin": "西北诸河",
+    "WaterSystem": "",
+    "SectionType": "国控",
+    "Lon": "77.371",
+    "Lat": "38.74"
+  },
+  {
+    "SectionCode": "12",
+    "SectionName": "艾比湖1",
+    "AssessmentCity": "博尔塔拉蒙古自治州",
+    "RiverLevel": "湖泊",
+    "Basin": "西北诸河",
+    "WaterSystem": "",
+    "SectionType": "国控",
+    "Lon": "82.55",
+    "Lat": "44.74"
+  },
+  {
+    "SectionCode": "13",
+    "SectionName": "艾山西大桥",
+    "AssessmentCity": "徐州市",
+    "RiverLevel": "二级",
+    "Basin": "淮河流域",
+    "WaterSystem": "沂沭泗水系",
+    "SectionType": "国控",
+    "Lon": "117.728",
+    "Lat": "34.374"
+  },
+  {
+    "SectionCode": "14",
+    "SectionName": "艾辛庄",
+    "AssessmentCity": "邢台市",
+    "RiverLevel": "二级",
+    "Basin": "海河流域",
+    "WaterSystem": "海河水系",
+    "SectionType": "国控",
+    "Lon": "114.857",
+    "Lat": "37.351"
+  },
+  {
+    "SectionCode": "15",
+    "SectionName": "爱河大桥",
+    "AssessmentCity": "丹东市",
+    "RiverLevel": "一级",
+    "Basin": "辽河流域",
+    "WaterSystem": "鸭绿江水系",
+    "SectionType": "国控",
+    "Lon": "124.295",
+    "Lat": "40.116"
+  },
+  {
+    "SectionCode": "16",
+    "SectionName": "隘头潭",
+    "AssessmentCity": "厦门市",
+    "RiverLevel": "独流入海",
+    "Basin": "浙闽片河流",
+    "WaterSystem": "",
+    "SectionType": "国控",
+    "Lon": "117.936",
+    "Lat": "24.624"
+  },
+  {
+    "SectionCode": "17",
+    "SectionName": "隘屯",
+    "AssessmentCity": "百色市",
+    "RiverLevel": "三级",
+    "Basin": "珠江流域",
+    "WaterSystem": "",
+    "SectionType": "国控",
+    "Lon": "106.318",
+    "Lat": "22.811"
+  },
+  {
+    "SectionCode": "18",
+    "SectionName": "安陆桑树",
+    "AssessmentCity": "孝感市",
+    "RiverLevel": "一级",
+    "Basin": "长江流域",
+    "WaterSystem": "",
+    "SectionType": "国控",
+    "Lon": "113.438",
+    "Lat": "31.013"
+  },
+  {
+    "SectionCode": "19",
+    "SectionName": "安溪罗内桥",
+    "AssessmentCity": "泉州市",
+    "RiverLevel": "独流入海",
+    "Basin": "浙闽片河流",
+    "WaterSystem": "",
+    "SectionType": "国控",
+    "Lon": "118.052",
+    "Lat": "24.902"
+  },
+  {
+    "SectionCode": "20",
+    "SectionName": "安州",
+    "AssessmentCity": "保定市",
+    "RiverLevel": "三级",
+    "Basin": "海河流域",
+    "WaterSystem": "海河水系",
+    "SectionType": "国控",
+    "Lon": "115.619",
+    "Lat": "38.735"
+  },
+  {
+    "SectionCode": "21",
+    "SectionName": "熬洲",
+    "AssessmentCity": "衡阳市",
+    "RiverLevel": "一级",
+    "Basin": "长江流域",
+    "WaterSystem": "",
+    "SectionType": "国控",
+    "Lon": "112.733",
+    "Lat": "27.178"
+  },
+  {
+    "SectionCode": "22",
+    "SectionName": "八都",
+    "AssessmentCity": "宁德市",
+    "RiverLevel": "独流入海",
+    "Basin": "浙闽片河流",
+    "WaterSystem": "",
+    "SectionType": "国控",
+    "Lon": "119.346",
+    "Lat": "26.666"
+  },
+  {
+    "SectionCode": "23",
+    "SectionName": "八号桥",
+    "AssessmentCity": "张家口市",
+    "RiverLevel": "二级",
+    "Basin": "海河流域",
+    "WaterSystem": "海河水系",
+    "SectionType": "国控",
+    "Lon": "115.332",
+    "Lat": "40.205"
+  },
+  {
+    "SectionCode": "24",
+    "SectionName": "八角",
+    "AssessmentCity": "德阳市",
+    "RiverLevel": "一级",
+    "Basin": "长江流域",
+    "WaterSystem": "",
+    "SectionType": "国控",
+    "Lon": "104.206",
+    "Lat": "30.878"
+  },
+  {
+    "SectionCode": "25",
+    "SectionName": "八庙沟",
+    "AssessmentCity": "广元市",
+    "RiverLevel": "一级",
+    "Basin": "长江流域",
+    "WaterSystem": "",
+    "SectionType": "国控",
+    "Lon": "105.694",
+    "Lat": "32.59"
+  },
+  {
+    "SectionCode": "26",
+    "SectionName": "八仙桥",
+    "AssessmentCity": "岳阳市",
+    "RiverLevel": "一级",
+    "Basin": "长江流域",
+    "WaterSystem": "",
+    "SectionType": "国控",
+    "Lon": "112.902",
+    "Lat": "29.036"
+  },
+  {
+    "SectionCode": "27",
+    "SectionName": "八宿县怒江桥",
+    "AssessmentCity": "昌都市",
+    "RiverLevel": "干流",
+    "Basin": "西南诸河",
+    "WaterSystem": "",
+    "SectionType": "国控",
+    "Lon": "95.998",
+    "Lat": "30.728"
+  },
+  {
+    "SectionCode": "28",
+    "SectionName": "巴河镇河口",
+    "AssessmentCity": "黄冈市",
+    "RiverLevel": "二级",
+    "Basin": "长江流域",
+    "WaterSystem": "",
+    "SectionType": "国控",
+    "Lon": "114.82",
+    "Lat": "30.277"
+  }
+
+]
+	  }
+}

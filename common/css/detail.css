@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 表格 */
+.tabtop {
+	margin: auto;
+  	margin-top: 15px;
+  	background:#cccccc;
+   	width: 98%;
+   	max-width:1050px;
+  	border:0px;
+}
+
+/* 主要表格 */
+.maintab {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+/* 表中所有td */
+.tabtop td{
+	background-color:#ffffff;
+	line-height:150%;
+	text-align:center;
+	padding:10px;
+	font-size: 12px;
+}
+
+/* 标题 */
+.tabtop td[class ="biaoti"] {
+	font-family: 微软雅黑;
+	font-size: 26px;
+	font-weight: bold;
+	border-bottom:1px dashed #CCCCCC;
+	color: #255e95;
+  	text-align:center;
+  	height:60px;
+}
+/* 小标题 */
+.tabtop td[class ="titfont"] {
+	font-family: 微软雅黑;
+	font-size: 16px;
+	font-weight: bold;
+	color: #255e95;
+  	background:#e9faff !important;
+  	text-align:left !important;
+}
+/* 字段名 */
+.tabtop td[class ="btbg"]{
+	min-width: 80px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #FFF;
+  	background: #33c59d;
+}
+/* 灰色背景 */
+.tabtop td[class ="btbg2"]{
+	font-size: 15px;
+	font-weight: bold;
+	color: #FFF;
+	background:#989696 ;
+}

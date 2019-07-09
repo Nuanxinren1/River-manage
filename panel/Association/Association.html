@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>关联分析</title>
+		<!--公共样式-->
+		<link rel="stylesheet" href="../../common/css/common.css">
+		<link rel="stylesheet" href="../../common/css/top/default.css">
+		<link rel="stylesheet" href="../../common/css/highSearch.css">
+		<link rel="stylesheet" href="../../common/css/top/head.css">
+		<!--<link href="css/gis/map.css" rel="stylesheet" />-->
+		<!--主页样式-->
+		<link rel="stylesheet" href="../../css/document/main.css">
+		<!--当前样式-->
+		<link rel="stylesheet" href="../../css/document/index.css">
+		<!--适配样式-->
+		<!--     <link media="screen and (max-device-width:1335px)" rel="stylesheet"
+		          href="../common/css/top/1024.css" /> -->
+		<link media="screen and (min-device-width:1336px) and (max-device-width:1440px)"
+		        rel="stylesheet" href="../../common/css/top/1366.css" />
+		<link media="screen and (min-device-width:1900px)" rel="stylesheet"
+		      href="../../common/css/top/1980.css" />
+		<link rel="stylesheet" href="../../css/document/document.css">
+		<link rel="stylesheet" href="../../css/scroll.css">
+		<link rel="stylesheet" href="Association.css">
+	</head>
+	<body>
+		<div class="Association-cont" id="Association">
+			<!--中间的条件搜索部分-->
+			<div class="condition">
+			    <!--搜索框-->
+			    <div class="search_box">
+			        <div action="" method=" " id="simple_search">
+			            <div class="searchdiv">
+			                <!--下拉菜单显示信息位置-->
+			                <div class="search">
+			                    <span class="search_type"></span> <span class="search_img" onclick="select_panel()"><img src="../../image/archives/sel.png" /></span>
+			                </div>
+			                <!--下拉面板-->
+			                <ul class="select">
+			                    <li value="EpName">排口名称</li>
+			                    <li value="LICENSECODE">设置单位名称</li>
+			                    <li value="LEGALPERSON">联系人</li>
+			                    <li value="ADDRESS">地址</li>
+			                </ul>
+			            </div>
+			            <input type="text" id="intext" value=""  onkeypress="searchKuangName(event)"/>
+			            <input type="button" value="×" class="reset_onecondision" />
+			            <input type="button" class="btn" onclick="search()" value="搜索" />
+			
+			        </div>
+			    </div>
+			    <div class="more_search">
+			        <div class="advanced_search">
+			            <div class="search_fold">
+								<!--<span class="result_count">共<span class="count"></span>条结果-->
+								<!--</span>-->
+			                <!--<div class="view_way">-->
+			                    <!--<span class='view_method1 simple_view' onclick='tiaozhuan(0)'></span>-->
+			                    <!--<span class='map-view' onclick='' ></span>-->
+			                <!--</div>-->
+			                <div class="hsearch" onclick="set_advanced_search()">
+			                    <span class="searchImg"></span>
+			                    <span class="hsearch_span">高级搜索</span>
+			                </div>
+			            </div>
+			            <!--高级搜索条件生成地方-->
+			            <div class="hsearch_result">
+			                <div>
+			                    <input type="submit" name="submit" value="查询" onclick="clickHighSearch();" />
+			                    <input type="button" name="reset" value="清空" class="reset_muchcondision" /> <label>搜索条件：</label>
+			                    <div class="muchcondision"></div>
+			                </div>
+			            </div>
+			        </div>
+			        <!--高级搜索部分div .advanced_search_con-->
+			        <div class="advanced_search_con"></div>
+			    </div>
+			</div>
+			<div class="Association-cont-2">
+				<p  class="titlep"><i class="line"></i><span>排污口区域拓扑图</span></p>
+				<div class="Association-cont-2-main">
+					<!--  -->
+					<div class="Association-cont-2-main-left">
+						<img src="../../img/zhfx/dt.png" alt="">
+					</div>
+					<div class="Association-cont-2-main-right" id="Association-cont-2-main-right"></div>
+				</div>
+			</div>
+			<!--  -->
+			<div class="Association-cont-3">
+				<p class="titlep"><i class="line"></i><span>排污口与污染源关联分析</span></p>
+				<div class="Association-cont-3-main">
+					<div class="Association-cont-3-main-left" id="Association-cont-3-main-left">
+						<ul class="Association-cont-3-main-left-menu">
+							<li class="zl active">排放总量</li>
+							<li class="cod">COD</li>
+							<li>氨氮</li>
+							<li>总磷</li>
+							<li>总氮</li>
+							<li>动植物油</li>
+						</ul>
+						<div class="Association-cont-3-main-left-line"id="Association-cont-3-main-left-line"></div>
+					</div>
+					<div class="Association-cont-3-main-right" id="Association-cont-3-main-right"></div>
+				</div>
+			</div>
+			<!--  -->
+			<div class="Association-cont-4">
+				<p class="titlep"><i class="line"></i><span>排污口与上下游水质关联分析</span></p>
+				<div class="Association-cont-4-main">
+					<div class="Association-cont-4-main-top">
+						<span>排污口污染物:</span>
+						<select>
+							<option value="0">选择污染物</option>
+						</select>
+						<span>监测指标:</span>
+						<select>
+							<option value="0">选择指标</option>
+						</select>
+						<span class="fx">分析</span>
+					</div>
+					<div id="Association-cont-4-main-line"></div>
+				</div>
+			</div>
+			<!--  -->
+			<div class="Association-cont-5">
+				<p class="titlep"><i class="line"></i><span>排污口与断面(监测点)水质关联分析</span></p>
+				<div class="Association-cont-5-main">
+					<div class="Association-cont-5-main-top">
+						<span>排污口污染物:</span>
+						<select>
+							<option value="0">选择污染物</option>
+						</select>
+						<span>监测指标:</span>
+						<select id="jcyz">
+							<option value="0">PH</option>
+							<option value="1">水温</option>
+							<option value="2">浊度</option>
+							<option value="3">溶解氧</option>
+							<option value="4">电导率</option>
+							<option value="5">氨氮</option>	
+							<option value="6">高锰酸钾指数</option>
+						</select>
+						<span class="fx" id="fx">分析</span>
+					</div>
+					<div id="Association-cont-5-main-line"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../../plugin/jquery-easyui-1.5/jquery.min.js"></script>
+	<script src="../../plugin/jquery-easyui-1.5/jquery.easyui.min.js"></script>
+	<script src="../../scripts/plugins/layui/layui.all.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../config/mapconfig.js"></script>
+	<script src="../../plugin/echarts/echarts.js"></script>
+	<script src="../../common/js/highSearch.js"></script>
+	<script src="Association.js"></script>
+</html>

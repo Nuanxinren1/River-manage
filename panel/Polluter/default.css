@@ -1,0 +1,411 @@
+﻿html, body {
+    margin: 0px 5px 0px 5px;
+    height: 100%;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/*页面切换样式*/
+#div_select {
+    height: 25px;
+    margin: 5px 0;
+    width: 100%;
+    position: relative;
+}
+
+    #div_select .btnspan {
+        color: #03b888;
+        border: 1px solid #51A351;
+        display: inline-block;
+        height: 23px;
+        border-radius: 3px;
+        margin-left: 0;
+    }
+
+        #div_select .btnspan button {
+            height: 23px;
+            margin: 0;
+            float: left;
+        }
+/*切换按钮*/
+.switch_btn {
+    float: right;
+    position: relative;
+    top: 2px;
+    cursor: pointer;
+}
+
+    .switch_btn img {
+        width: 40px;
+        height: 20px;
+    }
+
+    .switch_btn span {
+        position: relative;
+        top: 2px;
+    }
+
+.switch_btn_On {
+}
+
+.switch_btn_Off {
+}
+/*选择监测因子按钮*/
+#select_factor {
+    float: right;
+    position: relative;
+    top: 5px;
+    right: 10px;
+    background-color: #008080;
+    color: #fff;
+    padding: 0 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+
+/*#select_factor em{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background-image: url(../../IMG/icon/展开.png);
+	background-size: 100%;
+}*/
+
+
+/*选择监测因子面板*/
+#selects {
+    width: 120px;
+    /*height: 100px;*/
+    background-color: gray;
+    opacity: 0.8;
+    border-radius: 5px;
+    position: absolute;
+    color: #fff;
+    top: 25px;
+    right: 0px;
+    z-index: 101;
+    display: none;
+}
+
+    /*关闭面板按钮*/
+    #selects img {
+        width: 13px;
+        height: 13px;
+        position: relative;
+        top: 5px;
+        left: 100px;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+
+    #selects ul {
+        padding: 5px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        border-top: 1px solid #FFF;
+    }
+
+    #selects li {
+        padding: 2px;
+        margin: 5px 0;
+        float: left;
+        cursor: pointer;
+    }
+
+        #selects li:hover {
+            border-radius: 3px;
+            background-color: #008080;
+        }
+
+
+/*统计图切换图标*/
+#div_citysTJ .echarts_change, #div_cityDesc .echarts_change {
+    height: 25px;
+}
+
+.echarts_change {
+    height: 25px;
+}
+
+table {
+    table-layout: fixed;
+}
+
+/*统计图表切换按钮*/
+.pie_chart,
+.bar_chart,
+.desc_chart,
+.line_chart {
+    display: inline-block;
+    width: 23px;
+    height: 25px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin-left: 5px;
+    float: left;
+}
+
+.pie_chart {
+    background-image: url(../../IMG/chart/pie_chart.png);
+    width: 21px;
+    height: 22px;
+}
+
+.bar_chart {
+    background-image: url(../../IMG/chart/bars_chart.png);
+}
+
+.line_chart {
+    background-image: url(../../IMG/chart/line_chart.png);
+}
+
+.desc_chart {
+    background-image: url(../../IMG/chart/desc_chart.png);
+}
+
+
+/*各城市排名统计图表*/
+#echarts_tj {
+    /*border: 1px solid #dddddd;
+	border-radius: 3px;*/
+    margin-top: 2px;
+    width: 100%;
+    height: 200px;
+}
+
+/*统计柱状图*/
+#echarts_tj_bar {
+    height: 90%;
+    width: 100%;
+}
+
+#echarts_tj_bar2 {
+    height: 90%;
+    width: 100%;
+}
+
+/*统计饼状图*/
+#echarts_tj_pie {
+    height: 90%;
+    width: 100%;
+}
+
+/*统计排名table*/
+#datatable_tj_sort {
+    width: 100%;
+}
+
+#datatable_tj_sort2 {
+    width: 360px;
+}
+
+
+/*单个城市图表样式总*/
+#echarts_city24hour {
+    width: 100%;
+    height: 220px;
+}
+
+#echarts_city24hour2 {
+    width: 100%;
+    height: 220px;
+}
+
+
+/*单个城市曲线图表样式*/
+#echarts_city24_line {
+    width: 95%;
+    height: 95%;
+}
+
+#echarts_city24_line2 {
+    width: 95%;
+    height: 95%;
+}
+
+/*单个城市饼状图表样式*/
+#echarts_city24_pie {
+    width: 100%;
+    height: 90%;
+}
+
+#echarts_city24_pie2 {
+    width: 100%;
+    height: 90%;
+}
+
+
+/*单个城市描述信息*/
+#totaldesc {
+    height: 190px;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+}
+
+    #totaldesc .left {
+        float: left;
+        width: 6px;
+        height: 208px;
+        margin: 2px;
+    }
+
+    #totaldesc .right {
+        margin-left: 0px;
+    }
+
+        #totaldesc .right .title {
+            padding: 10px 0;
+            margin-left: 10px;
+        }
+
+            #totaldesc .right .title h2 {
+                display: inline-block;
+                font-weight: 600;
+                color: #555555;
+            }
+
+            #totaldesc .right .title a {
+                font-size: 12px;
+                padding: 0 8px;
+                margin-left: 10px;
+                border: 1px solid;
+                border-radius: 10px;
+                cursor: pointer;
+                color: #000;
+            }
+
+
+            /*返回按钮*/
+
+            #totaldesc .right .title .back {
+                display: inline-block;
+                width: 25px;
+                height: 25px;
+                float: right;
+                position: relative;
+                top: 5px;
+                right: 10px;
+                background-image: url(IMG/back1.png);
+                background-size: 100%;
+                background-repeat: no-repeat;
+                cursor: pointer;
+            }
+
+        #totaldesc .right p {
+            font-size: 12px;
+            color: gray;
+            margin: 0px 0 20px 10px;
+        }
+
+        #totaldesc .right ul {
+            display: flex;
+            justify-content: space-around;
+        }
+
+            #totaldesc .right ul li {
+                float: left;
+                margin-right: 3px;
+                width: 75px;
+                text-align: center;
+            }
+
+                #totaldesc .right ul li div {
+                    width: 45px;
+                    height: 45px;
+                    border: 2px solid #137274;
+                    border-radius: 50%;
+                    margin-bottom: 5px;
+                    line-height: 45px;
+                    font-size: 18px;
+                    text-align: center;
+                    margin: 5px auto;
+                    color: #3d3d3d;
+                }
+
+                #totaldesc .right ul li span {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 12px;
+                    color: #3d3d3d;
+                }
+
+/************污染源查询面板**********/
+.manageIcon {
+    text-align: center;
+    display: inline-block;
+    /*margin-left: 10px;*/
+}
+
+    .manageIcon span {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+    }
+
+        .manageIcon span:first-child {
+            background: url(../../IMG/drawmap/i_draw_rect.png) no-repeat;
+            vertical-align: middle;
+            margin-right: 3px;
+        }
+
+        .manageIcon span:nth-child(2) {
+            margin-left: 8px;
+            background: url(../../IMG/drawmap/i_draw_circle.png) no-repeat;
+            vertical-align: middle;
+        }
+
+        .manageIcon span:nth-child(3) {
+            margin-left: 11px;
+            margin-right: 11px;
+            background: url(../../IMG/drawmap/i_draw_poly.png) no-repeat;
+            vertical-align: middle;
+        }
+
+        .manageIcon span:last-child {
+            background: url(../../IMG/drawmap/i_draw_freepoly.png) no-repeat;
+            vertical-align: middle;
+        }
+
+td.face_left {
+    padding-left: 11px;
+}
+
+select.face_right {
+    position: relative;
+    top: 5px;
+    border: 1px solid #aaa;
+    background-color: #fff;
+    color: #3d3d3d;
+}
+
+#txt_entername {
+    width: 150px;
+    position: relative;
+    top: 5px;
+    color: #3d3d3d;
+    background-color: #fff;
+}
+
+#searchBtn {
+    background-color: #fff;
+    border: 1px solid #137274;
+    border-radius: 3px;
+    color: #137274;
+    line-height: 22px;
+    margin-left: 13px;
+}
+
+.sta_poll {
+    cursor: pointer;
+}

@@ -1,0 +1,74 @@
+﻿html, body {
+    margin: 0px 0px 0px 0px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-size: 12px;
+    background: #fff;
+}
+
+#div_body, #jianceTJ {
+    height: 100%;
+    width: 100%;
+}
+
+.contentPane {
+    max-height: 250px;
+    overflow: hidden;
+}
+
+.cellTool {
+    height: 25px;
+    border-top: 1px solid #dddddd;
+}
+
+
+/* 各项监测物的监测值table */
+#jianceTJ > table {
+    width: 100%;
+}
+
+.table th, .table td {
+    text-align: center;
+    padding: 4px 8px 4px 8px;
+    line-height: 18px;
+    vertical-align: middle;
+    border-top: 1px solid #dddddd;
+    font-weight: normal;
+}
+
+.jiancewusvaluetable td {
+    cursor: pointer;
+    background: #2b708c;
+    /*background: #008080;*/
+    color: #fff;
+}
+
+    .jiancewusvaluetable td:hover {
+        background: #5bacce;
+        /*background: #00CBD6;*/
+    }
+
+
+    /*监测物类型单击选中*/
+    .jiancewusvaluetable td.btnselect {
+        color: #D82069;
+        background: #5bacce !important;
+    }
+
+
+/*监测时间点击选中*/
+.searchnewbtn {
+    border: 1px solid transparent;
+    height: 23px;
+    border-radius: 3px;
+    background: #fff;
+    border: 1px solid #2b708c;
+    outline: none;
+}
+
+    .searchnewbtn.newbtnac {
+        background: #2b708c;
+        color: #fff;
+        border: 1px solid #2b708c;
+    }

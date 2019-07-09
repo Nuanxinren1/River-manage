@@ -1,0 +1,148 @@
+﻿html,
+body {
+    margin: 0px 5px 0px 5px;
+    height: 100%;
+    overflow: hidden;
+    font-size: 12px;
+}
+table{
+    table-layout:fixed;
+}
+
+.ul {
+    height: 80px;
+    margin: 0px auto 10px auto;
+    border-radius: 3px 3px 3px 3px;
+}
+
+    .ul li {
+        width: 140px;
+        height: 65px;
+        list-style: none;
+        float: left;
+        display: inline;
+        text-align: center;
+        margin: 0px 25px 0px 25px;
+        padding-top: 15px;
+    }
+
+        .ul li span {
+            display: block;
+        }
+
+
+/*时间框*/
+
+#txt_date {
+    margin: 0px;
+    padding: 0px;
+    width: 100px;
+    height: 20px;
+    text-align: center;
+    background: url("IMG/clock.png") no-repeat 135px;
+}
+
+
+/*饼状图*/
+
+#div_echart {
+    height: 170px;
+}
+
+
+/*不同水质断面个数描述文字*/
+
+#div_dec_Section {
+    padding: 5px;
+}
+
+
+/*不同水质断面个数红色字体样式*/
+
+.boldred {
+    font-weight: bold;
+    color: red;
+    border: 1px solid #ccc;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+    .boldred:hover {
+        color: red;
+        text-decoration: underline;
+    }
+
+
+/*.t_analysis {
+    margin-top: 5px;
+}
+
+    .t_analysis a {
+        color: #B94A48;
+        padding: 5px;
+    }
+
+        .t_analysis a:hover {
+            color: #ffffff;
+            text-decoration: none;
+            background: #3385FF;
+            border-radius: 3px;
+        }*/
+
+
+/*boottable断面水质类别*/
+
+.descpanel {
+    display: block;
+    width: 54px;
+    height: 25px;
+    color: #ffffff;
+    border-radius: 3px 3px 3px 3px;
+    line-height: 25px;
+    margin:auto;
+}
+
+
+/*河流页面*/
+#div_river .fixed-table-header .th-inner, .fixed-table-body .th-inner {
+    /*background-color: darkcyan;*/
+}
+
+#div_river .fixed-table-body {
+    background-color: #fff;
+}
+
+    #div_river .fixed-table-body tr {
+        background-color: lightcyan;
+    }
+
+        #div_river .fixed-table-body tr:nth-child(odd) {
+            background-color: lightblue;
+        }
+/*断面和河流显示隐藏控制按钮*/
+#sectionAndRiverVisible label {
+    display: inline;
+}
+
+#sectionAndRiverVisible input[type="checkbox"] {
+    margin: -2px 7px 2px;
+}
+
+#checkboxRiverGL {
+    margin-left: 0px;
+}
+
+
+
+/*监测页面*/
+#topConTable select {
+    position: relative;
+    top: 5px;
+}
+#div_time{
+    width: 102px;
+    position: absolute;
+    margin-top: 5px;
+    top: -3.5px;
+    right: 13px;	
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>排污口详情</title>
+		<link rel="stylesheet" href="pwukmess.css">
+		<!-- 滚动条的样式 -->
+		<link rel="stylesheet" href="../../css/scroll.css">
+	</head>
+	<body>
+		<div>
+			<!-- 头部 -->
+			<div class="pwukmess-top">
+				<div class="pwukmess-top-left">
+					<img src="../../img/pwukmess/pk.png" alt="">
+					<span>巨化西排污口</span>
+				</div>
+				<div>
+					<span class="sp"></span>
+					<span class="sc"></span>
+				</div>
+			</div>
+			<!-- 内容 -->
+			<div class="pwukmess-cont">
+				<ul class="menulist">
+					<li class="pwukmess-cont-jbxx active"><i></i><a href="#pwukmess-cont-right-jbxx" class="jbxx">基本信息</a></li>
+					<li class="pwukmess-cont-xgxx"><i></i><a href="#pwukmess-cont-right-xgfx">排污口相关分析</a></li>
+					<li class="pwukmess-cont-xgfj"><i></i><a href="#pwukmess-cont-right-xgfj">相关附件</a></li>
+					<li class="pwukmess-cont-smzq"><i></i><a href="#pwukmess-cont-right-smzq">生命周期</a></li>
+				</ul>
+				<div class="pwukmess-cont-right">
+					<!-- 排口信息 -->
+					<div class="pwukmess-cont-right-jbxx item " id="pwukmess-cont-right-jbxx">
+						<!-- 排口基本信息 -->
+						<div class="pkjbxx">
+							<div class="pkjbxxtitle">
+								<i></i><span>排口基本信息</span>
+							</div>
+							<div class="pkjbxxlb">
+								<img src="../../img/pwukmess/xxb.png" width="685" height="513">
+							</div>
+						</div>
+						<!-- 图片切换 -->
+						<div class="photochange">
+							<div class="photochange-top">
+								<div>
+									<img src="../../img/pwukmess/dw.png" alt="">
+									<span class="pkdlwz">排口地理位置</span>
+								</div>
+								<div class="pwkbtn">
+									<span class="zhaop active">照片</span>
+									<span class="ditu">地图</span>
+								</div>
+							</div>
+							<div class="photoimg">
+								<img src="../../img/pwukmess/pmt.jpg" alt="">
+								<!-- <img src="../../img/pwukmess/dtdw.png" alt=""> -->
+							</div>
+						</div>
+					</div>
+					<!-- 排口分析 -->
+					<div class="pwukmess-cont-right-xgfx item" id="pwukmess-cont-right-xgfx">
+						<!--  -->
+						<div class="pwukmess-cont-right-xgfx-top">
+							<i></i><span>排口相关分析</span>
+							
+						</div>
+						<div class="pwukmess-cont-right-xgfx-cont">
+							<!-- 左侧折线图 -->
+							<div id="leftline" class="leftline">
+								<p class="gxtype">
+									<span class="active">排污口与污染源关联分析</span>
+									<span>排污口与排污许可证关联分析</span>
+								</p>
+								<div class="chartscont">
+										<!-- 左侧按钮 -->
+										<ul class="btnlist">
+											<li id="total" class="active">排放总量</li>
+											<li id="cod">COD</li>
+											<li>氨氮</li>
+											<li>总氮</li>
+											<li>总磷</li>
+											<li>动植物油</li>
+										</ul>
+										<div id="linechart"></div>
+										<!-- 右侧饼状图 -->
+										<div id="rightpie">
+											
+										</div>
+								</div>
+									
+									
+							</div>
+							
+						</div>
+					</div>
+					<!-- 相关附件 -->
+					<div class="pwukmess-cont-right-xgfj item" id="pwukmess-cont-right-xgfj">
+						<img src="../../img/pwukmess/xgfjt.png" alt="">
+					</div>
+					<!-- 生命周期 -->
+					<div class="pwukmess-cont-right-smzq item" id="pwukmess-cont-right-smzq">
+						<img src="../../img/pwukmess/smzqt.png" alt="">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../../scripts/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../scripts/echarts/echarts.js" type="text/javascript" charset="utf-8"></script>
+	<script src="pwukmess.js" type="text/javascript" charset="utf-8"></script>
+</html>

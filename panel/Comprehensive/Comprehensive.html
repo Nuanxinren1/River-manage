@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>综合分析</title>
+		<link rel="stylesheet" href="Comprehensive.css">
+		<link rel="stylesheet" href="../../css/scroll.css">
+	</head>
+	<body>
+		<div class="zhfx">
+			<ul class="zhfxmenu">
+				<li onclick="jumphtml('dz')" class="dzfx active"><i></i><span>定制分析</span></li>
+				<li onclick="jumphtml('gj')" class="gjsx"><i></i><span>高级筛选</span></li>
+				<li onclick="jumphtml('gl')" class="glfx"><i></i><span>关联分析</span></li>
+			</ul>
+			<div class="zhfx-right">
+				<!-- 右侧内容 -->
+				<div class="dzfx-cont">
+					<!-- 搜素条 -->
+					<div class="searchbox">
+							<span>省份:</span>
+							<select class="xlklist">
+								<option value="0">请选择省份</option>
+								<option value="1">广州</option>
+								<option value="2">浙江</option>
+								<option value="3">上海</option>
+								<option value="4">北京</option>
+							</select>
+							<span>城市:</span>
+							<select class="xlklist">
+								<option value="00">请选择城市</option>
+								<option value="01">汕头</option>
+								<option value="02">珠海</option>
+								<option value="03">江门</option>
+								<option value="04">湛江</option>
+							</select>
+							<span>入河/入海方式:</span>
+							<select class="xlklist">
+								<option value="00">请选择</option>
+								<option value="01">明渠</option>
+								<option value="02">暗管</option>
+								<option value="03">泵站</option>
+								<option value="04">涵闸</option>
+								<option value="05">其他</option>
+							</select>
+							<!-- <input class="searchIpt" type="text" placeholder="请输入"> -->
+							
+						<span class="searchBtn">搜索</span>
+						<span class="gjss">高级搜索</span>
+					</div>
+				<!--  -->
+					<div class="zhfx-cont-1">
+						<p class="zhfx-cont-1-title">
+							<span>排污口数量分布情况</span>
+						</p>
+						<div style="display: flex;justify-content: space-between;">
+							<div class="zhfx-cont-1-left">
+								<img src="../../img/zhfx/1.png" alt="">
+							</div>
+							<div class="mapcharts" id="mapcharts"></div>
+						</div>
+					</div>
+					<div class="zhfx-cont-2">
+						<img src="../../img/zhfx/2.png" alt="">
+					</div>
+					<div class="zhfx-cont-3">
+						<p class="zhfx-cont-1-title">
+							<span>排污口类型占比情况</span>
+						</p>
+						<div style="width:100%;display: flex; justify-content: space-between;">
+							<div id="zhfx-cont-3-pie" class="zhfx-cont-3-pie"></div>
+							<div id="zhfx-cont-3-line" class="zhfx-cont-3-line"></div>
+						</div>
+					</div>
+					<div class="zhfx-cont-4">
+						<p class="zhfx-cont-1-title">
+							<span>排污口污染物排放情况</span>
+						</p>
+						<div style="display: flex; justify-content: space-between;">
+							<div class="zhfx-cont-4-left">
+								<img src="../../img/zhfx/3.png" alt="">
+							</div>
+							<div class="zhfx-cont-4-right">
+								<ul class="zhfx-cont-4-right-btn">
+									<li class="gyfs active">工业废水排污口</li>
+									<li class="shws">生活废水排污口</li>
+									<li>混合废污水排放口</li>
+									<li>其他</li>
+								</ul>
+								<div class="zhfx-cont-4-right-cont">
+									<img src="../../img/zhfx/4.png" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="zhfx-cont-5">
+						<p class="zhfx-cont-1-title">
+							<span>污水入河/入海方式情况</span>
+						</p>
+						<div style="width:100%;display: flex; justify-content: space-between;">
+							<div id="zhfx-cont-5-pie" class="zhfx-cont-3-pie"></div>
+							<div id="zhfx-cont-5-line" class="zhfx-cont-3-line"></div>
+						</div>
+					</div>
+					<div class="zhfx-cont-6">
+						<p class="zhfx-cont-1-title">
+							<span>排污口数量变化趋势</span>
+						</p>
+						<div class="zhfx-cont-6-btn">
+							<ul class="zhfx-cont-4-right-btn" id="zhfx-cont-6-btn">
+								<li onclick='search("total")' class="active">排污口总量</li>
+								<li onclick='search("gy")'>工业废水排污口</li>
+								<li onclick='search("sh")'>生活废水排污口</li>
+								<li onclick='search("hh")'>混合废污水排扣</li>
+								<li onclick='search("qt")'>其他</li>
+							</ul>
+							<div id="zhfx-cont-6-line" class="zhfx-cont-6-line"></div>
+						</div>
+					</div>
+					<div class="zhfx-cont-7">
+						<img src="../../img/zhfx/7.png" alt="">
+					</div>
+				</div>
+				
+						
+			</div>
+		</div>
+	</body>
+	<script src="../../scripts/jquery-1.11.3.js"></script>
+	<script src="../../scripts/echarts/echarts.js"></script>
+	<script src="../../scripts/echarts/china.js"></script>
+	<script src="Comprehensive.js"></script>
+</html>

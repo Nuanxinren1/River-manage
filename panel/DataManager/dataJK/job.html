@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<link rel="stylesheet" type="text/css" href="../layui/css/layui.css"/>
+		<link rel="stylesheet" href="job.css">
+	</head>
+	<body>
+		<div id="job" style="overflow-y:hidden;height:600px;">
+			<div class="search">
+				<span>系统名称:</span> <input class="ipt" type="text" placeholder="请输入"> 
+                <span>作业名称:</span> <input class="ipt" type="text" placeholder="请输入"> 
+				<span>数据库种类:</span>
+				<select class="ipt">
+                    <option value="1">oracle数据库</option>
+					<option value ="2">mysql数据库 </option>
+					
+				</select>
+				<span>运行状态:</span>
+				<select class="ipt">
+					<option value ="1">运行中</option>
+					<option value ="2">停止中</option>
+					<option value ="3">暂停中</option>
+					<!--<option value ="4">生态保护</option>-->
+				</select>
+                <br/><br />
+                <span>开始时间:</span> <input class="ipt" type="text" placeholder="请输入">
+                <span>结束时间:</span> <input class="ipt" type="text" placeholder="请输入"> 
+				<span id="searchBtn">查询</span>
+				<span id="reset">重置</span>
+			</div>
+			<div class="caozuo">
+				<span id="daochu"></span>
+				<span id="xinzeng"></span>
+				<span id="xiugai"></span>
+				<span id="shanchu"></span>
+			</div>
+			<div style="overflow-y:auto;height:400px;">
+            <table lay-even class="layui-hide" id="demo"  lay-filter="test" ></table>
+            </div>
+			<div id="page" ></div>
+		</div>
+		<script type="text/html" id="barDemo">
+		  <a class="layui-btn layui-btn-xs" lay-event="edit"><span class="edit"></span></a>
+		  <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><span class="dele"></span></a>
+		</script>
+	</body>
+	<script src="../../../scripts/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../layui/layui.all.js"></script>
+	<script src="job.js" type="text/javascript" charset="utf-8"></script>
+	
+</html>

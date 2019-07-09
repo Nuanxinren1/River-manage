@@ -1,0 +1,82 @@
+body {
+    background: url(../img/login/login_bg1.png) no-repeat;
+    /*min-width: 1340px;*/
+    margin: 0 auto;
+    /*background-size: 100% auto;*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei";
+}
+.login_title{
+    background: url("../img/login/login_logo.png") center no-repeat;
+    width: 100%;
+    height: 150px;
+}
+.login_box{
+    width: 1000px;
+    height: 535px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px #eee;
+}
+.login_box>div{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.login_left{
+    background: url("../img/login/left.png") center no-repeat;
+}
+.login_form{
+	text-align: center;
+}
+.login_form>p{
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 160px;
+    letter-spacing: 3px;
+}
+
+a {
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+        }
+		.iptdiv input{
+			border: none;
+			border-bottom: 1px solid #E6E6E6;
+			height: 60px;
+			width: 430px;
+			font-size: 19px;
+		}
+		.iptdiv input:nth-child(1){
+			margin-bottom: 25px;
+		}
+		input:focus{outline:none;}
+		input::-webkit-input-placeholder{
+			color: #333;
+			padding-left: 3px;
+			font-weight: 600;
+		}
+		input:last-child{
+			margin-bottom: 70px;
+		}
+		.login_Btn{
+			display: inline-block;
+			border-radius: 5px;
+			width: 430px;
+			height: 60px;
+			background: #46b1c8;
+			text-align: center;
+			line-height: 60px;
+			font-size: 22px;
+			color: #fff;
+			font-weight: 600;
+			letter-spacing: 3px;
+			cursor: pointer;
+		}

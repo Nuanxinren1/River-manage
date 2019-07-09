@@ -1,0 +1,14 @@
+[{
+  "id":2,
+  "text":"=",
+  "selected":true,
+  "group":"AAA"
+},{
+  "id":4,
+  "text":"!=",
+  "group":"AAA"
+},{
+  "id":5,
+  "text":"like",
+  "group":"AAA"
+}] 

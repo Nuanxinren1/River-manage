@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>空气质量弹出框页面</title>
+    <meta charset="utf-8" />
+
+    <script src="../../Scripts/jquery-1.11.3.js"></script>
+    <script src="../../Scripts/config/mapconfig.js"></script>
+
+    <!--插件-->
+    <link href="../../CSS/bootstrap.css" rel="stylesheet" type="text/css" />
+    <!--自定义-->
+    <link href="InfoWindow.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <div id="div_body" style="visibility:visible">
+        <div id="jianceTJ">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td>
+                        <table cellpadding="0" cellspacing="0" border="0" class="table table-bordered">
+                            <tr class="jiancewusvaluetable">
+                                <td class="btnselect" id="AQI" onclick="typeClick('AQI')">
+                                    AQI
+                                </td>
+                                <td id="PM2_5" onclick="typeClick('PM2_5')">
+                                    PM<sub style="font-size:smaller;">2.5</sub>
+                                </td>
+                                <td id="PM10" onclick="typeClick('PM10')">
+                                    PM<sub style="font-size:smaller;">10</sub>
+                                </td>
+                                <td id="NO2" onclick="typeClick('NO2')">
+                                    NO<sub style="font-size:smaller;">2</sub>
+                                </td>
+                                <td id="SO2" onclick="typeClick('SO2')">
+                                    SO<sub style="font-size:smaller;">2</sub>
+                                </td>
+                                <td id="CO" onclick="typeClick('CO')">
+                                    CO
+                                </td>
+                                <td id="O3" onclick="typeClick('O3')">
+                                    O<sub style="font-size:smaller;">3</sub>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div id="div_aqi"></div>
+                                </td>
+                                <td>
+                                    <div id="div_pm2_5"></div>
+                                </td>
+                                <td>
+                                    <div id="div_pm10"></div>
+                                </td>
+                                <td>
+                                    <div id="div_so2"></div>
+                                </td>
+                                <td>
+                                    <div id="div_no2"></div>
+                                </td>
+                                <td>
+                                    <div id="div_co"></div>
+                                </td>
+                                <td>
+                                    <div id="div_o3_h8"></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr id="div_button" style="margin-top:5px;">
+                    <td>
+                        <!--&nbsp;
+                        <button class="searchnewbtn" id="searchTime5" onclick="searchCityByID(5)">优良率</button>&nbsp;
+                        <button class="searchnewbtn" id="searchTime4" onclick="searchCityByID(4,'历年')">历年年均</button>&nbsp;
+                        <button class="searchnewbtn" id="searchTime3" onclick="searchCityByID(3,'一年')">最近一年</button>&nbsp;
+                        <button class="searchnewbtn" id="searchTime2" onclick="searchCityByID(2, '一月')">最近一月</button>&nbsp;
+                        <button class="searchnewbtn" id="searchTime1" onclick="searchCityByID(1, '一周')">最近一周</button>&nbsp;
+                        <button class="searchnewbtn newbtnac" id="searchTime0" onclick="searchCityByID(0, '24小时')">最近24小时</button>-->
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="bottom" id="div_echart_Parent">
+                        <div id="div_echartLine" style="height:200px"></div>
+                        <div id="div_echartBar" style="height:200px;display:none;"></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+
+<!--Echarts引用-->
+<script src="../../Scripts/plugins/charts/echarts/echarts.js"></script>
+
+<!--自定义-->
+<script src="../../Scripts/custom/coustomTool.js"></script>
+<script src="infoWindow.js" type="text/javascript"></script>
+

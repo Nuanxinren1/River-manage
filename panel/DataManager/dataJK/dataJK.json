@@ -1,0 +1,24 @@
+﻿{
+  "status": 200,
+  "message": "",
+  "total": 14,
+  "rows": {
+    "item": [
+{"id":"1","style":"二污普数据","file":"oracle数据库","name":"enterpris_info","number":"50000","relation":"41232","norelation":"8768"},
+{"id":"2","style":"二污普数据","file":"oracle数据库","name":"enterpris_info","number":"50000","relation":"41232","norelation":"8768"},
+{"id":"3","style":"二污普数据","file":"oracle数据库","name":"enterpris_info","number":"50000","relation":"41232","norelation":"8768"},
+{"id":"4","style":"入海排污口设置","file":"mysql数据库","name":"space_info","number":"50000","relation":"41232","norelation":"8768"},
+{"id":"5","style":"入海排污口设置","file":"mysql数据库","name":"space_info","number":"50000","relation":"41232","norelation":"8768"},
+{"id":"6","style":"入海排污口设置","file":"mysql数据库","name":"space_info","number":"50000","relation":"41232","norelation":"8768"},
+{"id":"7","style":"二污普数据","file":"excel文件","name":"空间信息","number":"50000","relation":"41232","norelation":"8768"},
+{"id":"8","style":"二污普数据","file":"excel文件","name":"空间信息","number":"50000","relation":"41232","norelation":"8768"},
+{"id":"9","style":"二污普数据","file":"excel文件","name":"空间信息","number":"50000","relation":"41232","norelation":"8768"},
+{"id":"10","style":"二污普数据","file":"excel文件","name":"空间信息","number":"50000","relation":"41232","norelation":"8768"},
+{"id":"11","style":"二污普数据","file":"excel文件","name":"空间信息","number":"50000","relation":"41232","norelation":"8768"},
+{"id":"12","style":"二污普数据","file":"excel文件","name":"空间信息","number":"50000","relation":"41232","norelation":"8768"},
+{"id":"13","style":"二污普数据","file":"excel文件","name":"空间信息","number":"50000","relation":"41232","norelation":"8768"},
+{"id":"14","style":"二污普数据","file":"excel文件","name":"空间信息","number":"50000","relation":"41232","norelation":"8768"}
+
+]
+  }
+}

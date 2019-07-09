@@ -1,0 +1,222 @@
+﻿html, body
+{
+    margin: 0px 0px 0px 0px;
+    height: 100%;
+    overflow: hidden;
+    font-size: 12px;
+}
+input[type=checkbox]
+{
+    vertical-align:middle;
+}
+.table th, .table td
+{
+    text-align: center;
+    padding: 4px 8px 4px 8px;
+
+    vertical-align: middle;
+    border-top: 1px solid #dddddd;
+    font-weight:normal;
+}
+
+
+#bufferSearchDiv
+{
+    visibility:visible;
+}
+.menuContent
+{
+    display:none; 
+    position: absolute; 
+    z-index:999;
+    background:#FFFFFF;
+    overflow:auto;
+    overflow-x:hidden;
+    border:1px solid #B6B6B6;
+    border-radius:3px;
+    width:200px;
+    text-align:left;
+    padding:5px;
+}
+.enterInfo a 
+{
+    text-decoration: none;
+}
+.boldred
+{
+
+    color: red;
+    /*border:1px solid #ccc;
+    padding-left:4px;*/
+    padding-right:4px;
+    padding-top:2px;
+    padding-bottom:2px;
+    margin-left:2px;
+    margin-right: 2px;
+}
+
+.resp-tabs-list li {
+    font-weight: 600;
+    font-size: 12px;
+    display: inline-block;
+    padding: 10px 10px;
+    margin: 0 4px 0 0;
+    list-style: none;
+    cursor: pointer;
+    float: left;
+
+}
+.resp-tab-active {
+    border: 1px solid #5AB1D0 !important;
+    border-bottom: none;
+    margin-bottom: -1px !important;
+    padding: 5px 14px 14px 14px !important;
+    border-top: 4px solid #5AB1D0 !important;
+    border-bottom: 0px #fff solid !important;
+}
+.resp-tab-content {
+    display: none;
+    padding: 5px 0 0 0;
+}
+
+.resp-tabs-list,.hor_1{
+    overflow: hidden!important;
+    border: 1px solid #e0e0e0!important;
+    background: #ececec!important;
+    color: #000!important;
+}
+#parentHorizontalTab>ul>li{
+    width: 88.8px!important;
+    text-align: center!important;
+    list-style: none!important;
+    padding: 0!important;
+    margin: 0!important;
+    float: left!important;
+    height: 39px!important;
+    line-height: 40px!important;
+    border-left: 1px solid #DCDCDC!important;
+    cursor: pointer!important;
+    font-size: 14px!important;
+}
+.resp-tab-item hor_1,.resp-tab-active{
+    color:#306bb5!important;
+    background:#fff!important;
+    border-bottom: 2px solid #306bb5!important;
+}
+
+/**/
+#zxjcTab ul{
+	padding-left: 10px;
+    width:100%;
+    height:42px;
+    box-sizing:border-box;
+    background-color:#efefef;
+    border-bottom:1px solid #53b1A2;
+    margin:0px;
+    margin-bottom:10px;
+}
+#zxjcTab li{
+    list-style:none;
+    margin-top:9px;
+    width:64px;
+    height:25px;
+    border: 1px solid #c0c0c0;
+    line-height: 25px;
+    float:left;
+    /*border-radius: 3px;*/
+    background: #fff;
+    color: #666;
+    border:1px solid #c4c4c4;
+    text-align: center;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: '宋体';
+    border-left:none;
+}
+#zxjcTab li:first-child{
+     border-left: 1px solid #c0c0c0;
+}
+#zxjcTab li.active,#zxjcTab li:hover{
+	background-color:#1b92ab;
+	color:#fff;
+}
+/*查询*/
+#btnQuery{
+	margin-left: 10px;
+    height:25px;
+    width:58px;
+	background-color:#399d8e;
+	color: #fff;
+	border: none;
+	padding: 3px 5px;
+	/*border-radius: 3px;*/
+    position:relative;
+}
+#search{
+    display:inline-block;
+    width:15px;
+    height:15px;
+    background:url(IMG/查询.png) no-repeat 100% 100%;
+}
+
+#jianceTJ td input[type="radio"]{
+	position: relative;
+	top: 2px;
+}
+
+select{
+    border:1px solid #348380;
+    border-radius:0;
+    outline:none;
+}
+/*超标列表*/
+#div_alarm{
+    overflow-y:auto;
+	width: 100%;
+	height:200px;
+	/*overflow: hidden;*/
+	border: 1px solid gainsboro;
+    margin-top:10px;
+    box-sizing:border-box;
+}
+#alarmTab{
+	border-collapse: collapse;
+	
+}
+#alarmTab tr:first-child{
+	width: 100%;
+	height: 25px;
+	line-height: 25px;
+	background-color: #008080!important;
+	color: #fff;
+}
+#alarmTab tr th{
+    border-right:1px solid #fff;
+}
+#alarmTab tr td{
+    height: 20px;
+	line-height: 20px;
+    border-right:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+}
+#alarmTab tr td:last-child{
+    border-right:none;
+}
+
+/**单选按钮*/
+#jianceTJ td input[type="radio"]{
+	position: relative;
+	top: 2px;
+	display: none;
+}
+#jianceTJ td label.active {
+    background-image: url('../../IMG/checkbox/radiochecked.png');
+}
+#jianceTJ td label {
+    background-image: url('../../IMG/checkbox/radiounchecked.png');
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    cursor: pointer;
+    line-height: 17px;
+    display: inline-block;
+}

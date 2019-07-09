@@ -1,0 +1,24 @@
+﻿body {
+    margin: 0px 0px 0px 0px;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-size: 12px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.middle {
+    margin: 0px auto;
+    max-width: 350px;
+}
+
+.fixed-table-loading {
+    display: none;
+}

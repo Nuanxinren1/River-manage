@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>资源目录</title>
+	<link rel="stylesheet" type="text/css" href="../../scripts/plugins/layui/css/layui.css"/>
+	<link rel="stylesheet" type="text/css" href="DataResourceDirectory.css"/>
+</head>
+<body>
+	<div class="layui-tab layui-tab-card site-demo-button" style="position: relative;">
+		<ul class="layui-nav layui-nav-tree layui-nav-side" id="leftmenu">
+			<li class="menulist">
+				<span class="quanbu" id="theall">全部</span>
+				<span class="opengk" id="theopen">公开</span>
+			</li>
+		    <li class="layui-nav-item layui-nav-itemed menu-xx">
+		        <a href="javascript:;"><i></i>基础信息</a>
+		        <dl class="layui-nav-child">
+		            <dd>
+		                <a data-url="pwuk/pwuk" data-id="11" data-title="排污口" href="#" class="site-demo-active" data-type="tabAdd" >排污口</a>
+		            </dd>
+		            <dd>
+		                <a href="#" data-url="section/section" data-title="监测断面"  data-id="12" class="site-demo-active" data-type="tabAdd">监测断面</a>
+		            </dd>
+		        </dl>
+		    </li>
+		    <li class="layui-nav-item menu-jc">
+		        <a href="javascript:;"><i></i>在线监测</a>
+		        <dl class="layui-nav-child">
+		            <dd>
+		                <a href="#" data-url="pwuk/pwukJC" data-title="排污口监测数据"  data-id="21" class="site-demo-active" data-type="tabAdd">排污口监测数据</a>
+		            </dd>
+		            <dd>
+		                <a href="#" data-url="section/sectionJC" data-title="断面监测数据"  data-id="22" class="site-demo-active" data-type="tabAdd">断面监测数据</a>
+		            </dd>
+		        </dl>
+		    </li>
+			<li class="layui-nav-item menu-shj" id="bgk1">
+			    <a href="javascript:;"><i></i>水环境信息</a>
+			    <dl class="layui-nav-child">
+			        <dd>
+			            <a href="#" data-url="section/section" data-title="饮用水"  data-id="31" class="site-demo-active" data-type="tabAdd">饮用水</a>
+			        </dd>
+			        <dd>
+			            <a href="#" data-url="section/section" data-title="地表水"  data-id="32" class="site-demo-active" data-type="tabAdd">地表水</a>
+
+			        </dd>
+                    <dd>
+                        <a href="#" data-url="section/section" data-title="地下水" data-id="33" class="site-demo-active" data-type="tabAdd">地下水</a>
+                    </dd>
+			    </dl>
+			</li>
+			<li class="layui-nav-item menu-hjzlxx">
+			    <a href="javascript:;"><i></i>环境质量信息</a>
+			    <dl class="layui-nav-child">
+			        <dd>
+			            <a href="#" data-url="section/section" data-title="功能区划" data-id="41" class="site-demo-active" data-type="tabAdd">功能区划</a>
+			        </dd>
+			        <dd>
+			            <a href="#" data-url="section/section" data-title="流域控制单元数据" data-id="42" class="site-demo-active" data-type="tabAdd">流域控制单元数据</a>
+			        </dd>
+			    </dl>
+			</li>
+			<li class="layui-nav-item menu-wbsj">
+			    <a href="javascript:;"><i></i>外部数据</a>
+			    <dl class="layui-nav-child">
+			        <dd>
+			            <a href="#" data-url="section/section" data-title="污普数据" data-id="51" class="site-demo-active" data-type="tabAdd">污普数据</a>
+			        </dd>
+			        <dd>
+			            <a href="#" data-url="shuiwen/shuiwen" data-title="水文数据" data-id="52" class="site-demo-active" data-type="tabAdd">水文数据</a>
+			        </dd>
+			    </dl>
+			</li>
+			<li class="layui-nav-item menu-wry" id="bgk2">
+			    <a href="javascript:;"><i></i>污染源数据</a>
+			    <dl class="layui-nav-child">
+			        <dd>
+			            <a href="#" data-url="section/section" data-title="生活废水" data-id="61" class="site-demo-active" data-type="tabAdd">生活废水</a>
+			        </dd>
+			        <dd>
+			            <a href="#" data-url="section/section" data-title="工业废水" data-id="62" class="site-demo-active" data-type="tabAdd">工业废水</a>
+			        </dd>
+                    <dd>
+                        <a href="#" data-url="section/section" data-title="规模化禽畜养殖场" data-id="63" class="site-demo-active" data-type="tabAdd">规模化禽畜养殖场</a>
+                    </dd>
+			    </dl>
+			</li>
+			<li class="layui-nav-item menu-stbh" id="bgk3">
+			    <a href="javascript:;"><i></i>水环境生态保护工程</a>
+			    <dl class="layui-nav-child">
+			        <dd>
+			            <a href="#" data-url="section/section" data-title="湿地" data-id="71" class="site-demo-active" data-type="tabAdd">湿地</a>
+			        </dd>
+			        
+			    </dl>
+			</li>
+			<li class="layui-nav-item menu-hjzlbg">
+			    <a href="javascript:;"><i></i>环境质量报告</a>
+			    <dl class="layui-nav-child">
+                    <dd>
+                        <a href="#" data-url="section/section" data-title="地表水水质月报" data-id="81" class="site-demo-active" data-type="tabAdd">地表水水质月报</a>
+                    </dd>
+                    <dd>
+                        <a href="#" data-url="section/section" data-title="生态环境质量报告" data-id="82" class="site-demo-active" data-type="tabAdd">生态环境质量报告</a>
+                    </dd>
+                    <dd>
+                        <a href="#" data-url="section/section" data-title="环境状态公报" data-id="83" class="site-demo-active" data-type="tabAdd">环境状态公报</a>
+                    </dd>
+                    <dd>
+                        <a href="#" data-url="section/section" data-title="太湖流域公报" data-id="84" class="site-demo-active" data-type="tabAdd">太湖流域公报</a>
+                    </dd>
+                    <dd>
+                        <a href="#" data-url="section/section" data-title="全国水资源公报" data-id="85" class="site-demo-active" data-type="tabAdd">全国水资源公报</a>
+                    </dd>
+                    <dd>
+                        <a href="#" data-url="section/section" data-title="饮用水月报" data-id="86" class="site-demo-active" data-type="tabAdd">饮用水月报</a>
+                    </dd>>
+			    </dl>
+			</li>
+			<li class="layui-nav-item menu-hjzlsj"  id="bgk4">
+			    <a href="javascript:;"><i></i>环境质量数据</a>
+			    <dl class="layui-nav-child">
+			        <dd>
+			            <a href="#" data-url="section/section" data-title="饮用水水源地" data-id="91" class="site-demo-active" data-type="tabAdd">饮用水水源地</a>
+			        </dd>
+			        <dd>
+			            <a href="#" data-url="section/section" data-title="近岸海域" data-id="92" class="site-demo-active" data-type="tabAdd">近岸海域</a>
+			        </dd>
+			    </dl>
+			</li>
+		    <!-- <li class="layui-nav-item">
+		        <a href="#" data-url="c" data-title="水环境信息"  data-id="33" class="site-demo-active" data-type="tabAdd"><i></i>水环境信息</a>
+		    </li> -->
+		</ul>
+		<div class="layui-tab" lay-filter="demo" lay-allowclose="true" style="margin-left: 180px;" id="layui-tab">
+		    <ul class="layui-tab-title">
+		    </ul>
+		    <ul class="rightmenu" style="display: none;position: absolute;">
+		        <li data-type="closethis">关闭当前</li>
+		        <li data-type="closeall">关闭所有</li>
+		    </ul>
+		    <div class="layui-tab-content">
+		    </div>
+		</div>
+	</div>
+</body>
+<script src="../../scripts/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../scripts/plugins/layui/layui.all.js" type="text/javascript" charset="utf-8"></script>
+<script src="DataResourceDirectory.js" type="text/javascript" charset="utf-8"></script>
+<script src="jquery.contextMenu.min.js"></script>
+</html>

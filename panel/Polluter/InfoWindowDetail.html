@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+		<!--本页面独有css-->
+		<link rel="stylesheet" type="text/css" href="InfoWindowDetail.css" />
+		<!-- 配置文件 -->
+		<script src="../../Scripts/config/mapconfig.js"></script>
+		<script src="../../Scripts/config/mapconfigUrl.js"></script>
+		<script src="../../Scripts/jquery-1.11.3.js"></script>
+		<script src="../../Scripts/custom/coustomTool.js"></script>
+		<script src="../../Scripts/custom/interface.js"></script>
+		<script src="InfoWindowDetail.js"></script>
+		<script type="text/javascript">
+			document.write("<link rel='Stylesheet' type='text/css' href='" + _arcgisJSAPIUrl_Themes + "'/>");
+			document.write("<link rel='stylesheet' type='text/css' href='" + _arcgisJSAPIUrl_Esricss + "'/>");
+			document.write("<script src='" + _arcgisJSAPIUrl_Init + "'><\/script>");
+		</script>
+		<script src="json.js"></script>
+	</head>
+
+	<body>
+		<div id='div_body' style='visibility:visible'>
+			<div style=" height: 175px">
+				<table>
+					<tr>
+						<td>
+							<img style="width:215px;height:160px;" src="../../IMG/enterprise/qiye.png" />
+						</td>
+						<td>
+							<div class="enterInfo">
+								<p style="line-height:18px">
+									<a id="EntName" href='javascript:void(0)' style="text-decoration:none;font:black 14px;" class='boldred' target="_blank"></a>位于
+									<a id="FK_City" href='javascript:void(0)' class='boldred'></a>，具体地址为
+									<a id="FK_CountyDistrict"></a>，该企业属于
+									<a id="FK_PolluterSuperviseType" href='javascript:void(0)' class='boldred'></a>企业，受纳水体为
+									<a id="RiverName" href='javascript:void(0)' class='boldred'></a>。该企业建厂时间：
+									<a id="CreateTime" href='javascript:void(0)' class='boldred'></a>，企业法人是
+									<b id="EntPerName"></b>，企业规模为
+									<a id="EntScale" href='javascript:void(0)' class='boldred'></a>，属于
+									<a id="FK_KeyIndustryType" href='javascript:void(0)' class='boldred'></a>。
+								</p>
+
+							</div>
+						</td>
+					</tr>
+				</table>
+				<p id="update" style="width: 100%; text-align: right; display:block;height:18px;margin-top: 5px;">
+					<a id="a1" href='javascript:modifycoordinate()' class='bordred'>坐标修改</a>
+					<!--<a id="airForecast" href='javascript:airModelClick()' class='bordred'>汽污染预测</a> &nbsp;
+                                <a id="waterForecast" href='javascript:waterModelClick()' class='bordred'>水污染预测</a> &nbsp;-->
+				</p>
+				<div id="coordinate" >
+					<span>经度:</span>
+					<input type="text" id="longitude" style="width:40px;">
+					<span>纬度:</span>
+					<input type="text" id="latitude" style="width:40px;">
+
+					<img id="selecticon" src="IMG/point_green.png" onclick="selectpointfrommap()" style="height:16px" />
+					<!-- <a href='javascript:selectpointfrommap()' >选点</a>  -->
+					<a href='javascript:savetoserver()'class="save" >保存</a>
+					<a href='javascript:cancle()' class="cancel">取消</a>
+				</div>
+			</div>
+			<div id="bufferSearchDiv">
+				<!--<div style="height:20px;">
+                <table style="width:100%">
+                    <tr>
+                        <td>
+                            周边查询
+                        </td>
+                    </tr>
+                </table>
+
+
+            </div>
+            <hr />-->
+				<div style="padding: 5px">
+					<span class="s_fact">周边查询：</span>
+					<select name="" id="radiusText" style="width: 75px; height: 25px">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+					</select>
+					<span style="color: #1e6386;margin-left: 3px;margin-right: 20px;font-size: 16px;">KM</span>
+					<span id="bufferSearch"></span>
+					<!--<input id="radiusText" type="text" style="width: 50px; height: 12px" value="10000" /> 米
+                <button type="button" id="bufferSearch" style="margin-right:50px;float:right;">查询</button>-->
+
+					<br />
+					<br />
+					<!--监测站：
+                <input type="checkbox" name="jiancezhan" onchange="jiancezhanChange(this)" id="waterStation" />水质监测站&nbsp;
+                <input type="checkbox" name="jiancezhan" onchange="jiancezhanChange(this)" id="airStation" />空气监测站
+                <br />-->
+					<span class="s_fact">敏感点：</span>
+					<input type="checkbox" name="mingandian" checked="checked" onchange="mingandianChange(this)" id="xuexiao" />学校&nbsp;
+					<input type="checkbox" name="mingandian" checked="checked" onchange="mingandianChange(this)" id="yiyuan" />医院&nbsp;
+					<input type="checkbox" name="mingandian" checked="checked" onchange="mingandianChange(this)" id="dangzhengjiguan" />党政机关&nbsp;
+					<input type="checkbox" name="mingandian" checked="checked" onchange="mingandianChange(this)" id="jumindi" />居民地&nbsp;
+				</div>
+			</div>
+
+		</div>
+	</body>
+
+</html>

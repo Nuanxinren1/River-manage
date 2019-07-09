@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>高级筛选</title>
+    <link rel="stylesheet" href="../../plugin/jquery-easyui-1.5/themes/bootstrap/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../../scripts/plugins/layui/css/layui.css"/>
+    <!--&lt;!&ndash;ArcGIS js API地图样式&ndash;&gt;-->
+    <!--<link rel='Stylesheet' type='text/css' href="http://192.168.10.13/arcgis_js_api/library/3.18/3.18/dijit/themes/tundra/tundra.css" />-->
+    <!--<link rel='Stylesheet' type='text/css' href="http://192.168.10.13/arcgis_js_api/library/3.18/3.18/esri/css/esri.css" />-->
+    <!--公共样式-->
+    <link rel="stylesheet" href="../../common/css/common.css">
+    <link rel="stylesheet" href="../../common/css/top/default.css">
+    <link rel="stylesheet" href="../../common/css/highSearch.css">
+    <link rel="stylesheet" href="../../common/css/top/head.css">
+    <!--<link href="css/gis/map.css" rel="stylesheet" />-->
+    <!--主页样式-->
+    <link rel="stylesheet" href="../../css/document/main.css">
+    <!--当前样式-->
+    <link rel="stylesheet" href="../../css/document/index.css">
+    <!--适配样式-->
+    <!--     <link media="screen and (max-device-width:1335px)" rel="stylesheet"
+              href="../common/css/top/1024.css" /> -->
+    <link
+            media="screen and (min-device-width:1336px) and (max-device-width:1440px)"
+            rel="stylesheet" href="../../common/css/top/1366.css" />
+    <link media="screen and (min-device-width:1900px)" rel="stylesheet"
+          href="../../common/css/top/1980.css" />
+    <link rel="stylesheet" href="../../css/document/document.css">
+    <link rel="stylesheet" href="screeningAnalysis.css">
+</head>
+<body>
+<div id="screen">
+	<!--中间的条件搜索部分-->
+	<div class="condition">
+	    <!--搜索框-->
+	    <div class="search_box">
+	        <div action="" method=" " id="simple_search">
+	            <div class="searchdiv">
+	                <!--下拉菜单显示信息位置-->
+	                <div class="search">
+	                    <span class="search_type">排口名称</span> <span class="search_img" onclick="select_panel()"><img src="../../image/archives/sel.png" /></span>
+	                </div>
+	                <!--下拉面板-->
+	                <ul class="select">
+	                    <li value="EpName">排口名称</li>
+	                    <li value="LICENSECODE">设置单位名称</li>
+	                    <li value="LEGALPERSON">联系人</li>
+	                    <li value="ADDRESS">地址</li>
+	                </ul>
+	            </div>
+	            <input type="text" id="intext" value=""  onkeypress="searchKuangName(event)"/>
+	            <input type="button" value="×" class="reset_onecondision" />
+	            <input type="button" class="btn" onclick="search()" value="搜索" />
+	
+	        </div>
+	    </div>
+	    <div class="more_search">
+	        <div class="advanced_search">
+	            <div class="search_fold">
+						<!--<span class="result_count">共<span class="count"></span>条结果-->
+						<!--</span>-->
+	                <!--<div class="view_way">-->
+	                    <!--<span class='view_method1 simple_view' onclick='tiaozhuan(0)'></span>-->
+	                    <!--<span class='map-view' onclick='' ></span>-->
+	                <!--</div>-->
+	                <div class="hsearch" onclick="set_advanced_search()">
+	                    <span class="searchImg"></span>
+	                    <span class="hsearch_span">高级搜索</span>
+	                </div>
+	            </div>
+	            <!--高级搜索条件生成地方-->
+	            <div class="hsearch_result">
+	                <div>
+	                    <input type="submit" name="submit" value="查询" onclick="clickHighSearch();" />
+	                    <input type="button" name="reset" value="清空" class="reset_muchcondision" /> <label>搜索条件：</label>
+	                    <div class="muchcondision"></div>
+	                </div>
+	            </div>
+	        </div>
+	        <!--高级搜索部分div .advanced_search_con-->
+	        <div class="advanced_search_con"></div>
+	    </div>
+	</div>
+	<div class="main">
+	    <div class="main-content" style="height: 510px">
+	        <div class="main-content-title">
+	            <p class="content-title">排污口排污总量排名</p>
+	            <img src="../../img/export.png" class="export_btn">
+	        </div>
+	        <div>
+	            <table id="renk">
+	
+	            </table>
+	        </div>
+	    </div>
+	    <div class="main-content" style="height: 410px">
+	        <div class="main-content-title">
+	            <p class="content-title">排污口实际排放量与许可排放量</p>
+	            <img src="../../img/export.png" class="export_btn">
+	        </div>
+	        <div class="bar-chart" id="bar-charts">
+	
+	        </div>
+	    </div>
+	    <div class="main-content" style="height: 350px">
+	        <!--<div class="main-content-title">-->
+	            <!--<p class="content-title">排污口类型情况分析</p>-->
+	        <!--</div>-->
+	        <img class="pwuktype" src="../../img/screeningAnalysis/paikouType.png">
+	    </div>
+	    <div class="main-content" style="height: 410px">
+	        <div class="main-content-title">
+	            <p class="content-title">排污口水质级别标准</p>
+	            <img src="../../img/export.png" class="export_btn">
+	        </div>
+	        <div class="bar-chart">
+	            <div style="width: 40%;height: 100%;float: left" id="pie-shuizhi">
+	
+	            </div>
+	            <div style="width: 60%;height: 100%;float: left" >
+	                <table id="shuizhi">
+	
+	                </table>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="main-content" style="height: 410px">
+	        <div class="main-content-title">
+	            <p class="content-title">污染因子排放占比与污水入河/入海方式占比情况</p>
+	            <img src="../../img/export.png" class="export_btn">
+	        </div>
+	        <div class="bar-chart">
+	            <div style="width: 50%;height: 100%;float: left" id="pie-yinzi">
+	
+	            </div>
+	            <div style="width: 50%;height: 100%;float: left" id="pie-paifangfangshi">
+	
+	            </div>
+	        </div>
+	    </div>
+	    <div class="main-content" style="height: 410px">
+	        <div class="main-content-title">
+	            <p class="content-title">排污口监测数据</p>
+	            <img src="../../img/export.png" class="export_btn">
+	        </div>
+	        <div class="bar-chart" id="bar-all-charts">
+	
+	        </div>
+	    </div>
+	</div>
+	
+</div>
+<script src="../../plugin/jquery-easyui-1.5/jquery.min.js"></script>
+<script src="../../plugin/jquery-easyui-1.5/jquery.easyui.min.js"></script>
+<script src="../../scripts/plugins/layui/layui.all.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../config/mapconfig.js"></script>
+<script src="../../plugin/echarts/echarts.js"></script>
+<script src="../../common/js/highSearch.js"></script>
+<script src="setEchart.js"></script>
+<script src="screeningAnalysis.js"></script>
+<script src="analysisPwk.js"></script>
+</body>
+</html>

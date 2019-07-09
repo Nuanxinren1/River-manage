@@ -1,0 +1,67 @@
+form#simple_search {
+    padding-left: 12%;
+}
+.hsearch_result form label{
+    margin-left: 108px;
+}
+.hsearch_result form{
+    margin-right: 75px;
+}
+.maincenter {
+    margin-right: 100px;
+}
+.mainright {
+    width: 300px;
+    background-color: #efefef;
+    z-index: 99;
+}
+.area {
+    max-width: 710px;
+    left: 50px;
+}
+.area li span {
+    display: inline-block;
+    padding-bottom: 5px;
+}
+.more{
+    left: 50px;
+}
+#myself {
+    margin-left: 42px;
+    margin-right: 20px;
+}
+#myself li{
+    width: auto;
+}
+#ziduan{
+    width: 100px;
+}
+#tiaojian{
+    width: 100px;
+}
+#val{
+    width: 100px;
+}
+#about{
+    width: 100px;
+}
+
+.myaimcon li{
+    padding-right: 0;
+}
+.myaimcon li span{
+    display: inline-block;
+    width: 150px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.myaimcon li .time{
+    width: 75px;
+}
+.address{
+    width: 200px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}

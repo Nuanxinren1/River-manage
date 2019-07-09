@@ -1,0 +1,142 @@
+#sewDetail{
+	width: 300px;
+	height: 100%;
+	border: 1px dashed lightgray;
+	padding: 5px;
+}
+
+#sewagePic img {
+	width: 100%;
+	height: 200px;
+}
+
+.title {
+	color: #0086C8;
+	font-weight: bold;
+	font-size: 14px;
+	height: 30px;
+	line-height: 30px;
+	width: 240px;
+}
+
+.aqinum {
+	height: 60px;
+	line-height: 60px;
+	width: 80px;
+	border-radius: 5px;
+	color: #ffffff;
+	text-align: center;
+	font-size: 65px;
+	font-weight: bold;
+	font-family: Cambria, 'Palatino Linotype', 'Book Antiqua', 'URW Palladio L', serif;
+}
+
+#overPollData {
+	margin-top: 5px;
+	max-width: 300px;
+	margin-left: 10px;
+}
+
+#seg {
+	width: 100%;
+	height: 10px;
+	background-color: lightgray;
+}
+
+.layui-tab {
+	max-width: 300px;
+	border: 1px solid lightgray;
+}
+
+.field {
+	text-align: right;
+	width: 72px;
+}
+
+#operateBtn {
+	margin-top: 10px;
+}
+
+.default-btn {
+	border: 1px solid cornflowerblue;
+}
+
+.selected-btn {
+	border: 1px solid coral;
+}
+
+.ykyd {
+	border: 1px solid cornflowerblue;
+	padding: 3px 10px;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+#factorList ul {
+	display: inline-block;
+}
+
+#factorList ul li {
+	text-align: center;
+	margin: 3px;
+}
+
+.factor-btn,
+.factorOver-btn {
+	width: 80px;
+	height: 25px;
+	line-height: 25px;
+	border-radius: 5px;
+}
+
+.factor-btn {
+	background-color: lightgray;
+}
+
+.factorOver-btn {
+	background-color: red;
+	border: 1px solid red;
+}
+
+.overData {
+	color: red;
+}
+
+#static-content {
+	text-align: center;
+	margin-top: -15px;
+	margin-bottom: 10px;
+}
+
+.static-btn {
+	background-color: #00bfa5;
+	width: 120px;
+	border-radius: 5px;
+	color: white;
+	height: 30px;
+	border: 1px solid #00bfa5;
+	line-height: 30px;
+}
+
+#monitorChart {
+	margin-top: 20px;
+	height: 300px;
+}
+
+.time-content {
+	width: 258px;
+	height: 70px;
+	background-color: #E6EEF8;
+}
+
+#fkContent ul li {
+	list-style: none;
+}
+
+.layui-text h3 {
+	margin-top: 20px;
+}
+
+.layui-tab-content td {
+	padding: 5px 1px;
+}

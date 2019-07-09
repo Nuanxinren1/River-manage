@@ -1,0 +1,81 @@
+﻿html, body {
+    margin: 0px 0px 0px 0px;
+    height: 100%;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+input[type=checkbox] {
+    vertical-align: middle;
+}
+
+.table th, .table td {
+    text-align: center;
+    padding: 4px 8px 4px 8px;
+    line-height: 18px;
+    vertical-align: middle;
+    border-top: 1px solid #dddddd;
+    font-weight: normal;
+}
+
+#bufferSearchDiv {
+    visibility: visible;
+   margin-top: 30px;
+   border-top: 1px solid #c0c0c0;
+   cursor: pointer;
+}
+
+.enterInfo a {
+    text-decoration: none; 
+}
+#bufferSearchDiv span.s_fact{
+	display: inline-block;
+	width: 60px;
+	text-align: justify;
+	text-align-last: justify;
+}
+.boldred {
+    color: red;
+   /* border: 1px solid #ccc;*/
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+#bufferSearch{
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	background: url(../../IMG/points/polluterGeneral/搜索按钮-hover.png) no-repeat 100% 100%;
+	background-size: 100%;
+	position: relative;
+	top: 7px;
+	cursor: pointer;
+}
+/*修改经纬度*/
+#update a{
+	color: #1e6386;
+}
+#coordinate{
+	display: none; 
+	width: 100%; 	
+	height:18px;
+	position: relative;
+	top: 3px;
+	left: 10px;
+}
+#coordinate a{
+	text-decoration: none;
+	color: #FFF;
+	padding:  5px;
+	border-radius: 3px;
+
+}
+#coordinate  a.save{
+	background-color: green;
+}
+#coordinate  a.cancel{
+	background-color: indianred;
+}

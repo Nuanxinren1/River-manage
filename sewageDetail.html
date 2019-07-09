@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="./scripts/plugins/layui/css/layui.css" />
+		<link rel="stylesheet" type="text/css" href="css/sewDetail.css"/>
+		<style>
+		.layui-text {
+			font-size: 10px !important;
+		}
+		.layui-text h3 {
+			font-size: 14px !important;
+		}
+		</style>
+	</head>
+	<body>
+			<div id="returnResult" style="position: absolute;top: 8px;left: 263px;z-index: 140;width: 40px;height: 22px;text-align: center !important;background: #fff;display: block;opacity: 0.6;cursor: pointer;"><span>返回</span></div>	
+		<div id="sewDetail">
+			<div class="layui-carousel" id="sewagePic" lay-filter="sewagePic">
+				<div carousel-item="">
+					<div><img src="image/archives/1.png"></div>
+					<div><img src="image/archives/2.png"></div>
+					<div><img src="image/archives/3.png"></div>
+					<div><img src="image/archives/4.png"></div>
+					<div><img src="image/archives/5.png"></div>
+				</div>
+			</div>
+			<div id="overPollData">
+				<table>
+					<tr>
+						<span>
+							<font class="title">重庆市渝北区翠桃路污水处理厂入河排污口</font>
+						</span>
+					</tr>
+					<tr>
+						<td>
+							<div class="aqinum" style="font-size: 30px; background: rgb(193, 35, 43);">超标</div>
+						</td>
+						<td>
+							<div id="div_main" style="height:60px">超标污染物（倍数）：化学需氧量（0.3）、氨氮（0.5）</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<hr id="seg" />
+			<div class="layui-tab" lay-filter="pkSwitch">
+				<ul class="layui-tab-title">
+					<li class="layui-this">基本信息</li>
+					<li>监测信息</li>
+					<li>审批信息</li>
+				</ul>
+				<div class="layui-tab-content">
+					<div class="layui-tab-item layui-show">
+						<table border="0" cellspacing="10" cellpadding="10" style="font-size:10px;">
+							<tr>
+								<td class="field">类别：</td>
+								<td>入河排污口</td>
+							</tr>
+							<tr>
+								<td class="field">日排放量：</td>
+								<td class="rpfl">45吨</td>
+							</tr>
+							<tr>
+								<td class="field">主要污染物：</td>
+								<td style="width:100px;" class="zywrw">COD、氨氮、总氮</td>
+							</tr>
+							<tr>
+								<td class="field">位置：</td>
+								<td class="wzzb">106.57027，29.69333</td>
+								<td><a
+									 class="ykyd">一口一档</a></td>
+							</tr>
+						</table>
+						<div id="operateBtn">
+							<!-- selected-btn 为点击选中的样式-->
+							<button id="suyuan" class="default-btn layui-btn layui-btn-primary layui-btn-sm" onclick="parent.pkPanelClick('suyuan')">溯源分析</button>
+							<button  id="huanchong" class="default-btn layui-btn layui-btn-primary layui-btn-sm" onclick="parent.pkPanelClick('huanchong')">周边缓冲</button>
+							<button id="video" class="default-btn layui-btn layui-btn-primary layui-btn-sm" onclick="parent.pkPanelClick('video')">视频监控</button>
+						</div>
+					</div>
+					<div class="layui-tab-item">
+						<span>当前监测情况：</span>
+						<div id="factorList" style="font-size:10px;">
+							<ul>
+								<li><button class="factorOver-btn layui-btn layui-btn-primary layui-btn-sm">化学需氧量</button></li>
+								<li class="overData">26mg/L</li>
+							</ul>
+							<ul>
+								<li><button class="factorOver-btn layui-btn layui-btn-primary layui-btn-sm">氨氮</button></li>
+								<li class="overData">1.5mg/L</li>
+							</ul>
+							<ul>
+								<li><button class="factor-btn layui-btn layui-btn-primary layui-btn-sm">总氮</button></li>
+								<li>0.34mg/L</li>
+							</ul>
+							<ul>
+								<li><button class="factor-btn layui-btn layui-btn-primary layui-btn-sm">总磷</button></li>
+								<li>0.05mg/L</li>
+							</ul>
+						</div>
+						<div id="monitorChart">
+						</div>
+						<div id="static-content">
+							<button class="static-btn layui-btn layui-btn-primary">统计分析</button>
+						</div>
+					</div>
+					<div class="layui-tab-item">
+						<ul class="layui-timeline">
+							<li class="layui-timeline-item">
+								<i class="layui-icon layui-timeline-axis"></i>
+								<div class="layui-timeline-content layui-text">
+									<h3 class="layui-timeline-title">
+										<b>罚款</b>
+										<p>2019/7/28 星期五下午</p>
+									</h3>
+									<div id="fkContent" class="time-content">
+										<ul>
+											<li>原因：氨氮含量超标</li>
+											<li>执行人：刘三庆</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li class="layui-timeline-item">
+								<i class="layui-icon layui-timeline-axis"></i>
+								<div class="layui-timeline-content layui-text">
+									<h3 class="layui-timeline-title">
+										<b>省级通过</b>
+										<p>2019/9/28 星期五下午</p>
+									</h3>
+									<div id="fkContent" class="time-content">
+										<ul>
+											<li>审批通过</li>
+											<li>审批人：李希芸</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li class="layui-timeline-item">
+								<i class="layui-icon layui-timeline-axis"></i>
+								<div class="layui-timeline-content layui-text">
+									<h3 class="layui-timeline-title">
+										<b>地市级通过</b>
+									</h3>
+								</div>
+							</li>
+						</ul>
+						<div id="static-content">
+							<button class="static-btn layui-btn layui-btn-primary">统计分析</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="./scripts/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./scripts/plugins/layui/layui.all.js" type="text/javascript" charset="utf-8"></script>
+		<script src="scripts/echarts/echarts.js" type="text/javascript" charset="utf-8"></script>
+		<script src="scripts/sewDetail.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

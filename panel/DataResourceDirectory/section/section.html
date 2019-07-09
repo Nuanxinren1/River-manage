@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<link rel="stylesheet" type="text/css" href="../layui/css/layui.css"/>
+		<link rel="stylesheet" href="section.css">
+	</head>
+	<body>
+		<div id="section">
+			<div class="search">
+				<span>名称:</span> <input class="ipt" type="text" placeholder="请输入"> 
+                <span>所属行政区:</span> <input class="ipt" type="text" placeholder="请输入"> 
+                <span>河流湖库级别:</span> <input class="ipt" type="text" placeholder="请输入"> 
+				<!--<span>行政区划:</span>
+				<select class="ipt">
+					<option value ="1">生态保护</option>
+					<option value ="2">生态保护</option>
+					<option value ="3">生态保护</option>
+					<option value ="4">生态保护</option>
+				</select>
+				<span>排污流向:</span>
+				<select class="ipt">
+					<option value ="1">全部</option>
+					<option value ="2">生态保护</option>
+					<option value ="3">生态保护</option>
+					<option value ="4">生态保护</option>
+				</select>-->
+				<span id="searchBtn">查询</span>
+				<span id="reset">重置</span>
+			</div>
+			<div class="caozuo">
+				<span id="daochu"></span>
+				<span id="xinzeng"></span>
+				<span id="xiugai"></span>
+				<span id="shanchu"></span>
+			</div>
+			<table lay-even class="layui-hide" id="demo"  lay-filter="test"></table>
+			<div id="page" ></div>
+		</div>
+		<script type="text/html" id="barDemo">
+		  <a class="layui-btn layui-btn-xs" lay-event="edit"><span class="edit"></span></a>
+		  <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><span class="dele"></span></a>
+		</script>
+	</body>
+	<script src="../../../scripts/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../layui/layui.all.js"></script>
+	<script src="section.js" type="text/javascript" charset="utf-8"></script>
+	
+</html>

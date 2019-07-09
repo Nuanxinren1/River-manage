@@ -1,0 +1,50 @@
+﻿#leftMenu {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+}
+
+    #leftMenu ul {
+        list-style: none;
+        margin: 0;
+    }
+
+.rootMenu {
+    border-radius: 5px;
+    overflow: hidden;
+    background: #fff;
+}
+
+    .rootMenu h3 {
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 30px;
+        background: #049AA0 url(../img/LeftMenu/zhankai.png) no-repeat 215px center;
+        margin: 0;
+        color: #ffffff;
+        padding: 0 20px;
+        width: 200px;
+        cursor: pointer;
+        border-bottom: 1px solid #ffffff;
+    }
+
+    .rootMenu h3.open {
+        background: #049AA0 url(../img/LeftMenu/zhankai_open.png) no-repeat 215px center;
+    }
+
+    .rootMenu .secondMenu {
+        display: none;
+        padding: 8px 30px;
+    }
+
+        .rootMenu .secondMenu li {
+            line-height: 28px;
+            cursor: pointer;
+        }
+
+        .detailPanle{
+            position:absolute;
+            top:60px;
+            right:30px;
+            background:#ffffff;
+        }

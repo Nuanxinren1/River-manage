@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <!--************************* config *************************-->
+    <script src="../../Scripts/jquery-3.3.1.js"></script>
+    <script src="../../config/utils.js"></script>
+
+    <!--************************* CSS *************************-->
+    <link href="../../Scripts/plugins/bootstrap-2.3.2/css/bootstrap.css" rel="stylesheet" />
+    <link href="../../css/scroll.css" rel="stylesheet" />
+    <link href="default.css" rel="stylesheet" />
+    <link href="statistics.css" rel="stylesheet" />
+    <link href="poilist.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="middle">
+        <div style="width:100%; height:100%; background:#ffffff;">
+            <!--所有点位统计页（统计信息和列表）-->
+            <div id="citysStatiscs">
+                <!--切换按钮-->
+                <div class="statiscs_type_change">
+                    <span class="desc button" title="描述" onclick="statiscsTypeChange('desc')"></span>
+                    <span class="bar button" title="区县排名" onclick="statiscsTypeChange('sort')"></span>
+                    <span class="pie button" title="优良率统计" onclick="statiscsTypeChange('ratio')"></span>
+                </div>
+                <!--统计信息（描述，排名，优良率）-->
+                <div id="citysStatiscsInfo" class="statiscsInfo">
+                    <div id="citysStatiscsDesc" class="statiscsDesc">
+                        <div class="title">
+                            <h2>城市</h2>
+                            <a href="../../" target="_blank">查看详细</a>
+                            <p>数据更新时间：<span>2000-01-01 00:00:00</span></p>
+                        </div>
+                        <ul>
+                            <li class="value">
+                                <div>-</div>
+                                <span>AQI指数</span>
+                            </li>
+                            <li class="level">
+                                <div>-</div>
+                                <span>空气质量级别</span>
+                            </li>
+                            <li class="count">
+                                <div>-</div>
+                                <span>收录站点个数</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="citysStatiscsSort" class="statiscsCharts" style="display:none;"></div>
+                    <div id="citysStatiscsRatio" class="statiscsCharts" style="display:none;"></div>
+                </div>
+                <div style="padding:5px;">
+                    <!--仿百度列表展示-->
+                    <ul class='poilist' style='display:block;'></ul>
+                    <!--<ul class="poilist" style="display:block;">
+                    <li class="poilist-item">
+                        <div class="left">
+                            <a href="javascript:void(0)" class="poiImg poiImg-1"></a>
+                        </div>
+                        <div class="right">
+                            <h2 class="pollutionIndex">86</h2>
+                            <span class="pollutionClass" style="background-color: #4ddd24;">轻度污染</span>
+                        </div>
+                        <div class="middle poilist-item-middle ">
+                            <div class="rowline">
+                                <h3 class="stationName">洛阳市</h3>
+                            </div>
+                            <div class="rowline">
+                                AQI:<a href="javascript:void(0)" class="aqi">NO.2</a>
+                            </div>
+                            <div class="rowline">
+                                首要污染物:<span class="contaminants" title="PM2.5、SO2、NO2、PM2.5、SO2、NO2">PM2.5、SO2、NO2、PM2.5、SO2、NO2</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="poilist-item">
+                        <div class="left">
+                            <a href="javascript:void(0)" class="poiImg poiImg-2"></a>
+                        </div>
+                        <div class="right">
+                            <h2 class="pollutionIndex">86</h2>
+                            <span class="pollutionClass">轻度污染</span>
+                        </div>
+                        <div class="middle poilist-item-middle ">
+                            <div class="rowline">
+                                <h3 class="stationName">洛阳市</h3>
+                            </div>
+                            <div class="rowline">
+                                AQI:<a href="javascript:void(0)" class="aqi">NO.2</a>
+                            </div>
+                            <div class="rowline">
+                                首要污染物:<span class="contaminants" title="PM2.5、SO2、NO2、PM2.5、SO2、NO2">PM2.5、SO2、NO2、PM2.5、SO2、NO2</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>-->
+                    <!--列表展示-->
+                    <table id="airCityTable" cellpadding='0' cellspacing='0' border='0'></table>
+                </div>
+            </div>
+
+            <!--单个点位统计页（统计信息和列表）-->
+            <div id="cityStatiscs" style="display:none;">
+                <div class="statiscs_type_change">
+                    <span class="pie button" title="饼状图" onclick="statiscsTypeChange_oneStatiscs('ratio')"></span>
+                    <span class="line button" title="折线图" onclick="statiscsTypeChange_oneStatiscs('line')"></span>
+                </div>
+                <!--统计信息（描述，排名，优良率）-->
+                <div id="cityStatiscsInfo" class="statiscsInfo">
+                    <div id="cityStatiscsRatio" class="statiscsCharts"></div>
+                    <div id="cityStatiscsLine" class="statiscsCharts" style="display:none;"></div>
+                </div>
+                <div id="cityStatiscsDesc" class="statiscsDesc">
+                    <div class="title">
+                        <h3>城市</h3>
+                        <a href="../../" target="_blank">查看详细</a>
+                        <span class="back" title="返回" onclick="back()"></span>
+                        <p>数据更新时间：<span>2000-01-01 00:00:00</span></p>
+                    </div>
+                    <ul>
+                        <li class="value">
+                            <div>-</div>
+                            <span>AQI指数</span>
+                        </li>
+                        <li class="level">
+                            <div>-</div>
+                            <span>空气质量级别</span>
+                        </li>
+                        <li class="rank">
+                            <div>-</div>
+                            <span>区县排名</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<!--bootstraptable-->
+<script src="../../Scripts/plugins/bootstraptable-1.8.1/bootstrap-table.js"></script>
+<script src="../../Scripts/plugins/bootstraptable-1.8.1/bootstrap-table-zh-CN.min.js"></script>
+<!--echarts-->
+<script src="../../Scripts/plugins/echarts/echarts.js"></script>
+
+<!--main主方法-->
+<script src="../../Scripts/utils/tableInit.js"></script>
+<script src="../../Scripts/utils/timeFormat.js"></script>
+<script src="defaultCity.js"></script>
+<script src="defaultCityPOI.js"></script>
+<script src="defaultStation.js"></script>
+<script src="defaultStationPOI.js"></script>
+<script src="default.js"></script>

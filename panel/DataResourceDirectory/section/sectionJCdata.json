@@ -1,0 +1,341 @@
+﻿{
+	 "status": 200
+	  ,"message": ""
+	  ,"total": 30,
+	  "rows": {
+      "item": [
+        {
+          "SectionName": "扁山",
+          "SectionCode": "A110011",
+          "Year": "2016",
+          "BOD5": "2.8",
+          "ChemistryO": "7.67",
+          "NH4N": "0.434",
+          "N": "2.22",
+          "P": "0.086",
+          "DissolutionO": "10"
+        },
+        {
+          "SectionName": "蒋家嘴",
+          "SectionCode": "A110012",
+          "Year": "2016",
+          "BOD5": "2.3",
+          "ChemistryO": "5",
+          "NH4N": "0.046",
+          "N": "1.6",
+          "P": "0.079",
+          "DissolutionO": "10"
+        },
+        {
+          "SectionName": "中俄交界东",
+          "SectionCode": "A110013",
+          "Year": "2016",
+          "BOD5": "2.0L",
+          "ChemistryO": "16.3",
+          "NH4N": "0.077",
+          "N": "0.348",
+          "P": "0.047",
+          "DissolutionO": "10"
+        },
+        {
+          "SectionName": "中俄交界西",
+          "SectionCode": "A110014",
+          "Year": "2016",
+          "BOD5": "2.0L",
+          "ChemistryO": "17.4",
+          "NH4N": "0.047",
+          "N": "0.428",
+          "P": "0.043",
+          "DissolutionO": "10"
+        },
+        {
+          "SectionName": "北湖中心",
+          "SectionCode": "A110015",
+          "Year": "2016",
+          "BOD5": "2.0L",
+          "ChemistryO": "10.0L",
+          "NH4N": "0.04",
+          "N": "1.54",
+          "P": "0.02",
+          "DissolutionO": "10.1"
+        },
+        {
+          "SectionName": "档壁镇",
+          "SectionCode": "A110016",
+          "Year": "2016",
+          "BOD5": "2.0L",
+          "ChemistryO": "17.8",
+          "NH4N": "0.061",
+          "N": "0.368",
+          "P": "0.043",
+          "DissolutionO": "10.1"
+        },
+        {
+          "SectionName": "东洞庭湖",
+          "SectionCode": "A110017",
+          "Year": "2016",
+          "BOD5": "3.17",
+          "ChemistryO": "7",
+          "NH4N": "0.516",
+          "N": "2.27",
+          "P": "0.074",
+          "DissolutionO": "10.1"
+        },
+        {
+          "SectionName": "南嘴",
+          "SectionCode": "A110018",
+          "Year": "2016",
+          "BOD5": "2.53",
+          "ChemistryO": "7.33",
+          "NH4N": "0.172",
+          "N": "1.83",
+          "P": "0.084",
+          "DissolutionO": "10.1"
+        },
+        {
+          "SectionName": "三道",
+          "SectionCode": "A110019",
+          "Year": "2016",
+          "BOD5": "2.0L",
+          "ChemistryO": "16.1",
+          "NH4N": "0.189",
+          "N": "1.04",
+          "P": "0.06",
+          "DissolutionO": "10.1"
+        },
+        {
+          "SectionName": "万子湖",
+          "SectionCode": "A110020",
+          "Year": "2016",
+          "BOD5": "2.5",
+          "ChemistryO": "5",
+          "NH4N": "0.091",
+          "N": "1.727",
+          "P": "0.088",
+          "DissolutionO": "10.1"
+        },
+        {
+          "SectionName": "新开流",
+          "SectionCode": "A110021",
+          "Year": "2016",
+          "BOD5": "2.0L",
+          "ChemistryO": "19.8",
+          "NH4N": "0.239",
+          "N": "0.658",
+          "P": "0.043",
+          "DissolutionO": "10.1"
+        },
+        {
+          "SectionName": "中俄交界中",
+          "SectionCode": "A110022",
+          "Year": "2016",
+          "BOD5": "2.0L",
+          "ChemistryO": "16.8",
+          "NH4N": "0.058",
+          "N": "0.418",
+          "P": "0.043",
+          "DissolutionO": "10.1"
+        },
+        {
+          "SectionName": "疗养院",
+          "SectionCode": "A110023",
+          "Year": "2016",
+          "BOD5": "2.0L",
+          "ChemistryO": "17",
+          "NH4N": "0.055",
+          "N": "0.418",
+          "P": "0.047",
+          "DissolutionO": "10.2"
+        },
+        {
+          "SectionName": "龙王庙",
+          "SectionCode": "A110024",
+          "Year": "2016",
+          "BOD5": "2.0L",
+          "ChemistryO": "16.4",
+          "NH4N": "0.093",
+          "N": "0.448",
+          "P": "0.047",
+          "DissolutionO": "10.2"
+        },
+        {
+          "SectionName": "鹿角",
+          "SectionCode": "A110025",
+          "Year": "2016",
+          "BOD5": "2.6",
+          "ChemistryO": "6.67",
+          "NH4N": "0.297",
+          "N": "1.96",
+          "P": "0.091",
+          "DissolutionO": "10.2"
+        },
+        {
+          "SectionName": "梅梁湖心",
+          "SectionCode": "A110026",
+          "Year": "2016",
+          "BOD5": "3.1",
+          "ChemistryO": "18",
+          "NH4N": "0.05",
+          "N": "1.62",
+          "P": "0.04",
+          "DissolutionO": "10.2"
+        },
+        {
+          "SectionName": "入湖口",
+          "SectionCode": "A110027",
+          "Year": "2016",
+          "BOD5": "1.2",
+          "ChemistryO": "13",
+          "NH4N": "0.108",
+          "N": "0.442",
+          "P": "0.02",
+          "DissolutionO": "10.2"
+        },
+        {
+          "SectionName": "小河嘴",
+          "SectionCode": "A110028",
+          "Year": "2016",
+          "BOD5": "2.27",
+          "ChemistryO": "5.33",
+          "NH4N": "0.065",
+          "N": "1.68",
+          "P": "0.083",
+          "DissolutionO": "10.2"
+        },
+        {
+          "SectionName": "虞公庙",
+          "SectionCode": "A110029",
+          "Year": "2016",
+          "BOD5": "2.23",
+          "ChemistryO": "8.33",
+          "NH4N": "0.4",
+          "N": "2.457",
+          "P": "0.07",
+          "DissolutionO": "10.2"
+        },
+        {
+          "SectionName": "岳阳楼",
+          "SectionCode": "A110030",
+          "Year": "2016",
+          "BOD5": "1.37",
+          "ChemistryO": "7.33",
+          "NH4N": "0.398",
+          "N": "2.153",
+          "P": "0.114",
+          "DissolutionO": "10.2"
+        },
+        {
+          "SectionName": "东梁子湖湖心",
+          "SectionCode": "A110031",
+          "Year": "2016",
+          "BOD5": "1.1",
+          "ChemistryO": "12",
+          "NH4N": "0.097",
+          "N": "0.473",
+          "P": "0.03",
+          "DissolutionO": "10.3"
+        },
+        {
+          "SectionName": "洞庭湖出口",
+          "SectionCode": "A110032",
+          "Year": "2016",
+          "BOD5": "1.77",
+          "ChemistryO": "6.67",
+          "NH4N": "0.395",
+          "N": "2.293",
+          "P": "0.124",
+          "DissolutionO": "10.3"
+        },
+        {
+          "SectionName": "沙湖",
+          "SectionCode": "A110033",
+          "Year": "2016",
+          "BOD5": "4",
+          "ChemistryO": "57",
+          "NH4N": "0.591",
+          "N": "1.7",
+          "P": "0.09",
+          "DissolutionO": "10.3"
+        },
+        {
+          "SectionName": "竺山湖心",
+          "SectionCode": "A110034",
+          "Year": "2016",
+          "BOD5": "3.5",
+          "ChemistryO": "19",
+          "NH4N": "1.07",
+          "N": "5.29",
+          "P": "0.17",
+          "DissolutionO": "10.3"
+        },
+        {
+          "SectionName": "江夏湖心",
+          "SectionCode": "A110035",
+          "Year": "2016",
+          "BOD5": "2.8",
+          "ChemistryO": "10",
+          "NH4N": "0.392",
+          "N": "0.64",
+          "P": "0.034",
+          "DissolutionO": "10.4"
+        },
+        {
+          "SectionName": "牛山湖湖心",
+          "SectionCode": "A110036",
+          "Year": "2016",
+          "BOD5": "2.3",
+          "ChemistryO": "15",
+          "NH4N": "0.193",
+          "N": "0.48",
+          "P": "0.025",
+          "DissolutionO": "10.4"
+        },
+        {
+          "SectionName": "西梁子湖湖北",
+          "SectionCode": "A110037",
+          "Year": "2016",
+          "BOD5": "1.6",
+          "ChemistryO": "10",
+          "NH4N": "0.157",
+          "N": "0.37",
+          "P": "0.023",
+          "DissolutionO": "10.5"
+        },
+        {
+          "SectionName": "东湖湖心",
+          "SectionCode": "A110038",
+          "Year": "2016",
+          "BOD5": "3.3",
+          "ChemistryO": "12",
+          "NH4N": "0.416",
+          "N": "2.5",
+          "P": "0.1",
+          "DissolutionO": "10.6"
+        },
+        {
+          "SectionName": "电视塔",
+          "SectionCode": "A110039",
+          "Year": "2016",
+          "BOD5": "2.0L",
+          "ChemistryO": "16.1",
+          "NH4N": "0.073",
+          "N": "0.7",
+          "P": "0.001",
+          "DissolutionO": "10.6"
+        },
+        {
+          "SectionName": "南山",
+          "SectionCode": "A110040",
+          "Year": "2016",
+          "BOD5": "0.8",
+          "ChemistryO": "10.0L",
+          "NH4N": "0.051",
+          "N": "3.94",
+          "P": "0.02",
+          "DissolutionO": "10.6"
+        }
+
+      ] 
+
+	 }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>登录</title>
+    <meta charset="utf-8" />
+
+    <link href="css/login.css" rel="stylesheet" />
+    <script src="scripts/jquery-1.11.3.js"></script>
+    <script src="scripts/login/login.js"></script>
+    <style type="text/css">
+        
+    </style>
+</head>
+<body>
+
+<div class="login_title">
+
+</div>
+    <div class="login_box">
+        <div class="login_left">
+
+        </div>
+        <div class="login_form">
+            <p>登录</p>
+            <form method="" action="">
+                <div class="iptdiv">
+					<input id="yhm" type="text" placeholder="用户名"><br>
+					<input id="pass" type="password" placeholder="密码">
+                </div>
+				<span class="login_Btn">登录</span>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
+<script>
+    window.onload = function () {
+        delCookie("GIS_USER_TOKEN");
+    }
+</script>

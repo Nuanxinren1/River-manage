@@ -1,0 +1,213 @@
+﻿html, body {
+    margin: 0px 0px 0px 0px;
+    height: 100%;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.ul {
+    height: 80px;
+    margin: 0px auto 10px auto;
+    border-radius: 3px 3px 3px 3px;
+}
+
+    .ul li {
+        width: 140px;
+        height: 65px;
+        list-style: none;
+        float: left;
+        display: inline;
+        text-align: center;
+        margin: 0px 25px 0px 25px;
+        padding-top: 15px;
+    }
+
+        .ul li span {
+            display: block;
+        }
+
+.title {
+    color: #0086C8;
+    font-weight: bold;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    width: 120px;
+}
+
+.aqinum {
+    height: 90px;
+    line-height: 90px;
+    width: 180px;
+    border-radius: 5px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 65px;
+    font-weight: bold;
+    font-family: Cambria, 'Palatino Linotype', 'Book Antiqua', 'URW Palladio L',serif;
+}
+
+.aqides {
+    text-align: left;
+    color: #6FBE09;
+    font-size: 40px;
+    height: 60px;
+    line-height: 60px;
+    font-weight: bold;
+    font-family: Cambria, 'Palatino Linotype', 'Book Antiqua', 'URW Palladio L',serif;
+}
+
+.table th, .table td {
+    text-align: center;
+    padding: 4px 8px 4px 8px;
+    line-height: 18px;
+    vertical-align: middle;
+    border-top: 1px solid #dddddd;
+    font-weight: normal;
+}
+
+.airlabel {
+    background: #6FBE09;
+    color: #ffffff;
+    border-radius: 3px 3px 3px 3px;
+    width: 54px;
+    height: 25px;
+}
+
+#txt_date {
+    margin: 0px;
+    padding: 0px;
+    width: 150px;
+    height: 20px;
+    background: url("../../IMG/ICONS/16/clock.png") no-repeat 135px;
+}
+
+.descpanel {
+    display: block;
+    width: 54px;
+    height: 25px;
+    color: #ffffff;
+    border-radius: 3px 3px 3px 3px;
+    line-height: 25px;
+    margin-left: 8px;
+}
+
+.chart {
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-top: 2px;
+    margin-bottom: 4px;
+}
+
+#div_echart2 {
+    height: 210px!important;
+}
+
+#div_dec {
+    padding: 5px;
+}
+
+.api {
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    padding-left: 2px;
+    margin-bottom: 2px;
+}
+
+
+.detail {
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+}
+
+
+    .detail ul {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+    }
+
+.city-item {
+}
+
+
+.factorAttr ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+    .factorAttr ul li {
+        float: left;
+    }
+
+.title-border {
+    margin: 5px;
+    padding: 5px;
+    background: #3385FF;
+    width: 250px;
+    color: #ffffff;
+    border-radius: 3px 3px 3px 3px;
+}
+
+.city-item .factor {
+    text-align: center;
+    height: 25px;
+    line-height: 25px;
+}
+
+.city-item .factorVal {
+    text-align: center;
+    height: 28px;
+    line-height: 28px;
+}
+
+.factorborder {
+    border: 1px solid #e0e0c0;
+    border-radius: 3px 3px 3px 3px;
+    margin: 0px 10px 0px 10px;
+}
+
+    .factorborder:hover {
+        background-color: #006ECC;
+        color: #ffffff;
+        border: 1px solid #fff;
+        box-shadow: 1px 1px 3px 1px #b4d7ed;
+    }
+
+.boldred {
+    font-weight: bold;
+    color: red;
+    border: 1px solid #ccc;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+    .boldred:hover {
+        color: red;
+        text-decoration: underline;
+    }
+
+.t_analysis {
+    margin-top: 5px;
+}
+
+    .t_analysis a {
+        color: #B94A48;
+        padding: 5px;
+    }
+
+        .t_analysis a:hover {
+            color: #ffffff;
+            text-decoration: none;
+            background: #3385FF;
+            border-radius: 3px;
+        }
+#div_body{
+	padding: 5px 7px;
+	box-sizing: border-box;
+}
+.fixed-table-container tbody td:last-child span {
+    margin: 0 auto!important;
+}

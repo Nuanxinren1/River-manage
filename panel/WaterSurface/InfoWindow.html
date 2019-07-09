@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="../../Scripts/jquery-1.11.3.js"></script>
+    <script src="../../Scripts/config/mapconfig.js"></script>
+    <!--插件-->
+    <link href="../../CSS/bootstrap.css" rel="stylesheet" type="text/css" />
+    <!--自定义-->
+    <link href="InfoWindow.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div id="div_body">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tbody>
+                <tr>
+                    <td>
+                        <table id="factor_concentration" cellpadding="0" cellspacing="0" border="0" class="table table-bordered">
+                            <tr class="shujutab">
+                                <td class="btnselect" id="WQI" onclick="typeClick('QualityRate')" style="width:30px;">
+                                    水质
+                                    级别
+                                </td>
+                                <td id="PH" onclick="typeClick('PH')">
+                                    pH值
+                                </td>
+                                <td id="TEMP" onclick="typeClick('TEMP')">
+                                    水温<br /><sub style="font-size:smaller;">(℃)</sub>
+                                </td>
+                                <td id="DO" onclick="typeClick('DO')">
+                                    溶解氧<br /><sub style="font-size:smaller;">(mg/L)</sub>
+                                </td>
+                                <td id="AD" onclick="typeClick('AD')">
+                                    氨氮<br /><sub style="font-size:smaller;">(mg/L)</sub>
+                                </td>
+                                <td id="KM" onclick="typeClick('KM')">
+                                    高猛酸甲<br /><sub style="font-size:smaller;">(mg/L)</sub>
+                                </td>
+                                <td id="EC" onclick="typeClick('EC')">
+                                    电导率<br /><sub style="font-size:smaller;">(μS/cm)</sub>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div id="div_wqi">10</div>
+                                </td>
+                                <td>
+                                    <div id="div_ph">10</div>
+                                </td>
+                                <td>
+                                    <div id="div_temp">10</div>
+                                </td>
+                                <td>
+                                    <div id="div_do">10</div>
+                                </td>
+                                <td>
+                                    <div id="div_ad">10</div>
+                                </td>
+                                <td>
+                                    <div id="div_10km">10</div>
+                                </td>
+                                <td>
+                                    <div id="div_ec">10</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr style="margin-top: 5px;">
+                    <td>
+                        &nbsp;
+                        <button class="searchnewbtn" id="searchTime5" onclick="searchCityByID(5)">优良率</button>&nbsp;
+                        <button class="searchnewbtn" id="searchTime4" onclick="searchCityByID(4,'三年')">近年年均</button>&nbsp;
+                        <button class="searchnewbtn newbtnac" id="searchTime0" onclick="searchCityByID(0,'一年')">最近一年</button>&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="div_echartLine" style="height:165px"></div>
+                        <div id="div_echartBar" style="height:165px;display:none;"></div>
+                    </td>
+                </tr>
+                <!--<tr>
+                    <td>
+                        预留功能位置
+                    </td>
+                </tr>-->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+<!--插件-->
+<!--Echarts引用-->
+<script src="../../Scripts/plugins/charts/echarts/echarts.js"></script>
+<!--自定义-->
+<script src="../../Scripts/custom/coustomTool.js"></script>
+<script src="datePicker.js" type="text/javascript"></script>
+<script src="infoWindow.js" type="text/javascript"></script>

@@ -1,0 +1,418 @@
+.header {
+    background: url("../.././common/images/red/red_logo.png") #e55464;
+}
+.btn {
+    border: 1px solid #e55464;
+    background-color: #e55464;
+}
+.select{
+    border: 1px solid #e55464;
+    border-top: 0;
+}
+.search{
+    border: 1px solid #e55464;
+    border-right: 0;
+}
+#intext{
+    border: 1px solid #e55464;
+    border-left: 0;
+}
+.myself_info{
+    color: #e55464;
+}
+.hsearch_result form input[type="submit"] {
+    background-color: #e55464;
+}
+.advanced_search {
+    background-color:  #fef4f5;
+}
+.advanced_search_con {
+    background-color:  #fef4f5;
+}
+.add {
+    background-color: #e55464;
+}
+.ptitle{
+    background-color:  #fef4f5;
+}
+.onok{
+    background-color: #e55464;
+    border: 1px solid #e55464;
+}
+.hsearch span{
+    color: #e55464;
+}
+.count{
+    color: #e55464;
+}
+.ui-paging-container li.ui-pager:hover, .ui-paging-container li.focus{
+    background-color: #e55464 !important;
+    color: #FFFFFF;
+}
+.icon_del:hover{
+    background-color: #e55464;
+    color: #ffffff !important;
+    animation: rotate 300ms;
+    -webkit-animation: rotate 300ms ;
+    animation-fill-mode: forwards;
+}
+.condision span {
+    color: #e55464;
+}
+.more_bottom {
+    background-color: #fef4f5;
+}
+.onsub {
+    background-color: #e55464;
+    border: 1px solid #e55464;
+}
+.selectli{
+    border-left: 4px solid #e55464;
+    color: #000000;
+}
+
+#north{
+    background: url("../.././common/images/red/red_logo.png") #e55464;
+}
+/*瑕佸啓鍒板垏鎹㈢毊鑲ょ殑鏍峰紡閲岄潰*/
+.datagrid-header, .datagrid-td-rownumber{
+   /*  background: linear-gradient(to bottom,#e55464 0,#e55464 100%); */
+    height: 40px;
+}
+.datagrid-header td.datagrid-header-over {
+   /*  background: #e55464; */
+    /*color: #00438a;*/
+    cursor: default;
+}
+.search_btn{
+    background-color: #e55464;
+}
+.reset_onecondision:hover{
+     background-color: #e55464;
+ }
+.hsearch_result div input[name="submit"]{
+      background-color: #e55464;
+ }
+/*  锟斤拷锟斤拷锟斤拷锟斤拷锟揭碉拷锟斤拷图锟斤拷图锟斤拷 */
+ .Motor_vehicle{
+    background:url("../images/red/vehicle.png");
+}
+.Myself_template{
+    background:url("../images/red/mytemp.png");
+}
+/* 8-21 */
+.tabs li.tabs-selected a.tabs-inner{
+	border-top: 3px solid #e55464;
+}
+.layui-layer-content .tabs li.tabs-selected a.tabs-inner{
+	border-top: 2px solid #fff;
+	color:#e55464;
+}
+/* 锟斤拷图锟叫伙拷锟斤拷钮 */
+.view_method1{
+	display:inline-block;
+	width:14px;
+	height:12px;
+	background:url("../images/red/view_list.png")
+}
+.view_method2{
+	display:inline-block;
+	width:14px;
+	height:12px;
+	background:url("../images/red/view_see.png")
+}
+/* 08-22 */
+/* 锟斤拷锟斤拷锟斤拷选锟斤拷锟斤拷色 */
+.li_hover{
+	background-color:#fef4f5;
+}
+.onpassok{
+	background-color:#e55464;
+}
+.searchImg{
+	background:url("../images/red/search.png") no-repeat;
+	background-size: 80% 80%; 
+}
+.hsearch_span{
+	color:#e55464;
+}
+/* layer锟斤拷锟斤拷锟斤拷锟绞�*/
+.layui-layer-title{
+	background-color: #fef4f5 !important;
+}
+.aimComList li:hover{
+	background-color:#f5f5f5;
+	color:#e55464;
+}
+.aimComList::-webkit-scrollbar-thumb{
+	background:#f9c4ca;
+}
+/* ztree锟斤拷锟节碉拷锟斤拷锟绞�*/
+.ztree li span.button{
+	background-image: url(../images/red/metro.png);
+}
+.ztree li ul.line {
+    background: url(../images/red/line_conn.png) 0 0 repeat-y;
+}
+.addline {
+    background: url(../images/red/line_conn.png) 0 0 repeat-y;
+}
+/* 锟斤拷图锟斤拷 */
+/* 锟斤拷页图锟斤拷 */
+.ztree li span.button.Home_ico_open,.ztree li span.button.Home_ico_close,.ztree li span.button.Home_ico_docu{
+	display: inline-block;
+    float: left;
+    margin-right:5px;
+    margin-top:5px;
+	background:url("../images/red/Home.png") no-repeat;
+	
+}
+/* 锟斤拷锟斤拷锟斤拷息图锟斤拷 */
+.ztree li span.button.baseInfo_ico_open,.ztree li span.button.baseInfo_ico_close,.ztree li span.button.baseInfo_ico_docu{
+	display: inline-block;
+    float: left;
+    margin-left:5px;
+    margin-top: 3px;
+	background:url("../images/red/baseInFo.png") no-repeat;
+}
+/* 锟斤拷业锟斤拷锟斤拷锟斤拷息 */
+.ztree li span.button.CbaseInFo_ico_open,.ztree li span.button.CbaseInFo_ico_close,.ztree li span.button.CbaseInFo_ico_docu{
+	display: inline-block;
+    float: left;
+    margin-left:5px;
+    margin-top:5px;
+	background:url("../images/red/CbaseInFo.png") no-repeat;	
+}
+/* 锟斤拷要锟斤拷品 */
+.ztree li span.button.MainPro_ico_open,.ztree li span.button.MainPro_ico_close,.ztree li span.button.MainPro_ico_docu{
+	display: inline-block;
+    float: left;
+    margin-left:5px;
+    margin-top:5px;
+	background:url("../images/red/MainPro.png") no-repeat;	
+}
+/* 锟斤拷水锟斤拷锟斤拷 */
+.ztree li span.button.WasteW_ico_open,.ztree li span.button.WasteW_ico_close,.ztree li span.button.WasteW_ico_docu{
+	display: inline-block;
+    float: left;
+    margin-left:5px;
+    margin-top:5px;
+	background:url("../images/red/WasteW.png") no-repeat;	
+}
+/* 锟斤拷锟斤拷锟斤拷息 */
+.ztree li span.button.Annex_ico_open,.ztree li span.button.Annex_ico_close,.ztree li span.button.Annex_ico_docu{
+	display: inline-block;
+    float: left;
+    margin-left:5px;
+    margin-top:5px;
+	background:url("../images/red/Annex.png") no-repeat;	
+}
+/* 锟斤拷锟斤拷锟斤拷目图锟斤拷 */
+.ztree li span.button.ConstrPro_ico_open,.ztree li span.button.ConstrPro_ico_close,.ztree li span.button.ConstrPro_ico_docu{
+	display: inline-block;
+    float: left;
+    margin-left:5px;
+    margin-top: 3px;
+	background:url("../images/red/ConstrPro.png") no-repeat;	
+}
+/* 锟斤拷锟斤拷锟斤拷目锟斤拷锟斤拷 */
+.ztree li span.button.ConstrSP_ico_open,.ztree li span.button.ConstrSP_ico_close,.ztree li span.button.ConstrSP_ico_docu{
+	display: inline-block;
+    float: left;
+    margin-left:5px;
+    margin-top:5px;
+	background:url("../images/red/ConstrSP.png") no-repeat;	
+}
+/* 锟斤拷锟竭硷拷锟�*/
+.ztree li span.button.OnlineMon_ico_open,.ztree li span.button.OnlineMon_ico_close,.ztree li span.button.OnlineMon_ico_docu{
+	display: inline-block;
+    float: left;
+     margin-left:5px;
+     margin-top: 3px;
+	background:url("../images/red/OnlineMon.png") no-repeat;	
+}
+/* 锟斤拷锟斤拷锟斤拷息 */
+.ztree li span.button.AirInfo_ico_open,.ztree li span.button.AirInfo_ico_close,.ztree li span.button.AirInfo_ico_docu{
+	display: inline-block;
+    float: left;
+    margin-left:5px;
+    margin-top:5px;
+	background:url("../images/red/AirInfo.png") no-repeat;	
+}
+/* 锟斤拷水锟斤拷息 */
+.ztree li span.button.WaterInfo_ico_open,.ztree li span.button.WaterInfo_ico_close,.ztree li span.button.WaterInfo_ico_docu{
+	display: inline-block;
+    float: left;
+    margin-left:5px;
+    margin-top:5px;
+	background:url("../images/red/WaterInfo.png") no-repeat;	
+}
+/* 锟斤拷水锟斤拷息 */
+.ztree li span.button.InputWater_ico_open,.ztree li span.button.InputWater_ico_close,.ztree li span.button.InputWater_ico_docu{
+	display: inline-block;
+    float: left;
+    margin-left:5px;
+    margin-top:5px;
+	background:url("../images/red/InputWater.png") no-repeat;	
+}
+/* 锟脚凤拷锟斤拷息 */
+.ztree li span.button.Emissions_ico_open,.ztree li span.button.Emissions_ico_close,.ztree li span.button.Emissions_ico_docu{
+	display: inline-block;
+    float: left;
+    margin-left:5px;
+    margin-top: 3px;
+	background:url("../images/red/Emissions.png") no-repeat;	
+}
+/* 锟脚凤拷锟斤拷锟街わ拷锟较�*/
+.ztree li span.button.License_ico_open,.ztree li span.button.License_ico_close,.ztree li span.button.License_ico_docu{
+	display: inline-block;
+    float: left;
+    margin-left:5px;
+    margin-top:5px;
+	background:url("../images/red/License.png") no-repeat;	
+}
+/* 锟斤拷锟斤拷锟秸凤拷锟斤拷息 */
+.ztree li span.button.WasteCost_ico_open,.ztree li span.button.WasteCost_ico_close,.ztree li span.button.WasteCost_ico_docu{
+	display: inline-block;
+    float: left;
+    margin-left:5px;
+    margin-top:5px;
+	background:url("../images/red/WasteCost.png") no-repeat;	
+}
+/* 锟斤拷站锟斤拷息 */
+.ztree li span.button.AllThing_ico_open,.ztree li span.button.AllThing_ico_close,.ztree li span.button.AllThing_ico_docu{
+	display: inline-block;
+    float: left;
+    margin-left:5px;
+    margin-top: 3px;
+	background:url("../images/red/baseInFo.png") no-repeat;	
+}
+/* 锟斤拷站锟斤拷息展示 */
+.ztree li span.button.AllInfo_ico_open,.ztree li span.button.AllInfo_ico_close,.ztree li span.button.AllInfo_ico_docu{
+	display: inline-block;
+    float: left;
+    margin-left:5px;
+    margin-top:5px;
+	background:url("../images/red/baseInFo.png") no-repeat;	
+}
+/* 锟斤拷锟斤拷统锟斤拷 */
+.ztree li span.button.Environmental_ico_open,.ztree li span.button.Environmental_ico_close,.ztree li span.button.Environmental_ico_docu{
+	display: inline-block;
+    float: left;
+    margin-left:5px;
+    margin-top: 3px;
+	background:url("../images/red/Environmental.png") no-repeat;	
+}
+/* 锟斤拷页 */
+.ztree li span.button.Division_ico_open,.ztree li span.button.Division_ico_close,.ztree li span.button.Division_ico_docu{
+	display: inline-block;
+    float: left;
+     margin-left:5px;
+     margin-top:5px;
+	background:url("../images/red/baseInFo.png") no-repeat;	
+}
+/* 锟斤拷锟斤拷页 */
+.ztree li span.button.UnDivision_ico_open,.ztree li span.button.UnDivision_ico_close,.ztree li span.button.UnDivision_ico_docu
+{
+	display: inline-block;
+    float: left;
+    margin-left:5px;
+    margin-top:5px;
+	background:url("../images/red/baseInFo.png") no-repeat;	
+}
+.myself_delete{
+	background-color:#e55464;	
+}
+.sub_form input[type="button"]{
+	background-color: #e55464;
+}
+/* layer锟斤拷锟斤拷陌锟脚�*/
+.layui-layer-btn .layui-layer-btn0{
+	background-color:#e55464 !important;	
+	border-color: #e55464 !important;
+}
+/* 锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷式 */
+.view_head{
+	background: url(../../image/customview/bgback.png) #e55464 no-repeat;
+}
+/* 08-24 */
+.updown{
+	    background-color:#e55464;
+}
+/* 锟皆讹拷锟斤拷锟斤拷图锟介看锟斤拷锟斤拷 */
+.view_head{
+	    background: url(../../image/customview/bgback.png) #e55464 no-repeat;
+}
+
+/* 08-29  */
+/* 每一锟斤拷锟街的橈拷锟絵 */
+.base_title_l{
+	border-left: 4px solid #e55464;
+}
+/* 09-04锟斤拷锟斤拷锟斤拷锟斤拷锟窖★拷锟斤拷锟缴拷锟斤拷锟绞�*/
+.ztree>li>ul>li ul>li>a.curSelectedNode .node_name{
+	color: #e55464;
+}
+/* 09-06锟皆讹拷锟藉看锟藉弹锟斤拷锟今背撅拷色 */
+.select_tab{
+	background-color:#fef4f5;
+}
+.all_condition li{
+		border:1px solid #e55464;
+}
+.deleteZ{
+	border:1px solid #e55464;
+	background-color:#e55464;
+}
+/* GIS锟斤拷锟斤拷 */
+.GISHead {
+    background: url(../../image/gis/head_bg.png) #e55464 no-repeat;
+}
+.template_ol li.selected{
+	border-left: 4px solid #e55464;	
+}
+.btn_div .search_btn{
+	background-color:#e55464;
+}
+.timeTab li.selected{
+	background-color:#e55464;
+	color:#fff;
+}
+.aim_logo{
+	background:url("../images/red/aimred.png")
+}
+.history_logo{
+	background:url("../images/red/historyred.png")
+}
+.base_img{
+	background:url("../images/red/qyxx.png")
+}
+.loca_img{
+	background:url("../images/red/qywz.png")
+}
+.hjpj_img{
+	background:url("../images/red/hpxx.png")
+}
+.tabs_select {
+    background: #e55464;
+}
+.gis_tabs{
+	border: 1px solid #e55464;
+}
+.searchInput{
+	color:#e55464;
+}
+.createC{
+	background-color: #e55464;
+}
+.updateWaring{
+	background-color: #e55464;
+	
+}
+.Myself_analysis{
+	background: url(../images/red/analy.png)
+	
+}
+.outExcel{
+	background: url(../images/red/Excel.png)	
+}

@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>环境地理信息平台</title>
+    <meta charset="utf-8" />
+    <link href="favicon.ico" rel="shortcut icon" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no" />
+
+    <!--************************* config *************************-->
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script src="config/mapconfig.js"></script>
+    <script src="config/config.js"></script>
+    <script src="config/utils.js"></script>
+
+    <!--************************* CSS *************************-->
+    <!--bootstrap样式-->
+    <!-- <link href="Scripts/plugins/bootstrap-2.3.2/css/bootstrap.css" rel="stylesheet" /> -->
+    <!-- slider需要的easyui样式 -->
+    <link href="scripts/plugins/jquery-easyui/themes/material/easyui.css" />
+    <link href="scripts/plugins/jquery-easyui/themes/icon.css" />
+    <link rel="stylesheet" href="plugin/paging/paging.css" />
+    <!--ArcGIS js API地图样式-->
+    <!-- <link rel='Stylesheet' type='text/css'
+        href="http://192.168.4.111/arcgis_js_api/library/3.18/3.18/dijit/themes/tundra/tundra.css" />
+    <link rel='Stylesheet' type='text/css'
+        href="http://192.168.4.111/arcgis_js_api/library/3.18/3.18/esri/css/esri.css" /> -->
+    <link rel='Stylesheet' type='text/css'
+        href="http://10.103.27.110/arcgis_js_v317_api/arcgis_js_api/library/3.17/3.17/dijit/themes/tundra/tundra.css" />
+    <link rel="stylesheet"
+        href="http://10.103.27.110/arcgis_js_v317_api/arcgis_js_api/library/3.17/3.17/esri/css/esri.css"/>
+    <!--自定义样式-->
+    <link href="css/map.css" rel="stylesheet" />
+    <link href="css/maptype.css" rel="stylesheet" />
+    <link href="css/mapcover.css" rel="stylesheet" />
+    <!-- <link href="css/jspanel.css" rel="stylesheet" /> -->
+    <link href="css/scroll.css" rel="stylesheet" />
+    <link href="css/tool.css" rel="stylesheet" />
+    <link href="css/leftMenu.css" rel="stylesheet" />
+	
+	<!--公共样式-->
+	<link rel="stylesheet" href="common/css/common.css">
+	<link rel="stylesheet" href="common/css/top/default.css">
+	<link rel="stylesheet" href="common/css/highSearch.css">
+	<link rel="stylesheet" href="common/css/top/head.css">
+	
+    <!--当前样式-->
+    <link rel="stylesheet" href="css/document/index.css">
+    <link
+            media="screen and (min-device-width:1336px) and (max-device-width:1440px)"
+            rel="stylesheet" href="common/css/top/1366.css" />
+    <link media="screen and (min-device-width:1900px)" rel="stylesheet"
+          href="common/css/top/1980.css" />
+    <link rel="stylesheet" href="css/document/document.css">
+    <style>
+        .jsPanel-headerbar {
+            height: 25px;
+        }
+        .jsPanel-hdr jsPanel-hdr-light{
+           display: none;
+        }
+        .close {
+            background-image: url(img/wrong.png);
+            width: 11px;
+            height: 11px;
+            top: 10px;
+            margin-right: 10px;
+        }
+
+        .jsPanel-controlbar .jsPanel-btn svg.jsPanel-icon {
+            width: 25px !important;
+        }
+
+        tr {
+            border: 1px solid #B5D2EC;
+        }
+
+        td {
+            border: 1px solid #F0F1F0;
+            font-size: 10px;
+            text-align: center;
+        }
+
+        .toolTable {
+            position: absolute;
+            top: 60px;
+            right: 10px;
+            z-index: 100;
+            background: white;
+            height: 30px;
+            width: 350px;
+        }
+
+
+        .topToolsFocus {
+            color: #5FB2C3;
+        }
+
+        .bh_tools {
+            position: absolute;
+            top: 90px;
+            z-index: 100;
+            background: white;
+            height: 45px;
+            width: 180px;
+            right: 168px;
+        }
+
+        .cjTools_fen {
+            position: absolute;
+            top: 90px;
+            z-index: 100;
+            background: white;
+            height: 45px;
+            width: 80px;
+            right: 288px;
+        }
+
+        .bhyc {
+            display: none;
+        }
+
+        .sDQh {
+            background: #4DA9BD;
+        }
+
+        .addInputC {
+            width: 80%;
+            padding: 0px;
+            border: 0;
+            margin: 0px;
+            float: left;
+            margin-left: 10px;
+            font-size: 10px;
+            outline: none;
+        }
+
+        .slider-handle {
+            background: url('img/HCPoint.png') no-repeat;
+            position: absolute;
+            display: block;
+            outline: none;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            margin-top: 12px;
+            margin-left: -10px;
+        }
+        slider-handleNew{
+            margin-top: 74px !important;
+        }
+        .slider-inner {
+            border-color: black !important;
+            background: black !important;
+            height: 3px !important;
+            margin-top: 10px;
+            width: 130px;
+            margin-left: 5px;
+        }
+
+        .slider-tip {
+            display: none;
+        }
+
+        .rightPCOP {
+            height: 30px;
+            width: 30px;
+            line-height: 35px;
+        }
+
+        .rightPCOPDiv {
+            text-align: center;
+            height: 35px;
+            width: 35px;
+            border: 1px solid #fff;
+            font-size: 10px;
+            font-family: monospace;
+            background: #fff;
+            cursor: pointer;
+        }
+
+        .KBDiv {
+            width: 40px;
+            height: 5px;
+        }
+
+        .rightSpanClic {
+            background: #4DA9BD;
+            color: white;
+        }
+
+        .esriPopup .titleButton.maximize {
+            right: 31px !important;
+        }
+        .esriPopup .esriPopupWrapper {
+            background: #fff
+        }
+		.hsearch,.result_count{
+			margin-top: 15px;
+		}
+		.result_count{
+			margin-left: 100px;
+		}
+		#simple_search{
+			width: 600px;
+		}
+		#intext{
+			width: 400px;
+		}
+		.search_box{
+			width: auto;
+			display: inline-block;
+			margin-left: 100px;
+			margin-bottom: 10px;
+		}
+        .lengendColor{
+            width:12px;height:12px;margin-top: 2px; margin-left: 10px;border-radius: 2px;
+        }
+        .lengendImage{
+            height:32px;
+            width:32px;
+        }
+        .pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 4px 0 !important;
+    border-radius: 4px;
+}
+.paginationjs .paginationjs-pages li>a {
+        min-width: 28px!important;
+    }
+    .maincenter{
+        margin-right: 0px !important; 
+    }
+    .company_info {
+    width:100% !important;
+    }
+    .maintitle {
+  
+    font-size: 10px;
+}
+.companyList{
+    font-size: 10px;
+}
+.companyList li{
+    font-size: 10px;
+    height: 18px;
+}
+.companyList>li span {
+    font-size: 10px !important;
+}
+.updateTime {
+    float: left;
+}
+.tag{
+    display: none;
+}
+.pf-type {
+  margin: 0px !important;
+}
+.pf-type>li {
+    margin-right: 3px !important;
+    padding: 0 0px;
+    height: 26px !important;
+}
+.content{
+    background: #fff
+}
+.no_p {
+    font-size: 15px;
+}
+#_easyui_textbox_input4{
+width: 135px !important;
+}
+#_easyui_textbox_input5{
+    width: 135px !important;
+}
+#_easyui_textbox_input6{
+    width: 135px !important;
+}
+.hidePointBasic{
+    display: none !important;
+}
+.pointClickMsg{
+    position:absolute;top:39px;left:0px;z-index:100;display: none;height: 600px;width: 330px;
+}
+.companyListNew{
+    position:absolute;top:39px;right:100px;z-index:100;display: none;height: 600px;width: 330px;
+}
+    </style>
+</head>
+
+<body>
+    <!-- 地图部分 -->
+    <div id="mapdiv">
+        <div>
+            <div id="pointClickMsg" class="pointClickMsg">
+                <!-- <img src="img/modelPicture/pointMsg.png" />
+                <table id="pointPKClick" style="position:absolute;top:376px;left: 48px;z-index: 100;">
+                    <tr style="height:23px;">
+                        <td id="suyuan" style="width:56px;background: #FFF8F2;opacity: 0;"></td>
+                        <td id="zhoubian" style="width:77px;background:#F5FBF8 ;opacity: 0;"></td>
+                        <td id="video" style="width:63px;background:#F6FAFB ;opacity: 0;"></td>
+                    </tr>
+                </table> -->
+                <iframe  id="piiframe" style="background:#fff;margin-top: 24px;"></iframe>
+            </div>
+            <div id="companyListNew" class="companyListNew">
+                <!-- <img src="img/modelPicture/pointMsg.png" />
+                <table id="pointPKClick" style="position:absolute;top:376px;left: 48px;z-index: 100;">
+                    <tr style="height:23px;">
+                        <td id="suyuan" style="width:56px;background: #FFF8F2;opacity: 0;"></td>
+                        <td id="zhoubian" style="width:77px;background:#F5FBF8 ;opacity: 0;"></td>
+                        <td id="video" style="width:63px;background:#F6FAFB ;opacity: 0;"></td>
+                    </tr>
+                </table> -->
+                <iframe  id="companyIframe" style="background:#fff;margin-top: 24px;"></iframe>
+            </div>
+            <div id="dyhw" style="position: absolute;  top: 100px; right: 10px; z-index: 100; width: 40px;">
+                <!-- <img src="img/modelPicture/topDaohang.png" /> -->
+                <div class="rightPCOPDiv" style="line-height: 16px;"><span class="">日排放量</span></div>
+                <div class="KBDiv"></div>
+                <div class="rightPCOPDiv"><span class="rightPCOP">氨氮</span></div>
+                <div class="KBDiv"></div>
+                <div class="rightPCOPDiv"> <span class="rightPCOP">总氧</span></div>
+                <div class="KBDiv"></div>
+                <div class="rightPCOPDiv"><span class="rightPCOP">总磷</span></div>
+                <div class="KBDiv"></div>
+                <div class="rightPCOPDiv"><span class="rightPCOP">COD</span></div>
+                <div class="KBDiv"></div>
+                <div class="rightPCOPDiv"><span class="rightPCOP">PH</span></div>
+            </div>
+            <div id="dhL" style="position: absolute;  top: 0px;  z-index: 130;width: 100%;">
+				
+                <!-- <img src="img/modelPicture/rightShaiXuan.png" /> -->
+				<div class="advanced_search">
+				    <div class="search_fold">
+						<span class="result_count">共<span class="count">0</span>条结果
+						</span>
+						
+						<!--搜索框-->
+						<div class="search_box">
+							<div action="" method=" " id="simple_search">
+								<div class="searchdiv">
+									<!--下拉菜单显示信息位置-->
+									<div class="search">
+										<span class="search_type">排口名称</span> <span class="search_img" onclick="select_panel()"><img src="image/archives/sel.png" /></span>
+									</div>
+									<!--下拉面板-->
+									<ul class="select">
+										<li value="EpName">排口名称</li>
+										<li value="LICENSECODE">设置单位名称</li>
+										<li value="LEGALPERSON">联系人</li>
+										<li value="ADDRESS">地址</li>
+									</ul>
+								</div>
+								<input type="text" id="intext" value=""  onkeypress="searchKuangName(event)"/>
+								<input type="button" value="×" class="reset_onecondision" />
+								<input type="button" class="btn" onclick="search()" value="搜索" />
+									
+							</div>
+						</div>
+				        <div class="hsearch" onclick="set_advanced_search()">
+				            <span class="searchImg"></span>
+				            <span class="hsearch_span">高级搜索</span>
+				        </div>
+				    </div>
+				    <!--高级搜索条件生成地方-->
+				    <div class="hsearch_result">
+				        <div>
+				            <input type="submit" name="submit" value="查询" onclick="clickHighSearch();" />
+				            <input type="button" name="reset" value="清空" class="reset_muchcondision" /> <label>搜索条件：</label>
+				            <div class="muchcondision"></div>
+				        </div>
+				    </div>
+				</div>
+				<!--高级搜索部分div .advanced_search_con-->
+				<div class="advanced_search_con"></div>
+            </div>
+            <div id="huanchong"
+                style="position:absolute;bottom:100px;left:335px;z-index:100;height:85px;width: 300px;background: white;display:none;">
+                <table style="width:100%;">
+
+                    <table style="width:100%;">
+                        <tr>
+                            <td><span
+                                    style="font-size: 2px; font-family: monospace; font-weight: 600; float: left; margin-left: 10px;  margin-top: 5px;">缓冲设置</span>
+                                <img style="float: right; margin-right: 10px;margin-top: 6px;" src="img/menu/close.png"
+                                    onclick="closeHCSeting()" /></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul style="list-style: none;">
+                                    <li style="float:left;margin-left: 8px;"><input style="margin-top:-2px;"
+                                            type="checkbox" name="hc" value="pollutionY" checked />污染源</li>
+                                    <li style="float:left;margin-left: 45px;"><input style="margin-top:-2px;"
+                                            type="checkbox" name="hc" value="waterLevelDM" />水质检测断面
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height:25px;">
+                                <ul style="list-style: none;">
+                                    <li style="float:left;margin-left: 8px;"><span>半径</span></li>
+                                    <li style="float:left">
+                                        <input id="water_slider" class="easyui-slider" style="width:200px"
+                                            data-options="showTip:true,min:0,max:10" />
+                                    </li>
+                                    <li style="float:left;">
+                                        <input id="distinctLength"
+                                            style="border: 0;padding: 0px;float: left;width: 35px;border: 1px solid grey;border-radius: 0;margin-left: -59px;margin-top: 3px;height: 15px;"
+                                            type="text" /><span
+                                            style="font-size: 10px; margin-left: -20px;vertical-align: middle;">KM</span>
+                                    </li>
+                                    <li style="float:left">
+                                        <div id="mingandianSearch" style="margin-left: 15px;background: #4DA9BD;
+                                        width: 40px;margin-top:1px;    cursor: pointer;"><span>确认</span></div>
+                                    </li>
+                                </ul>
+
+
+                            </td>
+                        </tr>
+                    </table>
+            </div>
+        </div>
+        <div id="legendOpen" style="position:absolute;bottom:8px;left:340px;z-index:100;background: #fff;width: 225px;display: none;">
+                <div style="height:35px;width: 225px;text-align: center;font-size: 17px;font-family: monospace;
+                margin-top: 10px;">
+                    <span>图例</span>
+                    <img style="float: right; margin-right: 10px;
+                    margin-top: 3px;" src="img/menu/close.png"  onclick="closeLengend()"/>
+                </div>
+                <table style="width:220px;margin-left:2px;">
+                    <tr>
+                        <td  style="border: 1px solid #fff;" colspan="2"><span>污染源数量</span></td>
+                        <td  colspan="2" style="border: 1px solid #fff;"><span>排污口类别</span></td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #fff;"><div class="lengendColor" style="background-color: #51DEA0"></div></td>
+                        <td style="border: 1px solid #fff;text-align: left;">0-2000</td>
+                        <td style="border: 1px solid #fff;"><img class="lengendImage" src="img/PKPoints/river.png"/></td>
+                        <td style="border: 1px solid #fff;text-align: left;">入河排污口</td>
+                    </tr>
+                    <tr>
+                            <td style="border: 1px solid #fff;"><div class="lengendColor" style="background-color: #FEBE24"></div></td>
+                            <td style="border: 1px solid #fff;text-align: left;">2000-7000</td>
+                            <td style="border: 1px solid #fff;"><img class="lengendImage" src="img/PKPoints/sea.png"/></td>
+                        <td style="border: 1px solid #fff;text-align: left;">入海排污口</td>
+                    </tr>
+                    <tr>
+                            <td style="border: 1px solid #fff;"><div class="lengendColor" style="background-color: #FE8F24"></div></td>
+                            <td style="border: 1px solid #fff;text-align: left;">7000-20000</td>
+                            <td style="border: 1px solid #fff;"></td>
+                        <td style="border: 1px solid #fff;"></td>
+                    </tr>
+                    <tr>
+                            <td style="border: 1px solid #fff;"><div class="lengendColor" style="background-color: #55B3D7"></div></td>
+                            <td style="border: 1px solid #fff;text-align: left;">20000+</td>
+                        <td style="border: 1px solid #fff;"></td>
+                        <td style="border: 1px solid #fff;"></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="lengendClose" style="position:absolute;bottom:8px;left:340px;z-index:200;text-align: center;font-size: 17px;font-family: monospace;height: 30px;width:44px;background: #4DA9BD;cursor: pointer;" onclick="openLengend()"><span style="vertical-align: sub;">图例</span></div>
+            <div id="mapMainSearch"  style="position: absolute;top: 62px;left: 0px;width: 283px;z-index: 103;background: #fff;height:580px; overflow-y: scroll;display: none;">
+                    <div class="maincenter">
+                            <ul class="maincon" style="overflow:auto;"></ul>
+                            <div class="paginat" id="paginta">
+                                <div id="page"></div>
+                            </div>
+                        </div>
+                    <div id='pagination-container' style="padding-top: 1px;"></div>
+            </div>
+            <div class="more_codition">
+                <div class="show_codition">
+                    <!-- <ol>
+            </ol> -->
+                </div>
+                <div class="more_bottom"></div>
+            </div>
+        <!-- <div id="sliderParent" style="position: absolute;top: 200px;left: 300px;z-index: 100; padding: 50px;background-color: gray;display: inline-block;">
+            </div> -->
+        <!-- 导航栏 -->
+        <!-- <div class="navlist" id="navlist">
+              
+            </div> -->
+        <!-- <div class="map-hierarchy" id="map-hierarchy" v-cloak>
+                <span id="QG" onclick="back_China(this)" style="cursor: pointer" value="000000" v-if="level">全国</span>
+                <span id="QGCode" style="display:none"></span>
+                <span id="Sheng" onclick="back_China(this)" style="cursor: pointer"></span>
+                <span id="ShengCode" style="display:none"></span>
+                <span id="Shi" onclick="back_China(this)" style="cursor: pointer"></span>
+                <span id="ShiCode" style="display:none"></span>
+                <span id="Xian" onclick="back_China(this)" style="cursor: pointer"></span>
+                <span id="XianCode" style="display:none"></span>
+            </div> -->
+        <!-- <div class="globalSearch">
+                <input  class="searchText"  type="text"/>
+            </div> -->
+        <div class="topToolsd">
+            <table id="topTools" class="toolTable">
+                <tr>
+                    <td style="cursor:pointer"><img id="cj" src="img/mapIcon/测量.png" /><span>测距</span></td>
+                    <td style="cursor:pointer"><img id="bh" src="img/mapIcon/标绘.png" /><span>标绘工具</span></td>
+                    <td style="cursor:pointer"><img id="jqdw" src="img/mapIcon/精准定位.png" /><span>精确定位</span></td>
+                    <td style="cursor:pointer"><img id="tcdj" src="img/mapIcon/图层.png" /><span>图层叠加</span></td>
+                </tr>
+            </table>
+            <table id="cjTools_fen" class="cjTools_fen" style="display:none">
+                <td id="line2" style="border:0px !important"><img id="line22" title="距离测量"
+                        src="img/mapIcon/toolIcon/线.png" /></td>
+                <td id="area2" style="border:0px !important"><img id="area22" title="面积测量"
+                        src="img/mapIcon/toolIcon/面.png" /></td>
+            </table>
+            <table id="bh_tools" class="bh_tools" style="display:none">
+                <td id="circle1" style="border:0px !important"><img id="circle" title="圆形查询" src="img/mapIcon/toolIcon/圆.png" /></td>
+                <td id="line1" style="border:0px !important"><img id="line" title="矩形查询" src="img/mapIcon/toolIcon/长方形.png" /></td>
+                <td id="area1" style="border:0px !important"><img id="area" title="多边形查询" src="img/mapIcon/toolIcon/面.png" /></td>
+                <td id="bgz1" style="border:0px !important"><img id="bgz"  title="自由多边形查询" src="img/mapIcon/toolIcon/不规则.png" /></td>
+            </table>
+            <div style="position: absolute;  top: 90px;  right: 116px;  z-index: 100;  background: white; width: 255px;    height: 140px;display: none;"
+                id="jqdw_open">
+                <table style="margin:10px;width:110px;height:25px;">
+                    <tr style="border:0px">
+                        <td class="sDQh"><span>十进制</span></td>
+                        <td><span>度分秒</span></td>
+                    </tr>
+                </table>
+                <table id="" class="jqdw_open" style="margin: 15px;width: 220px;">
+                    <tr style="height:26px;">
+                        <td><span>经度:</span></td>
+                        <td><input   id="addLon" style="width:80% ;padding: 0px;border: 0;margin: 0px;float: left;
+ margin-left: 10px;  font-size: 10px;outline: none;" placeholder="请输入经度" type="text" /></td>
+                    </tr>
+                    <tr style="height:26px;">
+                        <td><span>纬度:</span></td>
+                        <td><input id="addLat"
+                                style="width:80%;padding: 0px;border:0;margin: 0px;float: left;  margin-left: 10px; font-size: 10px;outline: none;"
+                                placeholder="请输入纬度" type="text" /></td>
+                    </tr>
+                </table>
+                <div style="height: 20px;width: 48px;background:#4DA9BD;text-align: center; margin-left: 187px;margin-top: -7px;cursor: pointer;" id="jqDwSearch"><span>查询</span></div>
+            </div>
+            <div id="layerAddS" class="layerAdds"
+                style="position: absolute;  top: 90px;  right:84px;  z-index: 100;  background: white; width: 213px;height: 160px;display: none;">
+                <ul style="list-style:none;margin-left: 17px;">
+                    <li>
+                        <a href="javascript:void(0)">
+                            <input type="checkbox" name="layer" value="1" style="vertical-align: top; "
+                                 />长江流域以及渤海支流
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <input type="checkbox" name="layer" value="2" style="vertical-align: top; "
+                                id="waterBaoHu" />地表水功能区划
+                            <div id="water_slider" style="width: 150px; display: none; padding-left: 33px;"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <input id="project_water" type="checkbox" name="layer" value="3"
+                                style="vertical-align: top; " />饮用水源保护区
+                        </a>
+                    </li>
+                    <li style="position:relative">
+                        <a href="javascript:void(0)">
+                            <input type="checkbox" name="layer" value="4" style="vertical-align: top; " />水资源一级分区
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <input type="checkbox" name="layer" value="5" style="vertical-align: top; " />水资源二级分区
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <input type="checkbox" name="layer" value="6" style="vertical-align: top; " />水资源三级分区
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <input id="project_soil" type="checkbox" name="layer" value="7"
+                                style="vertical-align: top; "  />河流水系
+                        </a>
+                    </li>
+                    <li>
+                        <input id="water_slider2" class="easyui-slider" style="width:200px"
+                        data-options="showTip:true,min:0,max:10" />
+                        <input id="distinctLength"
+                        style="border: 0;padding: 0px;float: left;width: 35px;border: 1px solid grey;border-radius: 0;margin-left: 141px;margin-top: -11px;height: 15px;"
+                        type="text" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="map">
+            <div class="BasemapToggle" role="presentation" style="display: block;" id="BasemapToggle"
+                widgetid="BasemapToggle">
+                <!-- 切换底图 -->
+                <div id="mapType">
+                    <div class="mapTypeCard panorama choosedType active" name="baseMap_VEC" data-name="矢量图">
+                        <span>矢量图</span>
+                    </div>
+                    <div class="mapTypeCard normal" name="baseMap_DEM" data-name="地形图">
+                        <span>地形图</span>
+                    </div>
+                    <div class="mapTypeCard satellite" name="baseMap_IMG" data-name="影像图">
+                        <span>影像图</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 经纬度信息 -->
+        <div id="PositionBar"></div>
+    </div>
+
+    <!--右边工具栏-->
+    <div id="toolBarPanel">
+        <ul id="Toolbar">
+            <li id="toolZoomIn" title="放大地图" class=""><img src="img/maptoolbar/zoomin.png"></li>
+            <li id="toolZoomOut" title="缩小地图" class=""><img src="img/maptoolbar/zoomout.png"></li>
+            <li id="toolPan" title="漫游" class="active"><img src="img/maptoolbar/move.png"></li>
+            <li id="toolFullExtent" title="初始化"><img src="img/maptoolbar/fullmap.png"></li>
+            <!-- <li id="toolMeasure" title="测距" class=""><img src="img/maptoolbar/ceju.png"></li>
+            <li id="toolSpaceSearch" title="空间查询" class=""><img src="img/maptoolbar/spacesearch.png"></li>
+            <li id="toolBufferSearch" title="缓冲查询" class=""><img src="img/maptoolbar/huanchong.png"></li>
+            <li id="toolPlotting" title="标绘" class=""><img src="img/maptoolbar/biaohui.png"></li>
+            <li id="toolPrint" title="打印"><img src="img/maptoolbar/print.png"></li>
+            <li id="toolCYGJ" title="常用工具"><img src="img/maptoolbar/cygj.png"></li> -->
+            <li id="toolClear" title="清除" style="border-bottom:none;"><img src="img/maptoolbar/clear.png"></li>
+        </ul>
+    </div>
+
+    <!--常用工具-->
+    <div id="toolCYGJ_drop" class="tool_drop" style="display:none;">
+        <ul class="toolPlotting_drop_ul">
+            <li class="tip" title="标识" onclick="">
+                <img src="img/maptoolbar/mark.png" />
+            </li>
+            <li class="tip" title="全屏" onclick="toggleFullScreen()">
+                <img src="img/maptoolbar/fullscreen.png" alt="" />
+            </li>
+        </ul>
+    </div>
+
+
+    <!--测距-->
+    <!-- <div id="toolMeasure_drop" class="tool_drop" style="display:none;">
+        <ul class="toolPlotting_drop_ul">
+            <li class="tip" title="长度测量" onclick="btn_measure(0)">
+                <img src="img/maptoolbar/长度测量.png" />
+            </li>
+            <li class="tip" title="面积测量" onclick="btn_measure(1)">
+                <img src="img/maptoolbar/面积测量.png" alt="" />
+            </li>
+        </ul>
+    </div> -->
+
+    <!--空间查询-->
+    <!-- <div id="toolSpaceSearch_drop" class="tool_drop" style="display:none;">
+        <ul class="toolPlotting_drop_ul">
+            <li class="tip" title="矩形查询" onclick="btn_ExSpace(0)">
+                <img src="img/DynamicPlot/矩形.png" />
+            </li>
+            <li class="tip" title="圆形查询" onclick="btn_ExSpace(1)">
+                <img src="img/DynamicPlot/圆.png" />
+            </li>
+            <li class="tip" title="多边形查询" onclick="btn_ExSpace(2)">
+                <img src="img/DynamicPlot/多边形.png" />
+            </li>
+            <li class="tip" title="自由多边形查询" onclick="btn_ExSpace(3)">
+                <img src="img/DynamicPlot/自由面.png" />
+            </li>
+        </ul>
+    </div> -->
+
+    <!--缓冲查询-->
+    <div id="toolBufferSearch_drop" class="tool_drop" style="display:none;">
+        <ul class="toolPlotting_drop_ul">
+            <li class="tip" title="点" onclick="btn_Buffer(0)">
+                <img src="img/DynamicPlot/单点.png" />
+            </li>
+            <li class="tip" title="直线" onclick="btn_Buffer(1)">
+                <img src="img/DynamicPlot/直线.png" />
+            </li>
+            <li class="tip" title="多边形" onclick="btn_Buffer(2)">
+                <img src="img/DynamicPlot/多边形.png" />
+            </li>
+            <li class="tip" title="自由多边形" onclick="btn_Buffer(3)">
+                <img src="img/DynamicPlot/自由面.png" />
+            </li>
+        </ul>
+        <div style="margin-top: 50px; padding-left: 0px">
+            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tr>
+                    <td style="height: 30px; width: 70px;">
+                        <span class="label label-warning">半径(km)</span>
+                    </td>
+                    <td colspan='2 ' style="height: 20px;">
+                        <input id="txt_distant" class="spinner" style="width: 50px;" value='25 ' readonly="readonly" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!--动态标绘-->
+    <div id="toolPlotting_drop" class="tool_drop" style="display:none;">
+        <table cellpadding="0" cellspacing="0" border="0">
+            <tr>
+                <td style="height: 30px; width: 70px;">
+                    <span class="label label-warning">图形尺寸</span>
+                </td>
+                <td colspan='2 ' style="height: 30px;">
+                    <input id="txt_graph" class="spinner" style="width: 80px;" value='25 ' readonly="readonly" />
+                </td>
+            </tr>
+            <tr>
+                <td style="height: 30px; width: 70px;">
+                    <span class="label label-important">背景颜色</span>
+                </td>
+                <td colspan='2 ' style="height: 30px;">
+                    <span id="sp_bgcolor" class="colorpicker" style="display: none"></span>
+                </td>
+            </tr>
+            <tr>
+                <td style="height: 30px; width: 70px;">
+                    <span class="label label-important">透明度</span>
+                </td>
+                <td style="height: 30px;">
+                    <div id="slider" style="margin-left:10px;">
+                    </div>
+                </td>
+                <td width="40" align="center">
+                    <span id="sp_slidervalue">100</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="height: 30px; width: 70px;">
+                    <span class="label label-info">边框尺寸</span>
+                </td>
+                <td colspan='2 ' style="height: 30px;">
+                    <input id="txt_border" class="spinner" style="width: 80px;" value='1 ' readonly="readonly" />
+                </td>
+            </tr>
+            <tr>
+                <td style="height: 30px; width: 70px;">
+                    <span class="label label-info">边框颜色</span>
+                </td>
+                <td colspan='2 ' style="height: 30px;">
+                    <span id="sp_bordercolor" class="colorpicker" style="display: none"></span>
+                </td>
+            </tr>
+        </table>
+        <ul class="toolPlotting_drop_ul">
+            <li class="tip" title="单点" onclick="btn_DynamicPlot(0)">
+                <img src="img/DynamicPlot/单点.png" />
+            </li>
+            <li class="tip" title="多点" onclick="btn_DynamicPlot(1)">
+                <img src="img/DynamicPlot/多点.png" />
+            </li>
+            <li class="tip" title="两点环线" onclick="btn_DynamicPlot(15)">
+                <img src="img/DynamicPlot/两点环线.png" />
+            </li>
+            <!--<li class="tip" title="多点环线" onclick="btn_DynamicPlot(16)">
+                <img src="img/DynamicPlot/多点环线.png" />
+            </li>-->
+            <li class="tip" title="直线" onclick="btn_DynamicPlot(2)">
+                <img src="img/DynamicPlot/直线.png" />
+            </li>
+            <!--<li class="tip" title="折线" onclick="btn_DynamicPlot(3)" style="margin-top: 5px">
+                <img src="img/DynamicPlot/折线.png" />
+            </li>-->
+            <li class="tip" title="多边形" onclick="btn_DynamicPlot(4)" style="margin-top: 5px">
+                <img src="img/DynamicPlot/多边形.png" />
+            </li>
+            <li class="tip" title="多线段" onclick="btn_DynamicPlot(5)" style="margin-top: 5px">
+                <img src="img/DynamicPlot/多线段.png" />
+            </li>
+            <li class="tip" title="自由面" onclick="btn_DynamicPlot(6)" style="margin-top: 5px">
+                <img src="img/DynamicPlot/自由面.png" />
+            </li>
+            <li class="tip" title="多点曲面" onclick="btn_DynamicPlot(17)" style="margin-top: 5px">
+                <img src="img/DynamicPlot/多点曲面.png" />
+            </li>
+            <li class="tip" title="旋转箭头" onclick="btn_DynamicPlot(7)" style="margin-top: 5px">
+                <img src="img/DynamicPlot/旋转箭头.png" />
+            </li>
+            <!--<li class="tip" title="自由箭头" onclick="btn_DynamicPlot(18)" style="margin-top: 5px">
+                <img src="img/DynamicPlot/自由箭头.png" alt="" />
+            </li>-->
+            <li class="tip" title="左箭头" onclick="btn_DynamicPlot(8)" style="margin-top: 5px">
+                <img src="img/DynamicPlot/左箭头.png" />
+            </li>
+            <li class="tip" title="右箭头" onclick="btn_DynamicPlot(9)" style="margin-top: 5px">
+                <img src="img/DynamicPlot/右箭头.png" />
+            </li>
+            <li class="tip" title="上箭头" onclick="btn_DynamicPlot(10)" style="margin-top: 5px">
+                <img src="img/DynamicPlot/上箭头.png" />
+            </li>
+            <li class="tip" title="下箭头" onclick="btn_DynamicPlot(11)" style="margin-top: 5px">
+                <img src="img/DynamicPlot/下箭头.png" />
+            </li>
+            <li class="tip" title="圆" onclick="btn_DynamicPlot(12)" style="margin-top: 5px">
+                <img src="img/DynamicPlot/圆.png" />
+            </li>
+            <!--<li class="tip" title="椭圆" onclick="btn_DynamicPlot(13)" style="margin-top: 5px">
+                <img src="img/DynamicPlot/椭圆.png" />
+            </li>-->
+            <li class="tip" title="矩形" onclick="btn_DynamicPlot(14)" style="margin-top: 5px">
+                <img src="img/DynamicPlot/矩形.png" />
+            </li>
+            <!--<li class="tip" title="三角形" onclick="btn_DynamicPlot(19)" style="margin-top: 5px">
+                <img src="img/DynamicPlot/三角形.png" />
+            </li>-->
+        </ul>
+    </div>
+	
+	<!--中间的条件搜索部分-->
+	<div class="condition">
+	    <!--搜索框-->
+	    <div class="search_box">
+	        <div action="" method=" " id="simple_search">
+	            <div class="searchdiv">
+	                <!--下拉菜单显示信息位置-->
+	                <div class="search">
+	                    <span class="search_type"></span> <span class="search_img" onclick="select_panel()"><img src="image/archives/sel.png" /></span>
+	                </div>
+	                <!--下拉面板-->
+	                <ul id="baseSe" class="select">
+	                    <li value="EpName">排口名称</li>
+	                    <li value="LICENSECODE">设置单位名称</li>
+	                    <li value="LEGALPERSON">联系人</li>
+	                    <li value="ADDRESS">地址</li>
+	                </ul>
+	            </div>
+	            <input type="text" id="intext" value=""  onkeypress="searchKuangName(event)"/>
+	            <input type="button" value="×" class="reset_onecondision" />
+	            <input type="button" class="btn" onclick="search()" value="搜索" />
+	
+	        </div>
+	    </div>
+	    <div class="more_search">
+	        <div class="advanced_search">
+	            <div class="search_fold">
+						<span class="result_count">共<span class="count">0</span>条结果
+                        </span>
+                        <div id="PointListOutput" style=" position:absolute;height:30px;width:61px;background: url(img/szsp/dc.png) no-repeat;top: 14px;left: 181px;cursor: pointer;" download="mock/xianjian.xlsx"></div>
+	                <!--                 <div class="view_way"> -->
+	                <!--                     <span class='view_method1 simple_view' onclick='tiaozhuan(0)' ></span> -->
+	                <!--                 </div> -->
+	                <div class="hsearch" onclick="set_advanced_search()">
+	                    <span class="searchImg"></span>
+	                    <span class="hsearch_span">高级搜索</span>
+	                </div>
+	            </div>
+	            <!--高级搜索条件生成地方-->
+	            <div class="hsearch_result">
+	                <div>
+	                    <input type="submit" name="submit" value="查询" onclick="clickHighSearch();" />
+	                    <input type="button" name="reset" value="清空" class="reset_muchcondision" /> <label>搜索条件：</label>
+	                    <div class="muchcondision"></div>
+	                </div>
+	            </div>
+	        </div>
+	        <!--高级搜索部分div .advanced_search_con-->
+	        <div class="advanced_search_con"></div>
+	    </div>
+	</div>
+
+</body>
+
+</html>
+<!--jquery UI-->
+<script src="Scripts/plugins/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="scripts/jquery-1.11.3.js"></script>
+<!--jspanel弹框面板-->
+<!-- <script src="Scripts/plugins/jspanel-2.6.2/jquery.jspanel.min.js"></script> -->
+<!-- slider使用的easyui的样式 -->
+<script src="scripts/plugins/jquery-easyui/jquery.easyui.min.js"></script>
+<script src="scripts/plugins/jquery-easyui/locale/easyui-lang-zh_CN.js"></script>
+<script src="/scripts/plugins/layui/layui.all.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="scripts/plugins/jspanel-4.5.0/jspanel.min.js"></script>
+<script src="Scripts/plugins/echarts/echarts.js"></script>
+<script src="Scripts/plugins/animo/animo.min.js"></script>
+<script src="Scripts/plugins/poshytip/jquery.poshytip.min.js"></script>
+<script src="Scripts/plugins/minicolors/jquery.minicolors.js"></script>
+
+<!--自定义ArcGIS组件路径-->
+<script type="text/javascript">
+    var dojoConfig = {
+        packages: [
+            { name: 'Scripts', location: location.pathname.replace(/\/[^/]+$/, "") + '/Scripts' },
+            { name: 'GISScripts', location: location.pathname.replace(/\/[^/]+$/, "") + '/Scripts/GISScripts' },
+            { name: 'widgets', location: location.pathname.replace(/\/[^/]+$/, "") + '/Scripts/widgets' },
+            { name: 'plugins', location: location.pathname.replace(/\/[^/]+$/, "") + '/Scripts/plugins' }
+
+        ]
+    };
+</script>
+<!--ArcGIS js API初始化脚本-->
+<!-- <script src='http://192.168.4.111/arcgis_js_api/library/3.18/3.18/init.js'></script> -->
+<script src="http://10.103.27.110/arcgis_js_v317_api/arcgis_js_api/library/3.17/3.17/init.js"></script>
+<!--mugis通用方法-->
+<script src="Scripts/GISScripts/mapInit.js"></script>
+<script src="Scripts/GISScripts/mapShowPOI.js"></script>
+<script src="Scripts/GISScripts/mapCityInfo.js"></script>
+<script src="Scripts/GISScripts/poiClassify.js"></script>
+<script src="Scripts/GISScripts/mapClear.js"></script>
+<script src="Scripts/GISScripts/mapZoom.js"></script>
+
+<!--utils通用方法-->
+<script src="Scripts/utils/timeFormat.js"></script>
+<!-- <script src="Scripts/utils/jspanelInit.js"></script> -->
+<!-- jspanel的弹窗，新加2019年4月19日 -->
+<script src="scripts/utils/jspanelsInit.js"></script>
+<script src="Scripts/utils/tableInit.js"></script>
+<script src="Scripts/utils/htmlOperate.js"></script>
+
+<!--模块-->
+<link href="Panel/AirQualityHour/append/append.css" rel="stylesheet" />
+<script src="Panel/AirQualityHour/append/append.js"></script>
+<script src="Scripts/widgets/windy/windyLoad.js"></script>
+<script src="Scripts/widgets/windy/windy.js"></script>
+<!-- 重庆的企业信息和溯源点位信息 -->
+<script src="mock/CQ_company_suyuan.js"></script>
+<!-- 添加图层的方法 -->
+<script src="Scripts/GISScripts/mapControls.js"></script>
+<!-- 导航栏地图上添加点位 -->
+<script type="text/javascript" src="Scripts/mapPoint.js"></script>
+<!--main主方法-->
+<script src="Scripts/mapMain.js"></script>
+<script src="Scripts/mapMenu.js"></script>
+<script src="Scripts/leftMenu.js"></script>
+
+<!-- 加载行政区划的边界数据 -->
+<script type="text/javascript" src="Scripts/GISScripts/borderAndCoverControls.js"></script>
+
+<!-- 全国各省的统计测试数据 -->
+<!-- <script type="text/javascript" src="mock/enery_Province_total.js"></script> -->
+<!-- 重庆的各区的统计测试数据 -->
+<script type="text/javascript" src="mock/CQ_GeQu_Total.js"></script>
+<!-- 重庆潼南区测试数据 -->
+<script type="text/javascript" src="mock/CQ_tongNanQu.js"></script>
+<!-- 32省行政区划数据和重庆市的行政区划数据 -->
+<script type="text/javascript" src="mock/RegionCode.js"></script>
+<!-- 长江11城市数据 -->
+<script type="text/javascript" src="mock/ChangJiangRiver_9_2.js"></script>
+<!-- 重庆的排口的测试数据 -->
+<script type="text/javascript" src="mock/CQ_PK_TestData.js"></script>
+<!-- 重庆的企业信息和溯源点位信息 -->
+<!-- <script src="mock/CQ_company_suyuan.js"></script> -->
+<!-- 溯源的js -->
+<script src="scripts/redialLayer.js"></script>
+<script src="plugin/effect/effect.js"></script>
+<script src="common/js/highSearch.js"></script>
+<!-- 主页的search方法集合 -->
+<script src="panel/mapPoints/mainSearch.js"></script>
+<script src="common/js/highSearch2.js"></script>

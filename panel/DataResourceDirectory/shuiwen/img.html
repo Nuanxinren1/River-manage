@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../../../scripts/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../layui/layui.all.js"></script>
+    <!--<script src="shuiwen.js"></script>-->
+</head>
+<body>
+    <img src="../../../img/datamanager/uploadfile1.png" />
+    <div style="position:absolute;z-index:99;background-color: rgba(0, 0, 0,0);top:10px;left:600px;width:60px;height:40px;" id="closeImg">
+
+    </div>
+</body>
+</html>
+<script>
+    $("#closeImg").click(function () {
+        
+        //关闭当前页
+        var index = parent.layer.getFrameIndex(window.name);
+        parent.layer.close(index);
+    });
+</script>

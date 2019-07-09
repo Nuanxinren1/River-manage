@@ -1,0 +1,42 @@
+body{
+    background-color: #eee;
+}
+.main-content{
+    width: 94%;
+    padding: 10px 2%;
+    margin: 10px 1%;
+    background-color: #fff;
+    border-radius: 5px;
+    /*height: 510px;*/
+}
+.main-content-title{
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid #e6e6e6;
+    padding-top: 20px;
+}
+.content-title{
+    border-left: 5px solid #4da9bd;
+    padding-left: 10px;
+    border-radius: 3px;
+    float: left;
+}
+.bar-chart{
+    width: 100%;
+    height: calc(100% - 60px);
+}
+.export_btn{
+    float: right;
+    cursor: pointer;
+}
+
+.pwuktype{
+	width: 105%;
+	/* height: 96%; */
+	margin-left: -25px;
+	/* margin-top: -10px; */
+}
+
+
+
+

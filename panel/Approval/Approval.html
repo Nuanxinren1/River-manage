@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>设置审批</title>
+		<link rel="stylesheet" href="layui/css/layui.css">
+		<link rel="stylesheet" href="Approval.css">
+		<link rel="stylesheet" href="../../css/scroll.css">
+	</head>
+	<body>
+		<div id="sp">
+			<!-- 查询 -->
+			<div class="searchtop">
+				<div>
+					<span>省份:</span>
+					<select class="select">
+						<option value="0">请选择省份</option>
+						<option value="1">重庆</option>
+						<option value="2">浙江</option>
+						<option value="3">四川</option>
+						<option value="4">福建</option>
+						<option value="5">江苏</option>
+					</select>
+					<span>城市:</span>
+					<select class="select">
+						<option value="00">请选择城市</option>
+						<option value="01">重庆市</option>
+					</select>
+					<span>区县:</span>
+					<select class="select">
+						<option value="000">请选择区县</option>
+						<option value="001">渝中区</option>
+						<option value="002">万州区</option>
+						<option value="003">涪陵区</option>
+						<option value="004">大渡口区</option>
+						<option value="005">江北区 </option>
+						<option value="006">沙坪坝区 </option>
+						<option value="007">九龙坡区 </option>
+						<option value="008">南岸区 </option>
+						<option value="009">綦江区 </option>
+						<option value="0010">大足区 </option>
+						<option value="0011">渝北区 </option>
+						<option value="0012">巴南区 </option>
+						<option value="0013">黔江区 </option>
+					</select>
+					<span>流域:</span>
+					<select class="select">
+						<option value="0">请选择</option>
+						<option value="1">黄河流域</option>
+						<option value="2">长江流域</option>
+					</select>
+					<span>排污口类别:</span>
+					<select class="select">
+						<option value="0">请选择</option>
+						<option value="1">入河排污口</option>
+						<option value="2">入海排污口</option>
+					</select>
+					<span>入河/入海方式:</span>
+					<select class="select">
+						<option value="0">请选择</option>
+						<option value="1">明渠</option>
+						<option value="2">暗管</option>
+						<option value="3">泵站</option>
+						<option value="4">涵闸</option>
+						<option value="5">其他</option>
+					</select>
+				</div>
+				<div>
+					<span>设置单位名称:</span>
+					<input class="dwname" type="text" placeholder="请输入">
+					<span>排污口名称:</span>
+					<input class="pwuname" type="text" placeholder="请输入">
+					<span>排污口类型:</span>
+					<select class="select">
+						<option value="0">请选择</option>
+						<option value="1">工业废水排污口</option>
+						<option value="2">生活污水排污口</option>
+						<option value="3">混合污废水排污口</option>
+						<option value="4">其他</option>
+					</select>
+					<span class="chaxun">查询</span>
+					<span class="czhi">重置</span>
+				</div>
+			</div>
+			<!-- 分析 -->
+			<div class="approval-fx">
+				<p class="approval-fx-title"><i></i><span>排污口总量分析</span></p>
+				<div class="approval-fx-charts">
+					<div id="approval-zhucharts"></div>
+					<div id="approval-piecharts"></div>
+				</div>
+			</div>
+			<!-- 排污口列表 -->
+			<div class="approval-list">
+				<p class="approval-list-title"><i></i><span>排污口列表</span>
+				<a id="daochu" class="daochu"></a></p>
+				<table lay-even class="layui-hide" id="demo"  lay-filter="test"></table>
+			</div>
+		</div>
+		<script type="text/html" id="barDemo">
+		  <a class="layui-btn layui-btn-xs" lay-event="edit"><span class="edit"></span></a>
+		</script>
+	</body>
+	<script src="../../scripts/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../scripts/echarts/echarts.js" type="text/javascript" charset="utf-8"></script>
+	<script src="layui/layui.all.js" type="text/javascript" charset="utf-8"></script>
+	<script src="Approval.js" type="text/javascript" charset="utf-8"></script>
+</html>

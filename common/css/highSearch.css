@@ -1,0 +1,627 @@
+.search_box{
+    width: 100%;
+    height: 50px;
+}
+
+.searchdiv{
+    display: inline-block;
+    float: left;
+}
+
+.search {
+    width: 100px;
+    border-right: 0;
+    font-size: 14px;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 10px;
+    z-index: 0;
+}
+
+.search_type{
+    color: rgb(120,130,130);
+}
+
+.search span.search_img {
+    display: inline-block;
+    float: right;
+    cursor: pointer;
+    height: 35px;
+    margin-right: 8px;
+    z-index: 99;
+    margin-top: -2px;
+}
+.search span.search_img>img{
+    width: 12px;
+    height: 7px;
+}
+
+.select{
+    font-size: 14px;
+    border-top: 0;
+    list-style: none;
+    width: 109px;
+    position: absolute;
+    margin-top: -1px;
+    z-index: 99;
+    background-color: #ffffff;
+    color:rgb(120,120,120);
+    display: none;
+}
+/*閹兼粎鍌ㄧ猾璇茬�娑撳濯洪崚妤勩�ul .select*/
+.select li{
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.li_hover{
+    background-color: #dee8f1;
+    cursor: pointer;
+    font-weight: bold;
+}
+/********************娑撶粯鎮崇槐銏☆攱********************/
+#intext{
+    display: inline-block;
+    float: left;
+    border-left: 0;
+    height: 35px;
+    width: 600px;
+    padding-left: 10px;
+    line-height: 35px;
+    font-size: 16px;
+}
+/***********閹兼粎鍌ㄩ幐澶愭尦閺嶅嘲绱�***********/
+.btn{
+    width: 60px;
+    height: 37px;
+    line-height: 37px;
+    outline: 0;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+form#simple_search{
+    margin-top: 10px;
+    padding-left: 23%;
+}
+/****************妤傛楠囬幖婊呭偍閸旂喕鍏�**********/
+.advanced_search{
+    width: 100%;
+    min-height: 50px;
+    overflow: hidden;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #dee8f1;
+}
+
+.advanced_search .hsearch img{
+    display: inline-block;
+    float: left;
+    margin-top: 9px;
+    margin-right: 5px;
+    width: 12px;
+    height: 12px;
+}
+
+.result_count{
+   float: left;
+   line-height: 30px;
+    margin-left: 150px;
+    color: rgb(120,120,120);
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+.hsearch{
+    width: 100px;
+    float: right;
+    margin-right: 100px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.hsearch span{
+    font-size: 14px;
+    line-height: 30px;
+}
+.search_fold{
+    overflow: hidden;
+}
+
+.view_way{
+    float: left;
+    overflow: hidden;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+/*鐟欏棗娴樺Ο鈥崇础閻ㄥ嫬娴橀悧鍥ㄧ壉瀵拷*/
+.view_way span{
+    display: inline-block;
+    float: left;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.view_remove{
+    margin-left: 150px;
+}
+
+.hsearch_result{
+    display: none;
+}
+/***********閹稿鎸抽弽宄扮础 (瀹告煡锟藉瀚ㄩ幖婊呭偍閺夆�娆㈤惃鍕叀鐠囥垹鎷板〒鍛存珟閹稿鎸�**************/
+.hsearch_result div{
+    overflow: hidden;
+    line-height: 30px;
+    margin-right: 110px;
+}
+/*閹绘劒姘﹂崪宀勫櫢缂冾喗瀵滈柦顔炬畱閺嶅嘲绱＄拋鍓х枂*/
+.hsearch_result div input[name="submit"],input[name="reset"]{
+    display: inline-block;
+    width: 60px;
+    height: 32px;
+    border-radius: 5px;
+    float: right;
+    margin-top: 10px;
+    /*background-color: #f1f5f8;*/
+    border: 1px solid #dee8f1;
+    font-size: 14px;
+    margin-right: 20px;
+    cursor: pointer;
+    /*line-height: 32px\9;*/
+}
+
+.hsearch_result div input[name="submit"]{
+	
+    border:none;
+    color:#ffffff;
+    line-height: 34px\9;
+
+}
+.hsearch_result div label{
+    display: inline-block;
+    margin-left: 140px;
+    font-size: 16px;
+    float: left;
+    line-height: 50px;
+}
+.advanced_search_con{
+    width: 100%;
+    min-height: 100px;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #dee8f1;
+    height:auto !important;
+    display: none;
+}
+.advanced_search_con .term{
+    position: relative;
+    left: 10%;
+    width: 80%;
+    min-height: 35px;
+    border-bottom: 1px solid #dee8f1;
+    overflow: hidden;
+    padding-left: 5px;
+}
+#myself_condition {
+    display: none;
+}
+.advanced_search_con .term>label{
+    display: inline-block;
+    margin-top: 9px;
+    float: left;
+    font-size: 14px;
+    width: 70px;
+}
+/**************閺勫墽銇氶崗铚傜秼閺夆�娆㈤惃鍕灙鐞涖劋浜掗崣濠傚従娑撳娈戦崗鍐閺嶅嘲绱�*****************/
+.area{
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    left: 70px;
+    margin-top: 10px;
+    color:#1378c5 ;
+    font-size: 13px;
+    max-width: 1200px;
+}
+
+.area li{
+    width: 120px;
+    margin-bottom:10px;
+    float: left;
+    cursor: pointer;
+    white-space:nowrap;
+}
+/*姒х姵鐖ｉ幃顒佽癁閸︺劍娼禒鏈电瑐閻ㄥ嫭妞傞崐娆欑礉鐎涙ぞ缍嬮崣妯煎*/
+.area li span:hover{
+    color: #FF3333;
+}
+.area li>span{
+    padding-left: 5px;
+}
+
+.term_select{
+    padding-left: 10px;
+    z-index: 1;
+    border:1px solid rgb(237,210,139) !important;
+   /*  height:100px; */
+}
+
+.onok{
+   /*  position: absolute;
+    bottom: 5px;
+    left: 40%; */
+    width: 60px;
+    height: 30px;
+    border: 0;
+    color: #ffffff;
+    cursor: pointer;
+   margin: 0 0 5px 40%;
+}
+.onexit{
+   /*  position: absolute;
+    bottom: 5px;
+    left: 48%; */
+    width: 60px;
+    height: 30px;
+    background-color: #f1f5f8;
+    border: 1px solid #dee8f1;
+    cursor: pointer;
+    margin: 0 0 0 20px;
+}
+
+
+.more{
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    left: 70px;
+    margin-top: 10px;
+    color:#1378c5 ;
+    font-size: 13px;
+    z-index: 2;
+
+}
+.more li{
+    width: 120px;
+    float: left;
+    cursor: pointer;
+    white-space:nowrap;
+}
+
+.more li img{
+    display: inline-block;
+    margin-left: 5px;
+    width: 12px;
+    height: 7px;
+    position: relative;
+    top: -2px;
+}
+.more li span{
+    padding-left: 3px;
+}
+.content{
+    display: inline-block;
+    padding-right: 10px;
+}
+
+/*************婢舵岸锟藉瀵滈柦锟�mutipule***************/ 	
+.mutipule{
+    float: right;
+    margin-top:5px;
+    width: 50px;
+    height: 25px;
+    background-color: #f1f5f8;
+    border: 1px solid #dee8f1;
+    cursor: pointer;
+    font-size: 14px;
+    overflow: hidden;
+    color: rgb(120,120,120);
+}
+/*婢舵岸锟藉瀵滈柦顔昏厬鐎涙ɑ鏂侀崝鐘插娇+閻ㄥ墕pan*/
+.mutipule .add_mutipule{
+    width: 12px;
+    height: 12px;
+    position: relative;
+    font-size: 18px;
+    right: 1px;
+    display: inline-block;
+}
+
+.mutipule:hover{
+    color: #FF3333;
+    border-color: #FF3333;
+}
+
+.mutipule_hover{
+    color: #FF3333;
+    border-color: #FF3333;
+    animation: upup 0.4s;
+    -webkit-animation: upup 0.4s;
+}
+
+/*************闁哄洦娼欓ˇ鍧楀箰婢舵劖灏�more***************/
+.showmore{
+	float: right;
+    margin-left: 5px;
+    margin-top: 5px;
+    width: 50px;
+    height: 25px;
+    background-color: #f1f5f8;
+    border: 1px solid #dee8f1;
+    cursor: pointer;
+    font-size: 14px;
+    overflow: hidden;
+    color: rgb(120,120,120);
+}
+/*濠㈣埖宀搁敓钘夘槹鐎垫粓鏌﹂鏄忓幀閻庢稒蓱閺備線宕濋悩鎻掑▏+闁汇劌澧昿an*/
+.showmore .add_more{
+   /*  width: 12px; */
+    position: relative;
+   /*  font-size: 18px; */
+    right: 1px;
+    display: inline-block;
+}
+
+
+/* .showmore:hover{
+    color: #FF3333;
+    border-color: #FF3333;
+} */
+.more_hover{
+    color: #FF3333;
+    border-color: #FF3333;
+    animation: upup 0.4s;
+    -webkit-animation: upup 0.4s;
+}
+.upup{
+    animation: upup 0.4s;
+    -webkit-animation: upup 0.4s;
+}
+@keyframes upup {
+    0%  {top:0;}
+    25% {top:-30px;}
+    75% {top:+30px;}
+    100% {top:0;}
+}
+@-webkit-keyframes upup {
+    0%  {top:0;}
+    25% {top:-30px;}
+    75% {top:+30px;}
+    100% {top:0;}
+}
+/*閻㈢喐鍨氶惃鍕槻闁顢嬮惃鍕壉瀵拷*/
+.check{
+    display: inline-block;
+    float: left;
+    margin-top: 3px;
+}
+/************閼奉亜鐣炬稊澶嬫偝缁便垺鐖禒銉ュ挤閸忔湹绗呴惃鍕灙鐞涖劎娈戦弽宄扮础************/
+#myself{
+    list-style: none;
+    display: inline-block;
+    margin-left: 67px;
+    margin-right: 50px;
+    color:#1378c5 ;
+    font-size: 14px;
+    margin-top:5px;
+}
+
+#myself li{
+    float: left;
+    line-height: 20px;
+    width: 200px;
+}
+
+#myself li label{
+    display: inline-block;
+    margin-top: 5px;
+    color: rgb(120,120,120);
+}
+
+#myself li span.combo{
+    display: inline-block;
+    margin-top: 5px !important;
+}
+.textbox{
+    top:-4px;
+}
+
+#val{
+    display: inline-block;
+    margin-top: 5px !important;
+    width: 120px!important;
+    height: 20px!important;
+    margin-left: 15px;
+    border: 1px solid #dee8f1;
+    padding-left: 5px;
+}
+
+.add{
+    float: right;
+    margin-top:5px;
+    width: 50px;
+    height: 25px;
+    border: 1px solid #dee8f1;
+    cursor: pointer;
+    font-size: 14px;
+    color:#ffffff;
+}
+.condision{
+    font-size: 13px;
+    display: inline-block;
+    padding-left: 5px;
+    border: 1px solid #dee8f1;
+    height: 25px;
+    line-height: 25px;
+    color: rgb(120,120,120);
+    margin-top: 6px;
+    cursor: pointer;
+    background-color: #ffffff;
+
+}
+/*閻愮懓鍤崥搴ｆ晸閹存劗娈戦弶鈥叉閻ㄥ嫬鎮曢惃鍕壉瀵拷*/
+.condision b{
+    font-weight: 400;
+}
+.condision span{
+    display: inline-block;
+}
+.condision :last-child{
+    color: rgb(120,120,120);
+}
+/*闁鑵戦弶鈥叉閻ㄥ嫬鍨归梽銈嗗瘻闁筋喚娈戦弽宄扮础*/
+.icon_del{
+    line-height: 25px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    right: 0;
+    text-align: center;
+    cursor: pointer;
+    /*padding: 0 6px\9;*/
+    font-size: 14px;
+
+}
+/*閺冨娴嗛惃鍕З閻拷*/
+.rotate{
+    animation: rotate 300ms;
+    -webkit-animation: rotate 300ms ;
+    animation-fill-mode: forwards;
+}
+@keyframes rotate {
+    0% {transform:rotate(0deg);}
+    100% {transform: rotate(-180deg)}
+}
+@-moz-keyframes rotate {
+    0% {transform:rotate(0deg);}
+    100% {transform: rotate(-180deg)}
+}
+@-webkit-keyframes rotate {
+    0% {transform:rotate(0deg);}
+    100% {transform: rotate(-180deg)}
+}
+
+.more_codition{
+    display: none;
+    font-size: 14px;
+    background-color: #ffffff;
+    max-width: 650px;
+    position: absolute;
+    border: 1px solid #1378c5;
+    color: #1378c5;
+}
+.more_codition ol{
+    list-style: none;
+    word-wrap: break-word;
+    width: 600px;
+    background-color: #ffffff;
+    min-height:80px;
+    margin: 20px;
+}
+.more_codition ol li{
+    float: left;
+    width: 150px;
+    height: 30px;
+    display:block;
+    white-space:nowrap;
+     overflow:hidden;
+      text-overflow:ellipsis;
+}
+.more_codition ol li span{
+    padding-left: 5px;
+    cursor: pointer;
+}
+.openmore{
+    background-color:#ffffff;
+    border: 1px solid #1378c5;
+    border-bottom:0;
+    z-index: 99;
+}
+.more_bottom{
+    width: 100%;
+    height: 35px;
+    position: relative;
+    bottom: 0;
+    background-color: #f6fafd;
+    border-top:1px solid #dee8f1;
+}
+.onclose{
+    height: 22px;
+    width: 42px;
+    float: right;
+    margin-right: 20px;
+    background-color: #f1f5f8;
+    border: 1px solid #dee8f1;
+    /*margin-bottom: 5px;*/
+    margin-top: 10px;
+    cursor: pointer;
+}
+.onsub{
+    height: 22px;
+    width: 42px;
+    float: right;
+    margin-right: 20px;
+    color: #ffffff;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.combo{
+    width: 120px!important;
+    height: 20px!important;
+    margin-left: 15px;
+    border: 1px solid #dee8f1;
+}
+.combo-arrow {
+    background: url(../../image/index/fold.png) no-repeat  center #ffffff;
+}
+.textbox-text{
+    width: auto!important;
+}
+
+.mycondision{
+    font-size: 13px;
+    display: inline-block;
+    padding-left: 5px;
+    border: 1px solid #dee8f1;
+    height: 25px;
+    line-height: 25px;
+    color: rgb(120,120,120);
+    margin-top: 6px;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+/*瀹告煡锟藉娼禒鏈佃厬閸氬秶袨閸旂姷鐭栭弫鍫熺亯*/
+.mycondision b{
+    font-weight: 400;
+}
+
+
+/************闁倿鍘ゆ禒锝囩垳************/
+/*闁倿鍘ら弲顕�拷姘辩應鐠佺増婀伴悽浣冨壋*/
+@media screen and (max-width: 1366px){
+    .area{
+        max-width: 860px;
+    }
+    #myself{
+        margin-left: 62px;
+    }
+    .area li{
+        width: 112px !important;
+    }
+    .more li{
+        min-width: 112px;
+    }
+    .condision {
+        font-size: 12px;
+    }
+    .muchcondision{
+        margin-right: 140px;
+    }
+    .advanced_search .result{
+        left: 11%;
+    }
+}

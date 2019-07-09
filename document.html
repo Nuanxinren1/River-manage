@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一口一档</title>
+    <link rel="stylesheet" href="plugin/jquery-easyui-1.5/themes/bootstrap/easyui.css">
+    <link rel="stylesheet" href="plugin/paging/paging.css" />
+
+    <!--&lt;!&ndash;ArcGIS js API地图样式&ndash;&gt;-->
+    <!--<link rel='Stylesheet' type='text/css' href="http://192.168.10.13/arcgis_js_api/library/3.18/3.18/dijit/themes/tundra/tundra.css" />-->
+    <!--<link rel='Stylesheet' type='text/css' href="http://192.168.10.13/arcgis_js_api/library/3.18/3.18/esri/css/esri.css" />-->
+    <!--公共样式-->
+    <link rel="stylesheet" href="common/css/common.css">
+    <link rel="stylesheet" href="common/css/top/default.css">
+    <link rel="stylesheet" href="common/css/highSearch.css">
+    <link rel="stylesheet" href="common/css/top/head.css">
+    <!--<link href="css/gis/map.css" rel="stylesheet" />-->
+    <!--主页样式-->
+    <link rel="stylesheet" href="css/document/main.css">
+    <!--当前样式-->
+    <link rel="stylesheet" href="css/document/index.css">
+    <!--适配样式-->
+    <!--     <link media="screen and (max-device-width:1335px)" rel="stylesheet"
+              href="../common/css/top/1024.css" /> -->
+    <link
+            media="screen and (min-device-width:1336px) and (max-device-width:1440px)"
+            rel="stylesheet" href="common/css/top/1366.css" />
+    <link media="screen and (min-device-width:1900px)" rel="stylesheet"
+          href="common/css/top/1980.css" />
+    <link rel="stylesheet" href="css/document/document.css">
+</head>
+<body>
+<!--中间的条件搜索部分-->
+<div class="condition">
+    <!--搜索框-->
+    <div class="search_box">
+        <div action="" method=" " id="simple_search">
+            <div class="searchdiv">
+                <!--下拉菜单显示信息位置-->
+                <div class="search">
+                    <span class="search_type"></span> <span class="search_img" onclick="select_panel()"><img src="image/archives/sel.png" /></span>
+                </div>
+                <!--下拉面板-->
+                <ul class="select">
+                    <li value="EpName">排口名称</li>
+                    <li value="LICENSECODE">设置单位</li>
+                    <li value="LEGALPERSON">联系人</li>
+                    <li value="ADDRESS">地址</li>
+                </ul>
+            </div>
+            <input type="text" id="intext" value=""  onkeypress="searchKuangName(event)"/>
+            <input type="button" value="×" class="reset_onecondision" />
+            <input type="button" class="btn" onclick="search()" value="搜索" />
+
+        </div>
+    </div>
+    <div class="more_search">
+        <div class="advanced_search">
+            <div class="search_fold">
+					<span class="result_count">共<span class="count"></span>条结果
+					</span>
+                                 <div class="view_way">
+                                     <span class='view_method1 simple_view' onclick='tiaozhuan(0)'></span>
+                                     <span class='map-view' onclick='' ></span>
+                                 </div>
+                <div class="hsearch" onclick="set_advanced_search()">
+                    <span class="searchImg"></span>
+                    <span class="hsearch_span">高级搜索</span>
+
+                </div>
+                <img src="img/export.png" class="export_btn"  onclick="window.open('files/重庆入河海排污口基本信息.xlsx')">
+            </div>
+            <!--高级搜索条件生成地方-->
+            <div class="hsearch_result">
+                <div>
+                    <input type="submit" name="submit" value="查询" onclick="clickHighSearch();" />
+                    <input type="button" name="reset" value="清空" class="reset_muchcondision" /> <label>搜索条件：</label>
+                    <div class="muchcondision"></div>
+                </div>
+            </div>
+        </div>
+        <!--高级搜索部分div .advanced_search_con-->
+        <div class="advanced_search_con"></div>
+    </div>
+</div>
+<div class="main">
+    <!--左侧导航栏-->
+    <!--<div class="mainleft">-->
+    <!--<div class="tabtab">-->
+    <!--<ol class="firsttitle">-->
+    <!--<li class="tabli" onclick="window.location.href='../gis/gis.do';"><span title>GIS信息</span></li>-->
+    <!--<li class="tabli"><span>污染源</span></li>-->
+    <!--</ol>-->
+    <!--<ol class="sort">-->
+    <!--<li class="sort_li"-->
+    <!--onclick="window.open('../jdc/jdc.do','_blank');"><span-->
+    <!--class="Motor_vehicle"></span><span>机动车尾气</span>-->
+    <!--</li>-->
+    <!--<li class="sort_li"-->
+    <!--onclick="window.open('../customViewCtrl/toListPage.do','_blank');"><span-->
+    <!--class="Myself_template"></span><span>自定义模板</span>-->
+    <!--</li>-->
+    <!--<li class="sort_li"-->
+    <!--onclick="window.open('../EChartsCtrl/tjcharts.do','_blank');"><span-->
+    <!--class="Myself_analysis"></span><span>统计分析</span>-->
+    <!--</li>-->
+    <!--</ol>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--右侧信息栏-->
+    <div class="mainright">
+        <div class="myaim">
+            <p class="ptitle"><span class='layer_logo aim_logo'></span>
+                我的关注<span class="much"><a href="#" onclick="list_Attention()">更多+</a></span>
+            </p>
+            <ol class="myaimcon">
+                <!--                 <li><span>兰州优耐赛博石化工程有限公司</span><span class="time">2015-09-15</span></li> -->
+                <!--             <li><span>兰州北方石化金属有限公司木材分公司</span><span class="time">2015-09-12</span></li> -->
+                <!--             <li><span>甘肃兰州中亚煤炭经销公司</span><span class="time">2015-04-17</span></li> -->
+                <!--             <li><span>兰州小蜜蜂经贸有限公司</span><span class="time">2015-03-21</span></li> -->
+                <!--             <li><span>兰州伊可新空调制造有限公司</span><span class="time">2015-01-06</span></li> -->
+            </ol>
+        </div>
+        <div class="history">
+            <p class="ptitle"><span class='layer_logo history_logo'></span>
+                历史查看<span class="much"><a href="#" onclick="list_History()">更多+</a></span>
+            </p>
+            <ol class="myaimcon">
+             <!--<li><span>兰州优耐赛博石化工程有限公司</span><span class="time">2015-09-15</span></li>-->
+            <!--<li><span>兰州北方石化金属有限公司木材分公司</span><span class="time">2015-09-12</span></li>-->
+            <!--<li><span>甘肃兰州中亚煤炭经销公司</span><span class="time">2015-04-17</span></li>-->
+            <!--<li><span>兰州小蜜蜂经贸有限公司</span><span class="time">2015-03-21</span></li>-->
+            <!--<li><span>兰州伊可新空调制造有限公司</span><span class="time">2015-01-06</span></li>-->
+            </ol>
+        </div>
+        <div id="map"></div>
+    </div>
+    <div class="little_tag">展开更多</div>
+    <!--中间显示企业部分-->
+    <div class="maincenter">
+        <ul class="maincon"></ul>
+        <div class="paginat" id="paginta">
+            <div id="page"></div>
+        </div>
+    </div>
+</div>
+<div class="more_codition">
+    <div class="show_codition">
+        <!-- <ol>
+</ol> -->
+    </div>
+    <div class="more_bottom"></div>
+</div>
+
+<div id="warn_info" class="warn_info">
+    <ol class="company_warn">
+
+    </ol>
+</div>
+<div class='setWaring' id="setWaring">
+    <div class="waringCon">
+        <label>类型：</label>
+        <select id="waringType" onchange="waringType()">
+            <option value="00">请选择数据类型</option>
+            <option value="01">废气</option>
+            <option value="02">废水</option>
+            <option value="03">进水</option>
+        </select>
+        <label>污染物：</label>
+        <select id="waste" onchange="waringVal()" >
+        </select>
+    </div>
+    <div class="waringCon">
+        <label>污染物浓度：</label>
+        <input type="text" name="type" class="waringInput" id="maxVal">
+        <input type="hidden" name="warId" class="waringInput" id="warId">
+    </div>
+    <div class="waringCon">
+        <input type="button" value="修改" class="updateWaring" onclick="updateWaring()">
+    </div>
+</div>
+<!--自定义ArcGIS组件路径-->
+<script type="text/javascript">
+    var dojoConfig = {
+        packages: [
+            { name: 'panel', location: location.pathname.replace(/\/[^/]+$/, "") + '/panel' },
+            { name: 'Scripts', location: location.pathname.replace(/\/[^/]+$/, "") + '/Scripts' },
+            { name: 'GISScripts', location: location.pathname.replace(/\/[^/]+$/, "") + '/Scripts/GISScripts' },
+            { name: 'widgets', location: location.pathname.replace(/\/[^/]+$/, "") + '/Scripts/widgets' },
+            { name: 'plugins', location: location.pathname.replace(/\/[^/]+$/, "") + '/Scripts/plugins' }
+
+        ]
+    };
+</script>
+<script src="plugin/jquery-easyui-1.5/jquery.min.js"></script>
+<script src="plugin/jquery-easyui-1.5/jquery.easyui.min.js"></script>
+<script src="plugin/layer/layer.js"></script>
+<script src="plugin/paging/query.js"></script>
+<script src="plugin/paging/paging.js"></script>
+<!--<script src="http://192.168.10.13/arcgis_js_api/library/3.18/3.18/init.js"></script>-->
+<script src="config/mapconfig.js"></script>
+<script src="common/js/highSearch.js"></script>
+<!--<script src="Scripts/GISScripts/mapInit.js"></script>-->
+<!--<script src="Scripts/GISScripts/mapZoom.js"></script>-->
+<!--<script src="scripts/document/eagleMap.js"></script>-->
+<script src="scripts/document/archives.js"></script>
+</body>
+</html>

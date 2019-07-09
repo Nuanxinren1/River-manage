@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页面</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/scroll.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<header class="homePage-head">
+    <div class="homePage-head-title">
+        <img src="img/index/logo.png">
+        <span>入河、入海排污口信息管理分系统</span>
+    </div>
+    <div class="homePage-head-nav">
+        <ul class="nav-list">
+            <li class="active" src="map.html">
+                <img src="img/index/map.png">
+                <div>一张图</div>
+            </li>
+            <li src="document.html">
+                <img src="img/index/document.png">
+                <div>一口一档</div>
+            </li>
+
+            <li >
+                <img src="img/index/data.png">
+                <div>数据集成</div>
+                <ul class="ul-second-list">
+                    <li src="panel/DataManager/DataManager.html">数据治理</li>
+                    <li src="panel/DataResourceDirectory/DataResourceDirectory.html">资源目录</li>
+                </ul>
+            </li>
+            <li src="panel/Approval/Approval.html">
+                <img src="img/index/total.png">
+                <div>设置审批</div>
+            </li>
+            <li src="panel/Comprehensive/Comprehensive.html">
+                <img src="img/index/analysis.png">
+                <div>综合分析</div>
+            </li>
+            <li src="panel/knowledge/knowledge.html">
+                <img src="img/index/knowledge.png">
+                <div>知识库</div>
+            </li>
+            <li src="panel/management/management.html">
+                <img src="img/index/system.png">
+                <div>系统管理</div>
+            </li>
+        </ul>
+        <div class="person-info">
+            <img src="img/index/person.png">
+            <div class="person-detail">
+                <span>杨永山</span>
+                <span>重庆市环保局</span>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="homePage-content">
+    <iframe src="map.html" scrolling="0" style="border: 0;width: 100%;height: 100%" id="main-iframe"></iframe>
+</div>
+<script src="scripts/jquery-3.3.1.js"></script>
+<script src="scripts/index/index.js"></script>
+</body>
+</html>

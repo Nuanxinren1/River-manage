@@ -1,0 +1,146 @@
+﻿/*各种统计图表切换*/
+.statiscs_type_change {
+    height: 25px;
+    margin-top: 5px;
+}
+    /*统计图表切换按钮*/
+    .statiscs_type_change .button {
+        display: inline-block;
+        width: 23px;
+        height: 25px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        margin-left: 5px;
+        float: left;
+    }
+
+    /*区县整体统计描述信息*/
+    .statiscs_type_change .desc {
+        background-image: url(../../img/charts/desc.png);
+        width: 13px;
+        height: 16px;
+    }
+
+    /*区县排名统计柱状图*/
+    .statiscs_type_change .bar {
+        background-image: url(../../img/charts/bar.png);
+        width: 18px;
+        height: 16px;
+    }
+
+    /*区县优良率统计信息*/
+    .statiscs_type_change .pie {
+        background-image: url(../../img/charts/pie.png);
+        width: 16px;
+        height: 16px;
+    }
+
+    .statiscs_type_change .line {
+        background-image: url(../../img/charts/line.png);
+        width: 18px;
+        height: 16px;
+    }
+
+
+
+/*各城市 统计信息（描述，排名，优良率）*/
+.statiscsInfo {
+    margin-top: 2px;
+    width: 100%;
+    height: 200px;
+}
+
+/*排名和优良率统计柱状图*/
+.statiscsCharts {
+    height: 90%;
+    width: 100%;
+}
+
+/*各城市 描述信息*/
+.statiscsDesc {
+    height: 190px;
+    border: 1px solid #dddddd;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+    .statiscsDesc .title {
+        padding: 0;
+        padding-top: 5px;
+        padding-left: 15px;
+    }
+        /*城市名*/
+        .statiscsDesc .title h2, .statiscsDesc .title h3 {
+            font-size: 28px;
+            display: inline-block;
+            font-weight: 600;
+            color: #555555;
+        }
+
+        /*查看详细*/
+        .statiscsDesc .title a {
+            font-size: 12px;
+            padding: 0 8px;
+            margin-left: 10px;
+            border: 1px solid;
+            border-radius: 10px;
+            cursor: pointer;
+            color: #000;
+        }
+
+        /*返回*/
+        .statiscsDesc .title .back {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            float: right;
+            position: relative;
+            top: 5px;
+            right: 10px;
+            background-image: url(img/back.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+
+        /*数据更新时间*/
+        .statiscsDesc .title p {
+            font-size: 12px;
+            color: gray;
+            margin: 0px;
+        }
+
+    /*排名统计*/
+    .statiscsDesc ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 15px;
+    }
+
+        .statiscsDesc ul li {
+            float: left;
+            margin-right: 15px;
+            width: 75px;
+            text-align: center;
+        }
+
+            .statiscsDesc ul li div {
+                width: 45px;
+                height: 45px;
+                border: 2px solid;
+                border-radius: 50%;
+                margin-bottom: 5px;
+                line-height: 45px;
+                font-size: 18px;
+                text-align: center;
+                margin: 5px auto;
+            }
+
+            .statiscsDesc ul li span {
+                width: 100%;
+                text-align: center;
+                font-size: 12px;
+                color: #555555;
+            }

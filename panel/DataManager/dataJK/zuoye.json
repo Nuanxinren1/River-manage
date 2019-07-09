@@ -1,0 +1,20 @@
+﻿{
+  "status": 200,
+  "message": "",
+  "total": 3,
+  "rows": {
+    "item":[
+{"id":"1","style":"二污普数据","file":"oracle数据库","name":"space_info","target":"基础库","targetname":"space_info","jobname":"空间数据导入","input":"50000","output":"50000","start":"2019-04-17 17:14:03","end":"2019-04-17 17:18:43","result":"成功"},
+{"id":"2","style":"二污普数据","file":"oracle数据库","name":"space_info","target":"基础库","targetname":"space_info","jobname":"空间数据导入","input":"50000","output":"50000","start":"2019-04-17 17:14:04","end":"2019-04-17 17:18:44","result":"成功"},
+{"id":"3","style":"二污普数据","file":"oracle数据库","name":"space_info","target":"基础库","targetname":"space_info","jobname":"空间数据导入","input":"50000","output":"50000","start":"2019-04-17 17:14:05","end":"2019-04-17 17:18:45","result":"成功"},
+{"id":"4","style":"二污普数据","file":"oracle数据库","name":"space_info","target":"基础库","targetname":"space_info","jobname":"空间数据导入","input":"50000","output":"50000","start":"2019-04-17 17:14:06","end":"2019-04-17 17:18:46","result":"成功"},
+{"id":"5","style":"二污普数据","file":"oracle数据库","name":"space_info","target":"基础库","targetname":"space_info","jobname":"空间数据导入","input":"50000","output":"50000","start":"2019-04-17 17:14:07","end":"2019-04-17 17:18:47","result":"成功"},
+{"id":"6","style":"二污普数据","file":"oracle数据库","name":"space_info","target":"基础库","targetname":"space_info","jobname":"空间数据导入","input":"50000","output":"50000","start":"2019-04-17 17:14:08","end":"2019-04-17 17:18:48","result":"成功"},
+{"id":"7","style":"二污普数据","file":"oracle数据库","name":"space_info","target":"基础库","targetname":"space_info","jobname":"空间数据导入","input":"50000","output":"50000","start":"2019-04-17 17:14:09","end":"2019-04-17 17:18:49","result":"成功"},
+{"id":"8","style":"二污普数据","file":"oracle数据库","name":"space_info","target":"基础库","targetname":"space_info","jobname":"空间数据导入","input":"50000","output":"50000","start":"2019-04-17 17:14:10","end":"2019-04-17 17:18:50","result":"成功"},
+{"id":"9","style":"二污普数据","file":"oracle数据库","name":"space_info","target":"基础库","targetname":"space_info","jobname":"空间数据导入","input":"50000","output":"50000","start":"2019-04-17 17:14:11","end":"2019-04-17 17:18:51","result":"成功"},
+{"id":"10","style":"二污普数据","file":"oracle数据库","name":"space_info","target":"基础库","targetname":"space_info","jobname":"空间数据导入","input":"50000","output":"50000","start":"2019-04-17 17:14:12","end":"2019-04-17 17:18:52","result":"成功"}
+
+]
+  }
+}

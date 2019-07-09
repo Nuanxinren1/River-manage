@@ -1,0 +1,376 @@
+/**************************************************************/
+/****************************layout***************************/
+/**************************濡炪倗鏁诲鐗堢▔鐠佸磭绉奸梺顔哄妼閸ㄥ海鏁崘銊ф拱***************************/
+body{
+	overflow:auto;
+}
+.main{
+    width: 94%;
+    height: auto;
+    overflow: hidden;
+    position: absolute;
+    margin-left:3%;
+}
+/***********濞戞捁顔婄紞瀣焾閵娿儱鐎婚柣銊ュ娑斿繑绗熻閻栵拷*********/
+.mainleft{
+    float: left;
+    /*border: 1px solid #c0c0c0;*/
+    width: 120px;
+    height: auto;
+    padding-left: 10px;
+}
+/***********濞戞捁顔婄紞瀣焾閵娿儱鐎婚柣銊ュ瑜板憡绗熻閻栵拷*********/
+.mainright{
+    float: right;
+    width: 570px;
+    width: 450px\9;
+    height: auto;
+    padding-left: 20px;
+    border-left:1px solid rgb(221,221,221) ;
+    margin-top: 20px;
+     margin-bottom:40px;
+}
+/***********濞戞捁顔婄紞瀣焾閵娿儱鐎婚柣銊ュ閼垫垿姊荤�妯煎焿**********/
+.maincenter{
+    margin-left: 150px;
+    margin-right: 670px;
+    margin-right: 560px\9;
+    height: auto;
+    margin-bottom:30px;
+}
+/*************鐎归潻缂氶弲鍓侊拷閼规澘鐒婚柡宥呯川ab閻庡湱鍋熼獮锟�********/
+.tabtab{
+    width: 100%;
+    font-size: 14px;
+}
+
+.tabtab .firsttitle{
+    list-style: none;
+    border-bottom: 1px solid rgb(221,221,221);
+    padding: 15px 0;
+}
+.tabli{
+    height: 30px;
+    line-height: 30px;
+    border-left: 4px solid #ffffff;
+    cursor: pointer;
+    color: rgb(132,132,132);
+}
+/*li濞戞挾鎹坧an闁汇劌瀚悧鍗烆嚕韫囨凹鍟庣紓鍐挎嫹*/
+.tabtab .firsttitle li span{
+    display: inline-block;
+    text-decoration: none;
+    padding-left: 30px;
+    font-weight: bold;
+    font-size: 13px;
+
+}
+
+.tabtab .sort{
+    list-style: none;
+    padding: 15px 0;
+}
+.tabtab .sort li{
+    height: 30px;
+    line-height: 30px;
+}
+
+.mysort{
+     display: inline-block;
+     padding-left: 35px;
+    color: rgb(132,132,132) ;
+    cursor: pointer;
+    font-size: 13px;
+ }
+.mysortclick{
+    color: #000000;
+    font-weight: 600;
+}
+
+.myaim{
+    width: 85%;
+    /*margin:20px 0;*/
+}
+
+.ptitle{
+    height: 40px;
+    width: 98%;
+    background-color: #f1f5f8;
+    line-height: 40px;
+    padding-left: 10px;
+    border-bottom: 1px solid #dee8f1;
+}
+
+.myaimcon{
+    list-style: none;
+}
+.myaimcon li{
+    height: 35px;
+    border-bottom: 1px solid #dee8f1;
+    line-height: 35px;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+.myaimcon li span{
+    cursor: pointer;
+}
+.myaimcon li a{
+
+    text-decoration: none;
+}
+
+.history{
+    width: 85%;
+    margin-top:60px;
+}
+.myaimcon :first-child{
+    color:#1378c5 ;
+    font-size: 14px;
+}
+
+.time{
+    display: inline-block;
+    float: right;
+    color: #989898;
+    font-size: 13px;
+}
+.maintitle{
+    color:#1378c5;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.maincon{
+    list-style: none;
+}
+.maincon>li{
+    margin-top: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom:1px solid #dee8f1 ;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    /* padding-left:10px; */
+
+}
+.maintitle:hover{
+    border-bottom: 1px solid #f6fafd;
+}
+
+.key {
+    font-size: 12px;
+    display: inline-block;
+    /* height: 22px; */
+    line-height: 26px;
+    float: left;
+}
+
+.key+span{
+    font-size: 12px;
+    display: inline-block;
+    line-height: 26px;
+    margin-right:5px;
+}
+.company_info{
+    float: left;
+    width: 500px;
+    padding-left:10px;
+}
+.maincon li .maintitle {
+    margin-bottom: 5px;
+    width: auto;
+    font-size: 16px;
+    border-bottom: 1px solid #ffffff;
+
+}
+.maincon li .maintitle:hover{
+    text-decoration: underline;
+}
+
+.myaimcon :first-child:hover{
+    color: #FF3333;
+}
+
+.system{
+    color: rgb(84,194,131);
+}
+.red{
+    display: inline;
+    color: #FF3333;
+}
+.much{
+    display: inline-block;
+    float: right;
+    font-size: 14px;
+    color: #989898;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.much a{
+    text-decoration: none;
+    color: #989898;
+}
+.code{
+    float: left;
+    word-wrap:break-word
+}
+.country{
+    float: left;
+    word-wrap:break-word;
+    width: 60px;
+}
+.person{
+    float: left;
+    word-wrap:break-word;
+    width: 60px;
+}
+.address{
+    width: 350px;
+    word-wrap:break-word
+}
+.source{
+    float: left;
+    margin-right: 20px;
+}
+
+.tag{
+    display: inline-block;
+    float: right;
+    overflow: hidden;
+    margin-top: 5px;
+}
+.if_aim{
+    display: inline-block;
+    width: 23px;
+    height: 22px;
+    float: right;
+    cursor: pointer;
+}
+.identi{
+    clear: both;
+    list-style: none;
+    float: right;
+}
+.identi li{
+    float: left;
+    width: 22px;
+    height: 22px;
+    margin-left: 5px;
+}
+
+.view_img{
+    float: left;
+    width: 130px;
+    height: 100px;
+    margin-right: 15px;
+    border-radius: 20px;
+}
+
+.little_tag{
+    display: none;
+    float: right;
+    margin-top: 20px;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 30px;
+    border: 1px solid #efefef;
+}
+
+.main_bottom{
+    width: 100%;
+    height: 26px;
+    background-color: #F1F5F8;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+
+.main_bottom span{
+    color: #999;
+    font-size: 13px;
+    display: inline-block;
+    line-height: 26px;
+}
+.main_bottom :last-child{
+    margin-left: 20px;
+}
+.ui-paging-container ul{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.ui-paging-container li.ui-pager {
+    min-width: 20px;
+    min-height: 25px;
+    line-height: 25px;
+}
+.ui-paging-container li.ui-paging-toolbar select {
+    min-height: 30px;
+}
+.ui-paging-container li.ui-paging-toolbar input{
+    height: 27px !important;
+}
+.ui-paging-container li.ui-paging-toolbar a{
+    height: 27px !important;
+    line-height: 27px !important;
+}
+
+
+.deactory{
+	display:inline-block;
+	float:left;
+	font-size:20px;
+	margin-right:10px;
+	color:#F7BA2A;
+}
+
+.setWaring{
+	overflow:hidden;
+	display:none;
+}
+.waringCon{
+	margin-top:20px;
+	margin-left:30px;
+}
+.waringCon select{
+	width:150px;
+	height:28px;
+	border-radius:4px;
+}
+.waringCon label{
+	font-size:14px;
+	display:inline-block;
+	width:60px;
+	
+}
+.waringInput{
+	width:150px;
+	height:28px;
+	border-radius:5px;
+	border:1px solid #ccc;
+}
+.updateWaring{
+	display:inline-block;
+	width:80px;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	color:#fff;
+	margin-left:180px;
+	margin-top:20px;
+	border:0;
+	border-radius:5px;
+	cursor:pointer;
+}
+
+#map{
+	width:85%;
+	height:60%;
+	margin-top:30px;
+	border-radius: 3px;
+    border:1px solid #1378c5;
+    position:relative;
+}
+.esriPopup .titleButton.maximize{
+	display:none;
+}

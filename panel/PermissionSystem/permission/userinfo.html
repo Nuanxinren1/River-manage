@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+		<link rel="stylesheet" type="text/css" href="../layui/css/layui.css" />
+	</head>
+
+	<body>
+		<div id="userinfo">
+			<div id="datainfo">
+				<h3><font color="#778899"><strong>·基本信息</strong></font></h3><br />
+
+				<table class="layui-table">
+					<colgroup>
+						<col width="200">
+						<col width="300">
+						<col width="200">
+						<col width="300">
+					</colgroup>
+
+					<tr>
+						<th bgcolor="#D0E9FF">姓名</th>
+						<td>杨**</td>
+						<th bgcolor="#D0E9FF">性别</th>
+						<td>男</td>
+					</tr>
+					<tr>
+						<th bgcolor="#D0E9FF">部门</th>
+						<td>研发一部</td>
+						<th bgcolor="#D0E9FF">编号</th>
+						<td>0211</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="logininfo">
+				<h3><font color="#778899"><strong>·登录信息</strong></font></h3><br />
+				<table class="layui-table">
+					<!--<colgroup>
+						<col width="200">
+						<col width="300">
+						<col width="200">
+						<col width="300">
+					</colgroup>-->
+
+					<tr>
+						<th>登录账号</th>
+						<th>登录ip</th>
+						<th>日期</th>
+						<th>状态</th>
+						<th>浏览器类型</th>
+						<th>ip所在地</th>
+					</tr>
+					<tr>
+						<td>admin</td>
+						<td>192.168.5.130</td>
+						<td>2019-03-22 12:07:33</td>
+						<td>离线</td>
+						<td>谷歌浏览器</td>
+						<td>北京</td>
+					</tr>
+					<tr>
+						<td>admin</td>
+						<td>192.168.5.130</td>
+						<td>2019-03-22 10:07:33</td>
+						<td>登录</td>
+						<td>谷歌浏览器</td>
+						<td>北京</td>
+					</tr>
+					<tr>
+						<td>admin</td>
+						<td>192.168.5.130</td>
+						<td>2019-03-21 15:19:21</td>
+						<td>离线</td>
+						<td>谷歌浏览器</td>
+						<td>北京</td>
+					</tr>
+					<tr>
+						<td>admin</td>
+						<td>192.168.5.130</td>
+						<td>2019-03-21 09:14:57</td>
+						<td>登录</td>
+						<td>谷歌浏览器</td>
+						<td>北京</td>
+					</tr>
+				</table>
+				<div id="page"></div>
+
+				<div id="updatePwd" style="text-align:center">
+					<font>您上次登录IP为192.168.5.130</font>
+					</br>
+					<font style="text-align:center">如非本人登录，请点此处
+						<font style="color: blue;" onclick="updataUserPwd()">修改密码</font>
+					</font>
+				</div>
+			</div>
+		</div>
+		<!--<table lay-even class="layui-hide" id="demo"  lay-filter="test"></table>
+			<div id="page"></div>-->
+		</div>
+	</body>
+	<script src="../../../scripts/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../layui/layui.all.js"></script>
+	<script src="userinfo.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

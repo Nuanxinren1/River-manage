@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="../layui/css/layui.css" />
+    <link rel="stylesheet" href="flfg.css">
+    <style>
+        .layui-table-cell {
+            min-width: 100px;
+            max-width: 500px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="flfg">
+        <div class="search">
+            <span>标题:</span> <input class="ipt" type="text" placeholder="请输入">
+            <span>危化品:</span> <input class="ipt" type="text" placeholder="请输入">
+            <!--<span>预案分类:</span>
+            <select class="ipt">
+                <option value="1">全部</option>
+                <option value="1">县市区预案 </option>               
+            </select>-->
+            <!--<span>排污口规模:</span>
+            <select class="ipt">
+                <option value ="1">全部</option>
+                <option value ="2">规模以上 </option>
+                <option value ="3">规模以下 </option>
+
+            </select>-->
+            <span id="searchBtn">查询</span>
+            <span id="reset">重置</span>
+        </div>
+        <div class="caozuo">
+            <span id="daochu"></span>
+            <span id="xinzeng"></span>
+            <span id="xiugai"></span>
+            <span id="shanchu"></span>
+        </div>
+        <table lay-even class="layui-hide" id="demo" lay-filter="test"></table>
+        <div id="page"></div>
+    </div>
+    <script type="text/html" id="barDemo">
+        <a class="layui-btn layui-btn-xs" lay-event="shenhe"><span class="shenhe"></span></a>
+        <a class="layui-btn layui-btn-xs" lay-event="detail"><span class="xiangqing"></span></a>
+        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="down"><span class="xiazai"></span></a>
+    </script>
+</body>
+<script src="../../../scripts/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+<script src="../layui/layui.all.js"></script>
+<script src="shigu.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

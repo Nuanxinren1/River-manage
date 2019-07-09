@@ -1,0 +1,58 @@
+﻿html, body {
+    margin: 0px 0px 0px 0px;
+    height: 100%;
+    overflow: hidden;
+    font-size: 14px;
+    background: #fff;
+    
+}
+
+/* 各项监测物的监测值table */
+
+.table th, .table td {
+    text-align: center;
+    padding: 4px 8px 4px 8px;
+    line-height: 18px;
+    /*vertical-align: middle;*/
+    border-top: 1px solid #dddddd;
+    font-weight: normal;
+}
+#PH{	
+   padding: 12px 0px 0px 0px;
+   width:60px
+}
+
+.shujutab td {
+    cursor: pointer;
+    background: #2b708c;
+    color:#fff;
+}
+
+    .shujutab td:hover {
+        background: #5bacce;
+    }
+
+
+/*监测物类型单击选中*/
+.shujutab td.btnselect {
+    color: #D82069;
+    background: #5bacce !important;
+}
+
+
+/*监测时间点击选中*/
+.searchnewbtn {
+    border: 1px solid transparent;
+    height: 23px;
+    border-radius: 3px;
+    background: #fff;
+   
+     border: 1px solid #2b708c;
+     outline:none;
+}
+
+    .searchnewbtn.newbtnac {
+        background: #2b708c;
+        color: #fff;
+        border: 1px solid #2b708c;
+    }

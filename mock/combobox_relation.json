@@ -1,0 +1,10 @@
+[{
+  "id":"+and",
+  "text":"and",
+  "selected":true,
+  "group":"AAA"
+},{
+  "id":"+or",
+  "text":"or",
+  "group":"AAA"
+}] 

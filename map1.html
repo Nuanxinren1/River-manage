@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>环境地理信息平台</title>
+    <meta charset="utf-8" />
+    <link href="favicon.ico" rel="shortcut icon" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no" />
+
+    <!--************************* config *************************-->
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script src="config/mapconfig.js"></script>
+    <script src="config/config.js"></script>
+    <script src="config/utils.js"></script>
+
+    <!--************************* CSS *************************-->
+    <!--bootstrap样式-->
+    <link href="Scripts/plugins/bootstrap-2.3.2/css/bootstrap.css" rel="stylesheet" />
+    <!--jquery UI-->
+    <link href="Scripts/plugins/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet" />
+    <!--jspanel弹框面板-->
+    <link href="Scripts/plugins/jspanel-2.6.2/jquery.jspanel.min.css" rel="stylesheet" />
+    <link href="Scripts/plugins/animo/animate-animo.min.css" rel="stylesheet" />
+    <link href="Scripts/plugins/minicolors/jquery.minicolors.css" rel="stylesheet" />
+    <link href="Scripts/plugins/poshytip/tip-twitter/tip-twitter.css" rel="stylesheet" />
+
+
+    <!--ArcGIS js API地图样式-->
+    <link rel='Stylesheet' type='text/css' href="http://192.168.4.111/arcgis_js_api/library/3.18/3.18/dijit/themes/tundra/tundra.css" />
+    <link rel='Stylesheet' type='text/css' href="http://192.168.4.111/arcgis_js_api/library/3.18/3.18/esri/css/esri.css" />
+
+    <!--自定义样式-->
+    <link href="css/map.css" rel="stylesheet" />
+    <link href="css/maptype.css" rel="stylesheet" />
+    <link href="css/mapcover.css" rel="stylesheet" />
+    <link href="css/jspanel.css" rel="stylesheet" />
+    <link href="css/scroll.css" rel="stylesheet" />
+    <link href="css/tool.css" rel="stylesheet" />
+    <link href="css/leftMenu.css" rel="stylesheet" />
+    <style>
+
+   </style>
+</head>
+<body>
+    <!-- 地图部分 -->
+    <div id="mapdiv">
+        		<!-- 导航栏 -->
+		<!-- <div class="navlist" id="navlist">
+              
+            </div> -->
+            <div class="map-hierarchy" id="map-hierarchy" v-cloak>
+                <span id="QG" onclick="back_China(this)" style="cursor: pointer" value="000000" v-if="level">全国</span>
+                <span id="QGCode" style="display:none"></span>
+                <span id="Sheng" onclick="back_China(this)" style="cursor: pointer"></span>
+                <span id="ShengCode" style="display:none"></span>
+                <span id="Shi" onclick="back_China(this)" style="cursor: pointer"></span>
+                <span id="ShiCode" style="display:none"></span>
+                <span id="Xian" onclick="back_China(this)" style="cursor: pointer"></span>
+                <span id="XianCode" style="display:none"></span>
+            </div>
+        <div id="map">
+            <div class="BasemapToggle" role="presentation" style="display: block;" id="BasemapToggle" widgetid="BasemapToggle">
+                <!-- 切换底图 -->
+                <div id="mapType">
+                    <div class="mapTypeCard panorama choosedType active" name="baseMap_VEC" data-name="矢量图">
+                        <span>矢量图</span>
+                    </div>
+                    <div class="mapTypeCard normal" name="baseMap_DEM" data-name="地形图">
+                        <span>地形图</span>
+                    </div>
+                    <div class="mapTypeCard satellite" name="baseMap_IMG" data-name="影像图">
+                        <span>影像图</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 经纬度信息 -->
+        <div id="PositionBar"></div>
+    </div>
+
+    <!--右边工具栏-->
+    <div id="toolBarPanel">
+        <ul id="Toolbar">
+            <li id="toolZoomIn" title="放大地图" class=""><img src="img/maptoolbar/zoomin.png"></li>
+            <li id="toolZoomOut" title="缩小地图" class=""><img src="img/maptoolbar/zoomout.png"></li>
+            <li id="toolPan" title="漫游" class="active"><img src="img/maptoolbar/move.png"></li>
+            <li id="toolFullExtent" title="全图"><img src="img/maptoolbar/fullmap.png"></li>
+            <li id="toolMeasure" title="测距" class=""><img src="img/maptoolbar/ceju.png"></li>
+            <li id="toolSpaceSearch" title="空间查询" class=""><img src="img/maptoolbar/spacesearch.png"></li>
+            <li id="toolBufferSearch" title="缓冲查询" class=""><img src="img/maptoolbar/huanchong.png"></li>
+            <li id="toolPlotting" title="标绘" class=""><img src="img/maptoolbar/biaohui.png"></li>
+            <li id="toolPrint" title="打印"><img src="img/maptoolbar/print.png"></li>
+            <li id="toolCYGJ" title="常用工具"><img src="img/maptoolbar/cygj.png"></li>
+            <li id="toolClear" title="清除" style="border-bottom:none;"><img src="img/maptoolbar/clear.png"></li>
+        </ul>
+    </div>
+
+    <!--常用工具-->
+    <div id="toolCYGJ_drop" class="tool_drop" style="display:none;">
+        <ul class="toolPlotting_drop_ul">
+            <li class="tip" title="标识" onclick="">
+                <img src="img/maptoolbar/mark.png" />
+            </li>
+            <li class="tip" title="全屏" onclick="toggleFullScreen()">
+                <img src="img/maptoolbar/fullscreen.png" alt="" />
+            </li>
+        </ul>
+    </div>
+
+
+    <!--测距-->
+    <div id="toolMeasure_drop" class="tool_drop" style="display:none;">
+        <ul class="toolPlotting_drop_ul">
+            <li class="tip" title="长度测量" onclick="btn_measure(0)">
+                <img src="img/maptoolbar/长度测量.png" />
+            </li>
+            <li class="tip" title="面积测量" onclick="btn_measure(1)">
+                <img src="img/maptoolbar/面积测量.png" alt="" />
+            </li>
+        </ul>
+    </div>
+
+    <!--空间查询-->
+    <div id="toolSpaceSearch_drop" class="tool_drop" style="display:none;">
+        <ul class="toolPlotting_drop_ul">
+            <li class="tip" title="矩形查询" onclick="btn_ExSpace(0)">
+                <img src="img/DynamicPlot/矩形.png" />
+            </li>
+            <li class="tip" title="圆形查询" onclick="btn_ExSpace(1)">
+                <img src="img/DynamicPlot/圆.png" />
+            </li>
+            <li class="tip" title="多边形查询" onclick="btn_ExSpace(2)">
+                <img src="img/DynamicPlot/多边形.png" />
+            </li>
+            <li class="tip" title="自由多边形查询" onclick="btn_ExSpace(3)">
+                <img src="img/DynamicPlot/自由面.png" />
+            </li>
+        </ul>
+    </div>
+
+    <!--缓冲查询-->
+    <div id="toolBufferSearch_drop" class="tool_drop" style="display:none;">
+        <ul class="toolPlotting_drop_ul">
+            <li class="tip" title="点" onclick="btn_Buffer(0)">
+                <img src="img/DynamicPlot/单点.png" />
+            </li>
+            <li class="tip" title="直线" onclick="btn_Buffer(1)">
+                <img src="img/DynamicPlot/直线.png" />
+            </li>
+            <li class="tip" title="多边形" onclick="btn_Buffer(2)">
+                <img src="img/DynamicPlot/多边形.png" />
+            </li>
+            <li class="tip" title="自由多边形" onclick="btn_Buffer(3)">
+                <img src="img/DynamicPlot/自由面.png" />
+            </li>
+        </ul>
+        <div style="margin-top: 50px; padding-left: 0px">
+            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tr>
+                    <td style="height: 30px; width: 70px;">
+                        <span class="label label-warning">半径(km)</span>
+                    </td>
+                    <td colspan='2 ' style="height: 20px;">
+                        <input id="txt_distant" class="spinner" style="width: 50px;" value='25 ' readonly="readonly" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!--动态标绘-->
+    <div id="toolPlotting_drop" class="tool_drop" style="display:none;">
+        <table cellpadding="0" cellspacing="0" border="0">
+            <tr>
+                <td style="height: 30px; width: 70px;">
+                    <span class="label label-warning">图形尺寸</span>
+                </td>
+                <td colspan='2 ' style="height: 30px;">
+                    <input id="txt_graph" class="spinner" style="width: 80px;" value='25 ' readonly="readonly" />
+                </td>
+            </tr>
+            <tr>
+                <td style="height: 30px; width: 70px;">
+                    <span class="label label-important">背景颜色</span>
+                </td>
+                <td colspan='2 ' style="height: 30px;">
+                    <span id="sp_bgcolor" class="colorpicker" style="display: none"></span>
+                </td>
+            </tr>
+            <tr>
+                <td style="height: 30px; width: 70px;">
+                    <span class="label label-important">透明度</span>
+                </td>
+                <td style="height: 30px;">
+                    <div id="slider" style="margin-left:10px;">
+                    </div>
+                </td>
+                <td width="40" align="center">
+                    <span id="sp_slidervalue">100</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="height: 30px; width: 70px;">
+                    <span class="label label-info">边框尺寸</span>
+                </td>
+                <td colspan='2 ' style="height: 30px;">
+                    <input id="txt_border" class="spinner" style="width: 80px;" value='1 ' readonly="readonly" />
+                </td>
+            </tr>
+            <tr>
+                <td style="height: 30px; width: 70px;">
+                    <span class="label label-info">边框颜色</span>
+                </td>
+                <td colspan='2 ' style="height: 30px;">
+                    <span id="sp_bordercolor" class="colorpicker" style="display: none"></span>
+                </td>
+            </tr>
+        </table>
+        <ul class="toolPlotting_drop_ul">
+            <li class="tip" title="单点" onclick="btn_DynamicPlot(0)">
+                <img src="img/DynamicPlot/单点.png" />
+            </li>
+            <li class="tip" title="多点" onclick="btn_DynamicPlot(1)">
+                <img src="img/DynamicPlot/多点.png" />
+            </li>
+            <li class="tip" title="两点环线" onclick="btn_DynamicPlot(15)">
+                <img src="img/DynamicPlot/两点环线.png" />
+            </li>
+            <!--<li class="tip" title="多点环线" onclick="btn_DynamicPlot(16)">
+                <img src="img/DynamicPlot/多点环线.png" />
+            </li>-->
+            <li class="tip" title="直线" onclick="btn_DynamicPlot(2)">
+                <img src="img/DynamicPlot/直线.png" />
+            </li>
+            <!--<li class="tip" title="折线" onclick="btn_DynamicPlot(3)" style="margin-top: 5px">
+                <img src="img/DynamicPlot/折线.png" />
+            </li>-->
+            <li class="tip" title="多边形" onclick="btn_DynamicPlot(4)" style="margin-top: 5px">
+                <img src="img/DynamicPlot/多边形.png" />
+            </li>
+            <li class="tip" title="多线段" onclick="btn_DynamicPlot(5)" style="margin-top: 5px">
+                <img src="img/DynamicPlot/多线段.png" />
+            </li>
+            <li class="tip" title="自由面" onclick="btn_DynamicPlot(6)" style="margin-top: 5px">
+                <img src="img/DynamicPlot/自由面.png" />
+            </li>
+            <li class="tip" title="多点曲面" onclick="btn_DynamicPlot(17)" style="margin-top: 5px">
+                <img src="img/DynamicPlot/多点曲面.png" />
+            </li>
+            <li class="tip" title="旋转箭头" onclick="btn_DynamicPlot(7)" style="margin-top: 5px">
+                <img src="img/DynamicPlot/旋转箭头.png" />
+            </li>
+            <!--<li class="tip" title="自由箭头" onclick="btn_DynamicPlot(18)" style="margin-top: 5px">
+                <img src="img/DynamicPlot/自由箭头.png" alt="" />
+            </li>-->
+            <li class="tip" title="左箭头" onclick="btn_DynamicPlot(8)" style="margin-top: 5px">
+                <img src="img/DynamicPlot/左箭头.png" />
+            </li>
+            <li class="tip" title="右箭头" onclick="btn_DynamicPlot(9)" style="margin-top: 5px">
+                <img src="img/DynamicPlot/右箭头.png" />
+            </li>
+            <li class="tip" title="上箭头" onclick="btn_DynamicPlot(10)" style="margin-top: 5px">
+                <img src="img/DynamicPlot/上箭头.png" />
+            </li>
+            <li class="tip" title="下箭头" onclick="btn_DynamicPlot(11)" style="margin-top: 5px">
+                <img src="img/DynamicPlot/下箭头.png" />
+            </li>
+            <li class="tip" title="圆" onclick="btn_DynamicPlot(12)" style="margin-top: 5px">
+                <img src="img/DynamicPlot/圆.png" />
+            </li>
+            <!--<li class="tip" title="椭圆" onclick="btn_DynamicPlot(13)" style="margin-top: 5px">
+                <img src="img/DynamicPlot/椭圆.png" />
+            </li>-->
+            <li class="tip" title="矩形" onclick="btn_DynamicPlot(14)" style="margin-top: 5px">
+                <img src="img/DynamicPlot/矩形.png" />
+            </li>
+            <!--<li class="tip" title="三角形" onclick="btn_DynamicPlot(19)" style="margin-top: 5px">
+                <img src="img/DynamicPlot/三角形.png" />
+            </li>-->
+        </ul>
+    </div>
+
+</body>
+</html>
+<!--jquery UI-->
+<script src="Scripts/plugins/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<!--jspanel弹框面板-->
+<script src="Scripts/plugins/jspanel-2.6.2/jquery.jspanel.min.js"></script>
+<script src="Scripts/plugins/echarts/echarts.js"></script>
+<script src="Scripts/plugins/animo/animo.min.js"></script>
+<script src="Scripts/plugins/poshytip/jquery.poshytip.min.js"></script>
+<script src="Scripts/plugins/minicolors/jquery.minicolors.js"></script>
+
+<!--自定义ArcGIS组件路径-->
+<script type="text/javascript">
+    var dojoConfig = {
+        packages: [
+            { name: 'Scripts', location: location.pathname.replace(/\/[^/]+$/, "") + '/Scripts' },
+            { name: 'GISScripts', location: location.pathname.replace(/\/[^/]+$/, "") + '/Scripts/GISScripts' },
+            { name: 'widgets', location: location.pathname.replace(/\/[^/]+$/, "") + '/Scripts/widgets' },
+            { name: 'plugins', location: location.pathname.replace(/\/[^/]+$/, "") + '/Scripts/plugins' }
+
+        ]
+    };
+</script>
+<!--ArcGIS js API初始化脚本-->
+<script src='http://192.168.4.111/arcgis_js_api/library/3.18/3.18/init.js'></script>
+<script src="plugin/effect/effect.js" type="text/javascript" charset="utf-8"></script>
+
+<!--mugis通用方法-->
+<script src="Scripts/GISScripts/mapInit.js"></script>
+<script src="Scripts/GISScripts/mapShowPOI.js"></script>
+<script src="Scripts/GISScripts/mapCityInfo.js"></script>
+<script src="Scripts/GISScripts/poiClassify.js"></script>
+<script src="Scripts/GISScripts/mapClear.js"></script>
+<script src="Scripts/GISScripts/mapZoom.js"></script>
+
+<!--utils通用方法-->
+<script src="Scripts/utils/timeFormat.js"></script>
+<script src="Scripts/utils/jspanelInit.js"></script>
+<script src="Scripts/utils/tableInit.js"></script>
+<script src="Scripts/utils/htmlOperate.js"></script>
+
+<!--模块-->
+<link href="Panel/AirQualityHour/append/append.css" rel="stylesheet" />
+<script src="Panel/AirQualityHour/append/append.js"></script>
+<script src="Scripts/widgets/windy/windyLoad.js"></script>
+<script src="Scripts/widgets/windy/windy.js"></script>
+
+<!--main主方法-->
+<script src="Scripts/mapMain.js"></script>
+<script src="Scripts/mapMenu.js"></script>
+<script src="Scripts/leftMenu.js"></script>
+<script src="scripts/redialLayer.js"></script>

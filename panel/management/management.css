@@ -1,0 +1,159 @@
+html, body{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+#leftmenu{
+	width: 180px;
+	overflow-y: auto;
+	background: #f6f8f9;
+	color: #333333 !important;
+}
+.menulist{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #fff;
+}
+.menulist span{
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	width: 100%;/*width: 86px;*/
+	text-align: center;
+}
+.menulist span:nth-child(1){
+	color: #109fbf;
+	border-right: 1px solid #ccc;
+	
+}
+
+.layui-nav-tree .layui-nav-item a{
+	color: #333 !important;
+	height: 40px;
+	line-height: 45px;	
+}
+.layui-nav-tree .layui-nav-item >a{
+	border-top: 1px solid #dfe6da;
+	border-bottom: 1px solid #fff;
+}
+.layui-nav .layui-nav-item dl.layui-nav-child{
+	background: #f6f8f9 !important;
+}
+.layui-nav-tree .layui-nav-child dd{
+	border-top: 1px solid #dfe6da;
+	border-bottom: 1px solid #fff;
+}
+.layui-nav-tree .layui-nav-child dd a{
+	margin-left: 45px;
+}
+.layui-nav-tree .layui-nav-item a:hover{
+	background: #f6f8f9 !important;
+}
+.layui-nav-bar{
+	display: none;
+}
+.layui-nav .layui-nav-mored, .layui-nav-itemed>a .layui-nav-more{
+	    border-color: transparent transparent #ccc;
+}
+.layui-nav .layui-nav-more {
+	border-color: #ccc transparent transparent ;
+}
+i{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+.menu-xx>a i{
+	background: url(../../img/sjjc/jcxx.png);
+}
+.menu-jc>a i{
+	background: url(../../img/sjjc/zxjc.png);
+}
+.menu-shj>a i{
+	background: url(../../img/sjjc/shjxx.png);
+}
+.menu-hjzlxx>a i{
+	background: url(../../img/sjjc/hjzlxx.png);
+}
+.menu-wbsj>a i{
+	background: url(../../img/sjjc/wbsj.png);
+}
+.menu-wry>a i{
+	background: url(../../img/sjjc/wry.png);
+}
+.menu-stbh>a i{
+	background: url(../../img/sjjc/stbh.png);
+}
+.menu-hjzlbg>a i{
+	background: url(../../img/sjjc/hjzlbg.png);
+}
+.menu-hjzlsj>a i{
+	background: url(../../img/sjjc/hjzlsj.png);
+}
+.layui-nav-itemed.layui-nav-item>a{
+	color: #109fbf !important;
+}
+.layui-nav-itemed.menu-xx>a i{
+	background: url(../../img/sjjc/jcxx1.png);
+}
+.layui-nav-itemed.menu-jc>a i{
+	background: url(../../img/sjjc/zxjc1.png);
+}
+.layui-nav-itemed.menu-shj>a i{
+	background: url(../../img/sjjc/shjxx1.png);
+}
+.layui-nav-itemed.menu-hjzlxx>a i{
+	background: url(../../img/sjjc/hjzlxx1.png);
+}
+.layui-nav-itemed.menu-wbsj>a i{
+	background: url(../../img/sjjc/wbsj1.png);
+}
+.layui-nav-itemed.menu-wry>a i{
+	background: url(../../img/sjjc/wry1.png);
+}
+.layui-nav-itemed.menu-stbh>a i{
+	background: url(../../img/sjjc/stbh1.png);
+}
+.layui-nav-itemed.menu-hjzlbg>a i{
+	background: url(../../img/sjjc/hjzlbg1.png);
+}
+.layui-nav-itemed.menu-hjzlsj>a i{
+	background: url(../../img/sjjc/hjzlsj1.png);
+}
+.layui-nav-tree .layui-nav-child dd.layui-this, .layui-nav-tree .layui-nav-child dd.layui-this a, .layui-nav-tree .layui-this, .layui-nav-tree .layui-this>a, .layui-nav-tree .layui-this>a:hover {
+	background: #f6f8f9;
+	color: #109fbf !important;
+
+}
+.layui-tab{
+	/* display: none; */
+	border: none;
+	margin: 0;
+	margin-top: 0px !important;
+}
+.layui-tab-title .layui-this{
+	color: #109fbf !important;
+}
+#layui-tab{
+	/* background: #E5E5E5; */
+}
+
+#menuCont{
+	border: 1px solid #8D8D8D;
+	margin: 2px 0 0 1px;
+	/* background: #fff; */
+}
+.layui-tab-content{
+	padding: 0;
+}
+
+
+
+
+
+
+

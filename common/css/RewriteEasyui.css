@@ -1,0 +1,148 @@
+/* RewriteEasyui.css v1.0 重写了EasyUI的原生样式 xingk*/
+
+
+/**提示框**/
+/**v1.0**/
+/**2016-11-8 18:37:52**/
+.tooltip {
+    border-color: #73bff9 !important;
+    background-color: #f3ffff !important;
+    padding: 5px 8px 5px 8px;
+    opacity: 0.8;
+}
+
+.tooltip-content {
+    font-size: 13px;
+    color: #71bee2;
+}
+
+/**消息窗口**/
+/**v1.0**/
+/**2016-11-8 18:37:52**/
+
+.messager-window {
+    border: 0px;
+    height: auto !important;
+}
+
+/*头部*/
+.window-header {
+    height: 40px;
+    padding: 0px !important;
+    border: 0px !important;
+    background-color: #FFFFFF !important;
+}
+
+    .window-header .panel-title {
+        color: #000000;
+        font-size: 15px;
+        font-weight: initial;
+        height: 40px;
+        line-height: 40px;
+        padding-left: 18px;
+    }
+
+
+    .window-header .panel-tool {
+        margin-top: -7px !important;
+        margin-right: 10px;
+    }
+
+/*身体*/
+.window .window-body {
+    border: 0px;
+    border-top: 1px solid;
+    border-bottom: 2px solid;
+    border-color: #E5E5E5;
+    font-size: 14px;
+    padding: 20px;
+}
+
+    /*图标*/
+    .window .window-body .messager-icon {
+        margin: 0px;
+        margin-left: 30px;
+        margin-right: 10px;
+    }
+
+/*不同状态的字体颜色*/
+/*错误和警告*/
+.messager-icon.messager-warning + div, .messager-icon.messager-error + div {
+    color: #EB5635;
+}
+/*提示和询问*/
+.messager-icon.messager-info + div, .messager-icon.messager-question + div {
+    color: #333333;
+}
+
+
+.messager-window {
+    padding: 0px !important;
+}
+
+.window-shadow {
+    background: none;
+    box-shadow: none;
+}
+
+/*脚部*/
+
+.messager-button {
+    background-color: #FFFFFF !important;
+    border: 0px;
+}
+    /*按钮*/
+    .messager-button .l-btn {
+        width: 80px;
+        height: 30px;
+        border: 0px;
+        background: none !important;
+        background-color: #54C285 !important;
+        outline-color: #54C285;
+    }
+
+        .messager-button .l-btn .l-btn-text {
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: bold;
+            font-family: 'Microsoft YaHei';
+            line-height: 30px;
+        }
+
+/**消息窗口**/
+/**v1.0**/
+/**2016-11-8 18:37:52**/
+/*遮罩层颜色*/
+.window-mask {
+    background: #000 none repeat scroll 0 0;
+}
+/*拖动框颜色*/
+.window-proxy {
+    border: 2px dashed #D4D4D4;
+}
+/**表单**/
+/**v1.0**/
+/**2016-11-20 19:07:46**/
+
+
+/**下拉框选中**/
+.combobox-item-selected {
+    background-color: #73BFF9;
+}
+/**下拉框上边框**/
+.panel-body-noheader {
+    border-top-width: 0px;
+}
+
+.textbox {
+    border-radius: 0px;
+}
+.tooltip-arrow-outer,
+.tooltip-arrow{
+	 _border-color: #23e1ff;
+  _filter: chroma(color=#23e1ff);
+}
+.validatebox-invalid{
+    background-color: #f3ffff !important;
+
+}

@@ -1,0 +1,29 @@
+﻿{
+  "status": 200,
+  "message": "",
+  "total": 1,
+  "rows": {
+    "item": [
+
+      {
+        "name": "登录用户",
+        "style": "0",
+        "sort": "0",
+        "found": "管理员",
+        "creattime": "2018-01-01",
+        "modifier": "管理员",
+        "moditime": "2019-02-01"
+      },
+      {
+        "name": "超级管理员",
+        "style": "0",
+        "sort": "1",
+        "found": "管理员",
+        "creattime": "2018-01-01",
+        "modifier": "管理员",
+        "moditime": ""
+      }
+    ]
+  }
+}
+

@@ -1,0 +1,133 @@
+.header {
+	 width: 100%;
+    height: 56px;
+    /*background: linear-gradient(left,#015a7f ,#049aa0, #014256);*/
+    background: -webkit-linear-gradient(left,#015a7f, #049aa0, #014256); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(left,#015a7f, #049aa0, #014256); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(left,#015a7f, #049aa0, #014256); /* Firefox 3.6 - 15 */
+    background: linear-gradient(left,#015a7f, #049aa0, #014256); /* 标准的语法 */
+}
+.firstNav{
+    float: left;
+}
+.firstNav li{
+    height: 56px;
+    float: left;
+    text-align: center;
+    padding-top: 6px;
+    cursor: pointer;
+}
+.firstNav li:hover{
+    background: -webkit-linear-gradient(top,#05aeb5, #037b7f); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(top,#05aeb5, #037b7f); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(top,#05aeb5, #037b7f); /* Firefox 3.6 - 15 */
+    background: linear-gradient(top,#05aeb5, #037b7f); /* 标准的语法 */
+}
+.firstNav li.hover{
+    background: -webkit-linear-gradient(top,#05aeb5, #037b7f); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(top,#05aeb5, #037b7f); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(top,#05aeb5, #037b7f); /* Firefox 3.6 - 15 */
+    background: linear-gradient(top,#05aeb5, #037b7f); /* 标准的语法 */
+}
+.navTitle{
+    font-size: 15px;
+    color: #fff;
+    padding: 0 10px;
+}
+.header_logo{
+    float: left;
+    overflow: hidden;
+}
+.header_logo img{
+    display: inline-block;
+    margin-top: 8px;
+    margin-left: 20px;
+}
+.header_nav{
+    height: 56px;
+    float: right;
+    overflow: hidden;
+}
+.header_nav ol{
+    list-style: none;
+    overflow: hidden;
+}
+.header_nav>ol.head_navol>li{
+    /*width: 200px;*/
+    height: 56px;
+    float: left;
+    line-height: 56px;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+.head_navol{
+    float: right;
+}
+.person_div{
+    float: left;
+    width: 30px;
+    /*border: 1px solid #efefef;*/
+    margin-left: 10px;
+    /*height: 60px;*/
+}
+.person_div img{
+    display: block;
+    margin-top: 15px;
+}
+.person_info{
+    float: left;
+}
+.person_btn{
+    float: right;
+    height: 56px;
+}
+.person_name{
+    color: #FFFFFF;
+    height: 25px;
+    line-height: 25px;
+    text-align: left;
+    margin-top: 4px;
+}
+.person_comp{
+    color: #FFFFFF;
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    padding-right: 10px;
+}
+
+
+.secondList{
+    position: absolute;
+    list-style: none;
+    background-color: #037b7f;
+    opacity: 0.9;
+}
+.secondList li{
+    line-height: 40px;
+    color: #ffffff;
+    border-bottom: 1px solid #A5CAE2;
+    font-size: 14px;
+    padding: 0 10px;
+    cursor: pointer;
+    min-width: 70px;
+}
+
+.exit_system {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    text-align: center;
+    background-color: rgba(0,0,0,0.2);
+}
+.secondList li.selected{
+	    color: navajowhite;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.secondList li.disabled{
+	    text-decoration: line-through;
+    color: #b0b0b0;
+}

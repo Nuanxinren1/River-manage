@@ -1,0 +1,117 @@
+#section{
+	padding-top: 10px;
+}
+.search{
+	margin-left: 15px;
+}
+.search span{
+	font-size: 14px;
+	margin-right: 4px;
+}
+.ipt input{
+	height: 24px;
+	border-radius: 3px;
+}
+.ipt{
+	width: 120px;
+	height: 26px;
+	margin-right: 8px;
+}
+#searchBtn, #reset{
+	width: 60px;
+	height: 30px;
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 3px;
+	line-height: 30px;
+	text-align: center;
+	color: #fff;
+}
+#searchBtn{
+	background: #4da9bd;
+	
+}
+#reset{
+	background: #7fc37c;
+}
+
+.caozuo{
+	height: 30px;
+	margin-left: 15px;
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+.caozuo span{
+	display: inline-block;
+	width: 60px;
+	height: 30px;
+}
+#daochu{
+	background: url(../../../img/sjjc/dc.png);
+}
+#xinzeng{
+	background: url(../../../img/sjjc/xz.png);
+}
+#xiugai{
+	background: url(../../../img/sjjc/xg.png);
+}
+#shanchu{
+	background: url(../../../img/sjjc/sc.png);
+}
+
+.edit{
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	background: url(../../../img/sjjc/bxg.png)no-repeat;
+}
+.dele{
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	background: url(../../../img/sjjc/bsc.png)no-repeat;
+}
+.layui-btn-danger{
+	width: 20px;
+	background: #fff;
+}
+.layui-btn{
+	width: 20px;
+	background: #fff !important;
+}
+.layui-table-page{
+	text-align: right;
+}
+#page{
+	width: 100%;
+	text-align: right;
+}
+.layui-table-cell{
+    min-width: 60px;
+    max-width: 100px;
+    height:25px;
+}
+input {
+    border-radius:5px;
+}
+select {
+    border-radius:5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
